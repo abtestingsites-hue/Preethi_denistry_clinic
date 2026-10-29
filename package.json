@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "clean": "node -e \"const fs=require('fs'); ['.next','out','dist'].forEach(d => { if(fs.existsSync(d)) fs.rmSync(d, {recursive:true, force:true}); }); console.log('Cleaned build and dev cache.');\"",
     "dev": "next dev",
     "build": "next build",
     "postbuild": "node -e \"const fs=require('fs'); if(fs.existsSync('out')){ fs.rmSync('dist', {recursive:true, force:true}); fs.cpSync('out', 'dist', {recursive: true}); console.log('Successfully prepared dist directory for Render deployment.'); }\"",
