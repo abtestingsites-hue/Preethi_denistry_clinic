@@ -3,16 +3,17 @@
 import React, { useState } from "react";
 import { AnnouncementMarquee } from "@/components/layout/AnnouncementMarquee";
 import { SiteHeader } from "@/components/layout/SiteHeader";
-import { CinematicHero } from "@/components/sections/CinematicHero";
+import { EditorialHero } from "@/components/sections/EditorialHero";
 import { TrustMetrics } from "@/components/sections/TrustMetrics";
-import { ClinicIntroduction } from "@/components/sections/ClinicIntroduction";
-import { InvisalignFeature } from "@/components/sections/InvisalignFeature";
+import { ClinicAbout } from "@/components/sections/ClinicAbout";
 import { TreatmentPortfolio } from "@/components/sections/TreatmentPortfolio";
+import { InvisalignFeature } from "@/components/sections/InvisalignFeature";
 import { ClinicGallery } from "@/components/sections/ClinicGallery";
+import { MeetTheDentist } from "@/components/sections/MeetTheDentist";
 import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
-import { AppointmentBooking } from "@/components/sections/AppointmentBooking";
-import { ContactMap } from "@/components/sections/ContactMap";
+import { BlogSection } from "@/components/sections/BlogSection";
 import { FAQAccordion } from "@/components/sections/FAQAccordion";
+import { ContactMap } from "@/components/sections/ContactMap";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { BackToTop } from "@/components/ui/BackToTop";
@@ -36,15 +37,14 @@ export default function HomePage() {
     }
   };
 
+  /**
+   * Version 4 Requirement:
+   * Every "Book Online", "Book Appointment", and "Enquire About Invisalign" CTA
+   * must open the consistent, reusable booking modal.
+   */
   const handleOpenBooking = (treatmentTitle?: string) => {
     setSelectedTreatment(treatmentTitle);
-    if (typeof window !== "undefined" && window.innerWidth >= 1024) {
-      // On desktop, scroll smoothly to the conversion booking section
-      scrollToSection("booking-section");
-    } else {
-      // On mobile / small tablet, open the dedicated booking modal
-      setIsModalOpen(true);
-    }
+    setIsModalOpen(true);
   };
 
   const handleExploreInvisalign = () => {
@@ -60,72 +60,84 @@ export default function HomePage() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen">
-      {/* SECTION 01 — SCROLLING PROMOTIONAL ANNOUNCEMENT BAR (Above Navbar) */}
+    <div className="flex flex-col min-h-screen bg-white">
+      {/* SECTION 01 — ANNOUNCEMENT MARQUEE (Above main navigation) */}
       <AnnouncementMarquee onBookClick={() => handleOpenBooking()} />
 
       {/* SECTION 02 — PREMIUM NAVIGATION */}
       <SiteHeader onBookAppointmentClick={() => handleOpenBooking()} />
 
       <main className="flex-1">
-        {/* SECTION 03 — CINEMATIC VIDEO HERO */}
-        <CinematicHero
+        {/* SECTION 03 — OVERSIZED EDITORIAL HERO */}
+        <EditorialHero
           onBookAppointment={() => handleOpenBooking()}
           onExploreInvisalign={handleExploreInvisalign}
           onExploreClinic={handleExploreClinic}
         />
 
-        {/* SECTION 04 — TRUST AND CLINIC KPI STRIP */}
+        {/* SECTION 04 — CLINIC TRUST METRICS */}
         <TrustMetrics />
 
-        {/* SECTION 05 — INTRODUCTION TO THE CLINIC */}
-        <ClinicIntroduction
+        {/* SECTION 05 — ABOUT THE CLINIC */}
+        <ClinicAbout
           onDiscoverClinic={handleExploreClinic}
           onBookAppointment={() => handleOpenBooking()}
+          onExploreInvisalign={handleExploreInvisalign}
         />
 
-        {/* SECTION 06 — INVISALIGN FEATURE EXPERIENCE */}
+        {/* SECTION 06 — DENTAL SERVICES */}
+        <TreatmentPortfolio
+          onBookTreatment={(title) => handleOpenBooking(title)}
+        />
+
+        {/* SECTION 07 — SIGNATURE INVISALIGN EXPERIENCE */}
         <InvisalignFeature
           onEnquireInvisalign={() =>
             handleOpenBooking("Invisalign® & Clear Aligners")
           }
         />
 
-        {/* SECTION 07 — TREATMENT PORTFOLIO */}
-        <TreatmentPortfolio
-          onBookTreatment={(title) => handleOpenBooking(title)}
-        />
-
         {/* SECTION 08 — DEDICATED CLINIC GALLERY */}
         <ClinicGallery />
 
-        {/* SECTION 09 — PATIENT TESTIMONIALS AND REVIEW METRICS */}
+        {/* SECTION 09 — MEET THE DENTIST */}
+        <MeetTheDentist
+          onBookAppointment={() => handleOpenBooking("Consultation with Dr. Preethi")}
+        />
+
+        {/* SECTION 10 — PATIENT TESTIMONIALS AND REVIEW COUNTS */}
         <TestimonialsSection />
 
-        {/* SECTION 10 — APPOINTMENT BOOKING */}
-        <AppointmentBooking initialTreatmentId={selectedTreatment} />
+        {/* SECTION 11 — BLOGS AND DENTAL EDUCATION */}
+        <BlogSection
+          onBookAppointment={() => handleOpenBooking()}
+        />
 
-        {/* SECTION 11 — CONTACT AND EMBEDDED LOCATION */}
-        <ContactMap onBookAppointment={() => handleOpenBooking()} />
+        {/* SECTION 12 — FAQ SECTION */}
+        <FAQAccordion
+          onBookAppointment={() => handleOpenBooking()}
+        />
 
-        {/* SECTION 12 — FREQUENTLY ASKED QUESTIONS */}
-        <FAQAccordion />
+        {/* SECTION 14 — CONTACT AND EMBEDDED MAP */}
+        <ContactMap
+          onBookAppointment={() => handleOpenBooking()}
+        />
 
-        {/* SECTION 13 — FINAL CONVERSION BANNER */}
+        {/* SECTION 15 — FINAL CTA WITH SCROLLING BANNER */}
         <FinalCTA
           onBookAppointment={() => handleOpenBooking()}
           onContactClinic={handleContactClinic}
         />
       </main>
 
-      {/* SECTION 14 — PREMIUM FOOTER */}
+      {/* SECTION 15 — SITE FOOTER */}
       <SiteFooter />
 
       {/* Persistent Controls & Floating Actions */}
       <BackToTop />
       <FloatingContactBar onOpenBookingModal={() => handleOpenBooking()} />
 
-      {/* Responsive Booking Modal Dialog */}
+      {/* SECTION 13 — ONLINE APPOINTMENT BOOKING MODAL */}
       <AppointmentModal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
@@ -134,4 +146,3 @@ export default function HomePage() {
     </div>
   );
 }
-

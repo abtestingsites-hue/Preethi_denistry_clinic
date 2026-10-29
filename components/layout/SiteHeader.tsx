@@ -19,17 +19,19 @@ export function SiteHeader({ onBookAppointmentClick }: SiteHeaderProps) {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
 
-      // Simple active section detection
       const sections = [
         "hero",
         "about",
         "treatments",
         "invisalign",
         "gallery",
+        "dentist",
         "testimonials",
+        "blogs",
+        "faq",
         "contact",
       ];
-      const scrollPosition = window.scrollY + 120;
+      const scrollPosition = window.scrollY + 140;
 
       for (const sectionId of sections) {
         const el = document.getElementById(sectionId);
@@ -66,8 +68,10 @@ export function SiteHeader({ onBookAppointmentClick }: SiteHeaderProps) {
     { label: "About", id: "about" },
     { label: "Treatments", id: "treatments" },
     { label: "Invisalign", id: "invisalign" },
-    { label: "Clinic Gallery", id: "gallery" },
-    { label: "Patient Stories", id: "testimonials" },
+    { label: "Our Clinic", id: "gallery" },
+    { label: "Meet Dr. Preethi", id: "dentist" },
+    { label: "The Journal", id: "blogs" },
+    { label: "Reviews", id: "testimonials" },
     { label: "Contact", id: "contact" },
   ];
 
@@ -77,8 +81,8 @@ export function SiteHeader({ onBookAppointmentClick }: SiteHeaderProps) {
         className={cn(
           "sticky top-0 z-40 w-full transition-all duration-300",
           isScrolled
-            ? "bg-white/95 backdrop-blur-md shadow-subtle border-b border-[#E5EAE4]"
-            : "bg-white border-b border-[#E5EAE4]/60"
+            ? "bg-white/95 backdrop-blur-md shadow-subtle border-b border-[#E8E9E5]"
+            : "bg-white border-b border-[#E8E9E5]/60"
         )}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -90,16 +94,16 @@ export function SiteHeader({ onBookAppointmentClick }: SiteHeaderProps) {
                 e.preventDefault();
                 scrollToSection("hero");
               }}
-              className="flex items-center gap-3 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#668C63] rounded-lg p-1"
+              className="flex items-center gap-3 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5C7651] rounded-lg p-1"
             >
               {/* Brand Aligner Arc Mark */}
-              <div className="w-9 h-9 rounded-full bg-[#EAF3E9] border border-[#B8D8B5]/60 flex items-center justify-center text-[#668C63] group-hover:bg-[#B8D8B5]/40 transition-colors">
+              <div className="w-10 h-10 rounded-full bg-[#C7DDB0]/30 border border-[#A9C49A]/50 flex items-center justify-center text-[#5C7651] group-hover:bg-[#C7DDB0]/60 transition-colors">
                 <svg
-                  className="w-5 h-5 text-[#668C63]"
+                  className="w-5 h-5 text-[#5C7651]"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
-                  strokeWidth="2"
+                  strokeWidth="2.2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   aria-hidden="true"
@@ -109,11 +113,11 @@ export function SiteHeader({ onBookAppointmentClick }: SiteHeaderProps) {
               </div>
 
               <div className="flex flex-col">
-                <span className="font-serif text-xl sm:text-2xl text-[#111311] tracking-tight font-semibold leading-tight group-hover:text-[#466A45] transition-colors">
+                <span className="font-serif text-xl sm:text-2xl text-[#252724] tracking-tight font-semibold leading-tight group-hover:text-[#5C7651] transition-colors">
                   Dr. Preethi’s
                 </span>
-                <span className="text-[10px] tracking-[0.24em] uppercase text-[#666B66] font-medium">
-                  Dentistry · Coimbatore
+                <span className="text-[10px] tracking-[0.22em] uppercase text-[#858780] font-medium">
+                  Dentistry · Saibaba Colony
                 </span>
               </div>
             </a>
@@ -121,7 +125,7 @@ export function SiteHeader({ onBookAppointmentClick }: SiteHeaderProps) {
             {/* Desktop Navigation Links */}
             <nav
               aria-label="Main Navigation"
-              className="hidden lg:flex items-center gap-7"
+              className="hidden xl:flex items-center gap-6"
             >
               {navItems.map((item) => {
                 const isActive = activeSection === item.id;
@@ -130,16 +134,49 @@ export function SiteHeader({ onBookAppointmentClick }: SiteHeaderProps) {
                     key={item.id}
                     onClick={() => scrollToSection(item.id)}
                     className={cn(
-                      "text-sm font-medium transition-colors relative py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#668C63] rounded",
+                      "text-sm font-medium transition-colors relative py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5C7651] rounded",
                       isActive
-                        ? "text-[#466A45] font-semibold"
-                        : "text-[#666B66] hover:text-[#111311]"
+                        ? "text-[#5C7651] font-semibold"
+                        : "text-[#858780] hover:text-[#252724]"
                     )}
                   >
                     <span>{item.label}</span>
                     {isActive && (
-                      <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#668C63] rounded-full animate-in fade-in" />
+                      <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#5C7651] rounded-full" />
                     )}
+                  </button>
+                );
+              })}
+            </nav>
+
+            {/* Compact Nav for Large Screens (1024-1279px) */}
+            <nav
+              aria-label="Compact Main Navigation"
+              className="hidden lg:flex xl:hidden items-center gap-4"
+            >
+              {[
+                { label: "About", id: "about" },
+                { label: "Treatments", id: "treatments" },
+                { label: "Invisalign", id: "invisalign" },
+                { label: "Clinic", id: "gallery" },
+                { label: "Doctor", id: "dentist" },
+                { label: "Journal", id: "blogs" },
+                { label: "Reviews", id: "testimonials" },
+                { label: "Contact", id: "contact" },
+              ].map((item) => {
+                const isActive = activeSection === item.id;
+                return (
+                  <button
+                    key={item.id}
+                    onClick={() => scrollToSection(item.id)}
+                    className={cn(
+                      "text-xs font-medium transition-colors relative py-1",
+                      isActive
+                        ? "text-[#5C7651] font-semibold"
+                        : "text-[#858780] hover:text-[#252724]"
+                    )}
+                  >
+                    <span>{item.label}</span>
                   </button>
                 );
               })}
@@ -154,16 +191,16 @@ export function SiteHeader({ onBookAppointmentClick }: SiteHeaderProps) {
                 className="hidden sm:inline-flex"
                 leftIcon={<Calendar className="w-3.5 h-3.5" />}
               >
-                Book Appointment
+                Book Online
               </Button>
 
               {/* Mobile Menu Trigger */}
               <button
                 onClick={() => setIsMobileMenuOpen(true)}
-                aria-label="Open mobile navigation menu"
-                className="lg:hidden p-2 rounded-lg text-[#111311] hover:bg-[#EAF3E9] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#668C63]"
+                aria-label="Open navigation menu"
+                className="lg:hidden p-2 rounded-xl text-[#252724] hover:bg-[#F7F7F5] border border-[#E8E9E5] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5C7651]"
               >
-                <Menu className="w-6 h-6" />
+                <Menu className="w-5 h-5" />
               </button>
             </div>
           </div>
@@ -181,4 +218,3 @@ export function SiteHeader({ onBookAppointmentClick }: SiteHeaderProps) {
     </>
   );
 }
-

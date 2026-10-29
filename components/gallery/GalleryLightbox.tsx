@@ -52,12 +52,12 @@ export function GalleryLightbox({
       role="dialog"
       aria-modal="true"
       aria-label={`Clinic Gallery Image Lightbox: ${currentImage.title}`}
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-md select-none animate-in fade-in duration-200"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/92 backdrop-blur-md select-none animate-in fade-in duration-200"
     >
       {/* Top Header Bar */}
       <div className="absolute top-0 left-0 right-0 p-4 sm:p-6 flex items-center justify-between text-white z-20">
         <div className="flex items-center gap-3">
-          <span className="text-xs font-semibold uppercase tracking-[0.2em] px-3 py-1 rounded-full bg-[#111411]/80 border border-white/20 text-[#B8D8B5]">
+          <span className="text-xs font-semibold uppercase tracking-[0.2em] px-3.5 py-1 rounded-full bg-[#111310]/80 border border-white/20 text-[#C7DDB0]">
             {currentImage.categoryLabel}
           </span>
           <span className="text-xs text-white/70 font-mono">
@@ -68,7 +68,7 @@ export function GalleryLightbox({
         <button
           onClick={onClose}
           aria-label="Close image lightbox"
-          className="p-2.5 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B8D8B5]"
+          className="p-2.5 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C7DDB0]"
         >
           <X className="w-6 h-6" />
         </button>
@@ -78,7 +78,7 @@ export function GalleryLightbox({
       <button
         onClick={onPrev}
         aria-label="Previous clinic image"
-        className="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full bg-black/40 hover:bg-black/70 text-white border border-white/15 backdrop-blur-sm transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B8D8B5]"
+        className="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full bg-black/40 hover:bg-black/70 text-white border border-white/15 backdrop-blur-sm transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C7DDB0]"
       >
         <ChevronLeft className="w-6 h-6" />
       </button>
@@ -86,7 +86,7 @@ export function GalleryLightbox({
       <button
         onClick={onNext}
         aria-label="Next clinic image"
-        className="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full bg-black/40 hover:bg-black/70 text-white border border-white/15 backdrop-blur-sm transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B8D8B5]"
+        className="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full bg-black/40 hover:bg-black/70 text-white border border-white/15 backdrop-blur-sm transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C7DDB0]"
       >
         <ChevronRight className="w-6 h-6" />
       </button>
@@ -112,7 +112,7 @@ export function GalleryLightbox({
           <p className="text-xs sm:text-sm text-white/75 leading-relaxed">
             {currentImage.description}
           </p>
-          <div className="flex items-center justify-center gap-1.5 text-[11px] text-[#B8D8B5] pt-1">
+          <div className="flex items-center justify-center gap-1.5 text-[11px] text-[#C7DDB0] pt-1">
             <MapPin className="w-3.5 h-3.5" />
             <span>Dr. Preethi’s Dentistry · Saibaba Colony, Coimbatore</span>
           </div>
@@ -121,4 +121,3 @@ export function GalleryLightbox({
     </div>
   );
 }
-

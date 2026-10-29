@@ -1,21 +1,6 @@
 import type { Metadata, Viewport } from "next";
-import { DM_Sans, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 import { clinicInfo } from "@/data/clinicInfo";
-
-const dmSans = DM_Sans({
-  subsets: ["latin"],
-  variable: "--font-dm-sans",
-  display: "swap",
-  weight: ["400", "500", "600", "700"],
-});
-
-const cormorant = Cormorant_Garamond({
-  subsets: ["latin"],
-  variable: "--font-cormorant",
-  display: "swap",
-  weight: ["400", "500", "600", "700"],
-});
 
 export const viewport: Viewport = {
   themeColor: "#FFFFFF",
@@ -127,7 +112,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" className={`${dmSans.variable} ${cormorant.variable}`}>
+    <html lang="en">
       <head>
         <script
           type="application/ld+json"

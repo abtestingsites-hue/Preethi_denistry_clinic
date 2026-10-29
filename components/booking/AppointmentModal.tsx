@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useEffect } from "react";
-import { X } from "lucide-react";
+import React, { useEffect, useRef } from "react";
+import { X, Sparkles } from "lucide-react";
 import { AppointmentForm } from "./AppointmentForm";
 
 interface AppointmentModalProps {
@@ -15,6 +15,9 @@ export function AppointmentModal({
   onClose,
   initialTreatmentId,
 }: AppointmentModalProps) {
+  const modalRef = useRef<HTMLDivElement>(null);
+  const previousActiveElement = useRef<HTMLElement | null>(null);
+
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape" && isOpen) {
@@ -23,10 +26,22 @@ export function AppointmentModal({
     };
 
     if (isOpen) {
+      previousActiveElement.current = document.activeElement as HTMLElement;
       document.body.style.overflow = "hidden";
       window.addEventListener("keydown", handleKeyDown);
+
+      // Focus close button or first input after opening
+      setTimeout(() => {
+        const firstInput = modalRef.current?.querySelector<HTMLInputElement>("input, select, textarea, button");
+        if (firstInput) {
+          firstInput.focus();
+        }
+      }, 50);
     } else {
       document.body.style.overflow = "unset";
+      if (previousActiveElement.current) {
+        previousActiveElement.current.focus();
+      }
     }
 
     return () => {
@@ -41,33 +56,38 @@ export function AppointmentModal({
     <div
       role="dialog"
       aria-modal="true"
-      aria-label="Book an Appointment Consultation"
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto"
+      aria-label="Book an Appointment Consultation with Dr. Preethi"
+      className="fixed inset-0 z-50 flex items-center justify-center p-0 sm:p-4 md:p-6 overflow-y-auto"
     >
-      {/* Backdrop */}
+      {/* Dimmed Backdrop */}
       <div
         onClick={onClose}
-        className="fixed inset-0 bg-black/60 backdrop-blur-sm transition-opacity"
+        className="fixed inset-0 bg-black/65 backdrop-blur-sm transition-opacity"
         aria-hidden="true"
       />
 
-      {/* Modal Dialog Content */}
-      <div className="relative w-full max-w-xl bg-white rounded-3xl shadow-elevated z-10 my-8 overflow-hidden animate-in zoom-in-95 duration-200">
-        <div className="absolute top-5 right-5 z-20">
+      {/* Modal Dialog Content: Mobile near-full sheet / Desktop centered rounded panel */}
+      <div
+        ref={modalRef}
+        className="relative w-full max-w-xl bg-white rounded-t-3xl sm:rounded-clinic-2xl shadow-elevated z-10 mt-auto sm:my-8 overflow-hidden animate-in fade-in zoom-in-95 duration-200 border border-[#E8E9E5] max-h-[95vh] sm:max-h-[90vh] flex flex-col"
+      >
+        {/* Top Floating Close Button */}
+        <div className="absolute top-4 right-4 sm:top-5 sm:right-5 z-20">
           <button
             onClick={onClose}
-            aria-label="Close booking modal"
-            className="p-2 rounded-full bg-[#F7FAF7] text-[#111311] hover:bg-[#EAF3E9] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#668C63]"
+            aria-label="Close booking dialog"
+            className="p-2.5 rounded-full bg-[#F7F7F5] text-[#252724] hover:bg-[#E8E9E5] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5C7651]"
           >
             <X className="w-5 h-5" />
           </button>
         </div>
 
-        <div className="p-1 sm:p-2">
+        {/* Scrollable Form Body */}
+        <div className="overflow-y-auto p-1 sm:p-2 flex-1">
           <AppointmentForm
             initialTreatmentId={initialTreatmentId}
             onSuccess={() => {
-              // Keep open for confirmation card review
+              // Stays open to display the confirmation card
             }}
             className="border-none shadow-none p-5 sm:p-8"
           />
@@ -76,4 +96,3 @@ export function AppointmentModal({
     </div>
   );
 }
-

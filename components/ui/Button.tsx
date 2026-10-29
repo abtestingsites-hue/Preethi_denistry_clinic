@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: "primary" | "pastel" | "outline" | "dark" | "ghost";
+  variant?: "primary" | "pistachio" | "pastel" | "outline" | "dark" | "ghost";
   size?: "sm" | "md" | "lg";
   isLoading?: boolean;
   leftIcon?: React.ReactNode;
@@ -26,7 +26,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     ref
   ) => {
     const baseStyles =
-      "inline-flex items-center justify-center font-medium rounded-full transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#668C63] focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none select-none active:scale-[0.98]";
+      "inline-flex items-center justify-center font-medium rounded-full transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5C7651] focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none select-none active:scale-[0.98]";
 
     const sizeStyles = {
       sm: "text-xs px-4 py-2 gap-1.5",
@@ -36,15 +36,17 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 
     const variantStyles = {
       primary:
-        "bg-[#668C63] text-white hover:bg-[#466A45] shadow-sm hover:shadow-md",
+        "bg-[#5C7651] text-white hover:bg-[#455a3c] shadow-subtle hover:shadow-card",
+      pistachio:
+        "bg-[#C7DDB0] text-[#111310] hover:bg-[#b5ce9a] font-semibold shadow-subtle",
       pastel:
-        "bg-[#B8D8B5] text-[#111311] hover:bg-[#a6cca3] font-semibold shadow-sm",
+        "bg-[#C7DDB0] text-[#111310] hover:bg-[#b5ce9a] font-semibold shadow-subtle",
       dark:
-        "bg-[#111411] text-white hover:bg-[#252a25] shadow-sm hover:shadow-md",
+        "bg-[#111310] text-white hover:bg-[#252724] shadow-subtle hover:shadow-card",
       outline:
-        "border border-[#E5EAE4] bg-white text-[#111311] hover:bg-[#EAF3E9] hover:border-[#668C63]",
+        "border border-[#E8E9E5] bg-white text-[#252724] hover:bg-[#F7F7F5] hover:border-[#5C7651]",
       ghost:
-        "text-[#111311] hover:bg-[#F7FAF7] hover:text-[#466A45]",
+        "text-[#252724] hover:bg-[#F7F7F5] hover:text-[#5C7651]",
     };
 
     return (
@@ -91,4 +93,3 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 );
 
 Button.displayName = "Button";
-

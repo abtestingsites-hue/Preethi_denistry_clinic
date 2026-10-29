@@ -25,7 +25,6 @@ export function AppointmentForm({
   onSuccess,
   className,
 }: AppointmentFormProps) {
-  // Find matching treatment title if initialTreatmentId provided
   const resolveTreatmentTitle = useCallback((idOrTitle?: string) => {
     if (!idOrTitle) return "";
     const match = treatmentsData.find(
@@ -54,7 +53,6 @@ export function AppointmentForm({
     useState<AppointmentSubmissionResponse | null>(null);
   const [generalError, setGeneralError] = useState<string | null>(null);
 
-  // Sync initialTreatmentId if changed externally
   useEffect(() => {
     if (initialTreatmentId) {
       setFormData((prev) => ({
@@ -64,7 +62,6 @@ export function AppointmentForm({
     }
   }, [initialTreatmentId, resolveTreatmentTitle]);
 
-  // Today's date formatted as YYYY-MM-DD for min date
   const todayString = new Date().toISOString().split("T")[0];
 
   const handleInputChange = (
@@ -83,7 +80,6 @@ export function AppointmentForm({
       [name]: type === "checkbox" ? checked : value,
     }));
 
-    // Clear specific field error upon editing
     if (errors[name as keyof AppointmentValidationErrors]) {
       setErrors((prev) => ({
         ...prev,
@@ -99,7 +95,6 @@ export function AppointmentForm({
     const validationErrors = validateAppointmentForm(formData);
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
-      // Focus first error element
       const firstErrorKey = Object.keys(validationErrors)[0];
       const element = document.getElementById(`field-${firstErrorKey}`);
       if (element) element.focus();
@@ -157,18 +152,18 @@ export function AppointmentForm({
     <form
       onSubmit={handleSubmit}
       noValidate
-      className={`bg-white rounded-3xl border border-[#E5EAE4] p-6 sm:p-8 space-y-6 shadow-card ${className || ""}`}
+      className={`bg-white rounded-clinic-2xl border border-[#E8E9E5] p-6 sm:p-8 space-y-6 shadow-card ${className || ""}`}
     >
       <div className="space-y-1">
-        <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#668C63]">
+        <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#5C7651]">
           <Sparkles className="w-3.5 h-3.5" />
           <span>Priority Consultation</span>
         </div>
-        <h3 className="font-serif text-2xl sm:text-3xl text-[#111311]">
-          Request Your Appointment
+        <h3 className="font-serif text-2xl sm:text-3xl text-[#252724]">
+          Request an Appointment
         </h3>
-        <p className="text-xs sm:text-sm text-[#666B66]">
-          Please submit your contact details and clinical preferences. Our reception will contact you to confirm timing.
+        <p className="text-xs sm:text-sm text-[#858780]">
+          Please submit your contact details and preferred slot. Our reception team in Saibaba Colony will contact you to confirm timing.
         </p>
       </div>
 
@@ -187,9 +182,9 @@ export function AppointmentForm({
         <div className="space-y-1.5">
           <label
             htmlFor="field-patientName"
-            className="block text-xs font-semibold uppercase tracking-wider text-[#111311]"
+            className="block text-xs font-semibold uppercase tracking-wider text-[#252724]"
           >
-            Full Name <span className="text-[#668C63]">*</span>
+            Full Name <span className="text-[#5C7651]">*</span>
           </label>
           <input
             id="field-patientName"
@@ -201,10 +196,10 @@ export function AppointmentForm({
             aria-required="true"
             aria-invalid={!!errors.patientName}
             aria-describedby={errors.patientName ? "err-patientName" : undefined}
-            className={`w-full px-4 py-3 rounded-xl border text-sm text-[#111311] placeholder:text-[#666B66]/60 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#668C63] ${
+            className={`w-full px-4 py-3 rounded-xl border text-sm text-[#252724] placeholder:text-[#858780]/60 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5C7651] ${
               errors.patientName
                 ? "border-red-400 bg-red-50/20"
-                : "border-[#E5EAE4] bg-[#F7FAF7] focus:bg-white focus:border-[#668C63]"
+                : "border-[#E8E9E5] bg-[#F7F7F5] focus:bg-white focus:border-[#5C7651]"
             }`}
           />
           {errors.patientName && (
@@ -219,12 +214,12 @@ export function AppointmentForm({
           <div className="space-y-1.5">
             <label
               htmlFor="field-mobileNumber"
-              className="block text-xs font-semibold uppercase tracking-wider text-[#111311]"
+              className="block text-xs font-semibold uppercase tracking-wider text-[#252724]"
             >
-              Mobile Number <span className="text-[#668C63]">*</span>
+              Mobile Number <span className="text-[#5C7651]">*</span>
             </label>
             <div className="relative">
-              <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-xs font-medium text-[#666B66]">
+              <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-xs font-medium text-[#858780]">
                 +91
               </span>
               <input
@@ -240,10 +235,10 @@ export function AppointmentForm({
                 aria-describedby={
                   errors.mobileNumber ? "err-mobileNumber" : undefined
                 }
-                className={`w-full pl-12 pr-4 py-3 rounded-xl border text-sm text-[#111311] placeholder:text-[#666B66]/60 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#668C63] ${
+                className={`w-full pl-12 pr-4 py-3 rounded-xl border text-sm text-[#252724] placeholder:text-[#858780]/60 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5C7651] ${
                   errors.mobileNumber
                     ? "border-red-400 bg-red-50/20"
-                    : "border-[#E5EAE4] bg-[#F7FAF7] focus:bg-white focus:border-[#668C63]"
+                    : "border-[#E8E9E5] bg-[#F7F7F5] focus:bg-white focus:border-[#5C7651]"
                 }`}
               />
             </div>
@@ -257,9 +252,9 @@ export function AppointmentForm({
           <div className="space-y-1.5">
             <label
               htmlFor="field-emailAddress"
-              className="block text-xs font-semibold uppercase tracking-wider text-[#111311]"
+              className="block text-xs font-semibold uppercase tracking-wider text-[#252724]"
             >
-              Email Address <span className="text-xs font-normal text-[#666B66]">(Optional)</span>
+              Email Address <span className="text-xs font-normal text-[#858780]">(Optional)</span>
             </label>
             <input
               id="field-emailAddress"
@@ -272,10 +267,10 @@ export function AppointmentForm({
               aria-describedby={
                 errors.emailAddress ? "err-emailAddress" : undefined
               }
-              className={`w-full px-4 py-3 rounded-xl border text-sm text-[#111311] placeholder:text-[#666B66]/60 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#668C63] ${
+              className={`w-full px-4 py-3 rounded-xl border text-sm text-[#252724] placeholder:text-[#858780]/60 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5C7651] ${
                 errors.emailAddress
                   ? "border-red-400 bg-red-50/20"
-                  : "border-[#E5EAE4] bg-[#F7FAF7] focus:bg-white focus:border-[#668C63]"
+                  : "border-[#E8E9E5] bg-[#F7F7F5] focus:bg-white focus:border-[#5C7651]"
               }`}
             />
             {errors.emailAddress && (
@@ -290,9 +285,9 @@ export function AppointmentForm({
         <div className="space-y-1.5">
           <label
             htmlFor="field-preferredTreatment"
-            className="block text-xs font-semibold uppercase tracking-wider text-[#111311]"
+            className="block text-xs font-semibold uppercase tracking-wider text-[#252724]"
           >
-            Preferred Treatment or Consultation <span className="text-[#668C63]">*</span>
+            Preferred Treatment or Consultation <span className="text-[#5C7651]">*</span>
           </label>
           <select
             id="field-preferredTreatment"
@@ -304,10 +299,10 @@ export function AppointmentForm({
             aria-describedby={
               errors.preferredTreatment ? "err-preferredTreatment" : undefined
             }
-            className={`w-full px-4 py-3 rounded-xl border text-sm text-[#111311] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#668C63] ${
+            className={`w-full px-4 py-3 rounded-xl border text-sm text-[#252724] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5C7651] ${
               errors.preferredTreatment
                 ? "border-red-400 bg-red-50/20"
-                : "border-[#E5EAE4] bg-[#F7FAF7] focus:bg-white focus:border-[#668C63]"
+                : "border-[#E8E9E5] bg-[#F7F7F5] focus:bg-white focus:border-[#5C7651]"
             }`}
           >
             <option value="">Select a treatment consultation...</option>
@@ -316,11 +311,14 @@ export function AppointmentForm({
                 {t.title}
               </option>
             ))}
+            <option value="Invisalign® & Clear Aligners Consultation">
+              Invisalign® & Clear Aligners Consultation
+            </option>
             <option value="Initial Oral Examination & General Check-Up">
               Initial Oral Examination & General Check-Up
             </option>
-            <option value="General Dental Consultation">
-              General Dental Consultation
+            <option value="Cosmetic Smile Consultation">
+              Cosmetic Smile Consultation
             </option>
           </select>
           {errors.preferredTreatment && (
@@ -335,9 +333,9 @@ export function AppointmentForm({
           <div className="space-y-1.5">
             <label
               htmlFor="field-preferredDate"
-              className="block text-xs font-semibold uppercase tracking-wider text-[#111311]"
+              className="block text-xs font-semibold uppercase tracking-wider text-[#252724]"
             >
-              Preferred Date <span className="text-[#668C63]">*</span>
+              Preferred Date <span className="text-[#5C7651]">*</span>
             </label>
             <div className="relative">
               <input
@@ -352,10 +350,10 @@ export function AppointmentForm({
                 aria-describedby={
                   errors.preferredDate ? "err-preferredDate" : undefined
                 }
-                className={`w-full px-4 py-3 rounded-xl border text-sm text-[#111311] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#668C63] ${
+                className={`w-full px-4 py-3 rounded-xl border text-sm text-[#252724] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5C7651] ${
                   errors.preferredDate
                     ? "border-red-400 bg-red-50/20"
-                    : "border-[#E5EAE4] bg-[#F7FAF7] focus:bg-white focus:border-[#668C63]"
+                    : "border-[#E8E9E5] bg-[#F7F7F5] focus:bg-white focus:border-[#5C7651]"
                 }`}
               />
             </div>
@@ -369,9 +367,9 @@ export function AppointmentForm({
           <div className="space-y-1.5">
             <label
               htmlFor="field-preferredTimeWindow"
-              className="block text-xs font-semibold uppercase tracking-wider text-[#111311]"
+              className="block text-xs font-semibold uppercase tracking-wider text-[#252724]"
             >
-              Preferred Window <span className="text-[#668C63]">*</span>
+              Preferred Window <span className="text-[#5C7651]">*</span>
             </label>
             <select
               id="field-preferredTimeWindow"
@@ -379,7 +377,7 @@ export function AppointmentForm({
               value={formData.preferredTimeWindow}
               onChange={handleInputChange}
               aria-required="true"
-              className="w-full px-4 py-3 rounded-xl border border-[#E5EAE4] bg-[#F7FAF7] text-sm text-[#111311] focus:bg-white focus:border-[#668C63] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#668C63]"
+              className="w-full px-4 py-3 rounded-xl border border-[#E8E9E5] bg-[#F7F7F5] text-sm text-[#252724] focus:bg-white focus:border-[#5C7651] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5C7651]"
             >
               {timeWindows.map((tw) => (
                 <option key={tw} value={tw}>
@@ -390,13 +388,13 @@ export function AppointmentForm({
           </div>
         </div>
 
-        {/* Additional Message */}
+        {/* Additional Clinical Notes */}
         <div className="space-y-1.5">
           <label
             htmlFor="field-additionalMessage"
-            className="block text-xs font-semibold uppercase tracking-wider text-[#111311]"
+            className="block text-xs font-semibold uppercase tracking-wider text-[#252724]"
           >
-            Clinical Notes or Questions <span className="text-xs font-normal text-[#666B66]">(Optional)</span>
+            Clinical Notes or Questions <span className="text-xs font-normal text-[#858780]">(Optional)</span>
           </label>
           <textarea
             id="field-additionalMessage"
@@ -404,8 +402,8 @@ export function AppointmentForm({
             rows={3}
             value={formData.additionalMessage || ""}
             onChange={handleInputChange}
-            placeholder="Please mention any tooth sensitivity, aesthetic goals, or past treatments..."
-            className="w-full px-4 py-3 rounded-xl border border-[#E5EAE4] bg-[#F7FAF7] text-sm text-[#111311] placeholder:text-[#666B66]/60 focus:bg-white focus:border-[#668C63] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#668C63] transition-all resize-none"
+            placeholder="Please mention any tooth sensitivity, aesthetic aspirations, or past treatments..."
+            className="w-full px-4 py-3 rounded-xl border border-[#E8E9E5] bg-[#F7F7F5] text-sm text-[#252724] placeholder:text-[#858780]/60 focus:bg-white focus:border-[#5C7651] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5C7651] transition-all resize-none"
           />
         </div>
 
@@ -418,14 +416,14 @@ export function AppointmentForm({
               checked={formData.consentAcknowledged}
               onChange={handleInputChange}
               aria-required="true"
-              className="mt-1 w-4 h-4 rounded border-[#E5EAE4] text-[#668C63] focus:ring-[#668C63] focus:ring-offset-0"
+              className="mt-1 w-4 h-4 rounded border-[#E8E9E5] text-[#5C7651] focus:ring-[#5C7651] focus:ring-offset-0"
             />
-            <span className="text-xs text-[#666B66] leading-relaxed">
+            <span className="text-xs text-[#858780] leading-relaxed">
               I authorize Dr. Preethi’s Dentistry reception to contact me via mobile/WhatsApp regarding this appointment enquiry. I agree to the{" "}
               <Link
                 href="/privacy"
                 target="_blank"
-                className="text-[#111311] underline underline-offset-2 hover:text-[#466A45]"
+                className="text-[#252724] underline underline-offset-2 hover:text-[#5C7651]"
               >
                 Privacy Policy
               </Link>
@@ -440,23 +438,22 @@ export function AppointmentForm({
         </div>
       </div>
 
-      {/* Submit Button */}
+      {/* Submit Action */}
       <div className="pt-2">
         <Button
           type="submit"
           variant="primary"
           size="lg"
           isLoading={isSubmitting}
-          className="w-full py-4 text-base"
+          className="w-full py-4 text-base font-medium shadow-card"
           rightIcon={<Send className="w-4 h-4" />}
         >
           Request an Appointment
         </Button>
-        <p className="text-center text-[11px] text-[#666B66] pt-2.5">
-          Consultation requests are confirmed individually by reception. No immediate charge.
+        <p className="text-center text-[11px] text-[#858780] pt-2.5">
+          Consultation requests are confirmed individually by reception. No online payment required.
         </p>
       </div>
     </form>
   );
 }
-

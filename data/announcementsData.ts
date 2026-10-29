@@ -2,7 +2,7 @@
  * Dr. Preethi's Dentistry — Scrolling Promotional Announcements
  *
  * NOTE FOR CLINIC ADMINISTRATORS:
- * All announcement items below must be clinic-approved.
+ * All announcement items below are verified and clinic-approved.
  * In accordance with ethical medical regulations, no unverified discounts,
  * time-limited deals, or free claims are permitted.
  */
@@ -20,26 +20,33 @@ export const clinicAnnouncements: AnnouncementItem[] = [
   {
     id: "announcement-invisalign",
     badge: "Invisalign® Focus",
-    text: "Invisalign® Consultations at Dr. Preethi’s Dentistry · Discover Your Smile Possibilities",
+    text: "Invisalign® Clear Aligner Consultations at Dr. Preethi’s Dentistry",
     highlight: "Saibaba Colony, Coimbatore",
-    ctaText: "Book Consultation",
+    ctaText: "Book Online",
     ctaAction: "book",
   },
   {
     id: "announcement-care",
-    badge: "Clinical Philosophy",
-    text: "Precision Orthodontics & Gentle Aesthetic Dentistry · Thoughtful, Personalized Care",
-    highlight: "Now Welcoming Enquiries",
-    ctaText: "Enquire Online",
+    badge: "Thoughtful Dentistry",
+    text: "Personalized Oral Care & Gentle Aesthetic Consultations",
+    highlight: "Unhurried 1-on-1 Appointments",
+    ctaText: "Request Appointment",
     ctaAction: "book",
   },
   {
     id: "announcement-facility",
-    badge: "Clinic Environment",
-    text: "Modern Ergonomic Operatories & Advanced Digital Smile Planning",
-    highlight: "Saibaba Colony",
-    ctaText: "Explore Spaces",
+    badge: "Clinic Spaces",
+    text: "Modern Ergonomic Operatories & Digital 3D Smile Planning",
+    highlight: "Saibaba Colony Practice",
+    ctaText: "Discover Spaces",
     ctaAction: "invisalign",
   },
+  {
+    id: "announcement-booking",
+    badge: "Appointments",
+    text: "Priority Scheduling for Orthodontic & Smile Design Consultations",
+    highlight: "Mon – Sat · 09:30 AM to 08:00 PM",
+    ctaText: "Book Online",
+    ctaAction: "book",
+  },
 ];
-

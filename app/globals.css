@@ -1,40 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Manrope:wght@300;400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --color-primary-bg: #FFFFFF;
-  --color-secondary-bg: #F7FAF7;
-  --color-soft-green: #EAF3E9;
-  --color-pastel-green: #B8D8B5;
-  --color-brand-green: #668C63;
-  --color-brand-hover: #466A45;
-  --color-primary-text: #111311;
-  --color-secondary-text: #666B66;
-  --color-border: #E5EAE4;
-  --color-dark-feature: #111411;
-  --color-dark-text: #FFFFFF;
+  --font-manrope: "Manrope", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-dm-sans: "DM Sans", "Manrope", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-cormorant: "Cormorant Garamond", Georgia, serif;
+
+  /* Version 4 Refined Minimalism Palette */
+  --color-primary-white: #FFFFFF;
+  --color-warm-white: #F7F8F5;
+  --color-pistachio: #C7DDB0;
+  --color-soft-sage: #A9C49A;
+  --color-deep-green: #5C7651;
+  --color-light-grey: #E8E9E5;
+  --color-medium-grey: #858780;
+  --color-charcoal: #252724;
+  --color-near-black: #111310;
 }
 
 @layer base {
   html {
     scroll-behavior: smooth;
     background-color: #FFFFFF;
-    color: #111311;
+    color: #252724;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
   body {
     background-color: #FFFFFF;
-    color: #111311;
+    color: #252724;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
     overflow-x: hidden;
   }
 
   ::selection {
-    background-color: #B8D8B5;
-    color: #111311;
+    background-color: #C7DDB0;
+    color: #111310;
   }
 }
 
@@ -50,30 +55,52 @@
 
   .border-hairline {
     border-width: 1px;
-    border-color: #E5EAE4;
+    border-color: #E8E9E5;
+  }
+
+  .content-container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  @screen sm {
+    .content-container {
+      padding-left: 1.75rem;
+      padding-right: 1.75rem;
+    }
+  }
+
+  @screen lg {
+    .content-container {
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+    }
   }
 }
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #F7FAF7;
+  background: #F7F8F5;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #B8D8B5;
+  background: #C7DDB0;
   border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #668C63;
+  background: #5C7651;
 }
 
-/* Respect Reduced Motion */
+/* Respect Reduced Motion Preferences */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -84,4 +111,3 @@
     scroll-behavior: auto !important;
   }
 }
-

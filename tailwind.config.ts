@@ -9,41 +9,54 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Version 2 Design System Palette
+        // Version 4 Refined Minimalism Palette
         clinic: {
           bg: "#FFFFFF",
-          secondary: "#F7FAF7",
-          surface: "#EAF3E9",
-          pastel: "#B8D8B5",
-          brand: "#668C63",
-          hover: "#466A45",
-          dark: "#111411",
-          text: "#111311",
-          muted: "#666B66",
-          border: "#E5EAE4",
           white: "#FFFFFF",
+          warm: "#F7F8F5",
+          pistachio: "#C7DDB0",
+          sage: "#A9C49A",
+          deep: "#5C7651",
+          border: "#E8E9E5",
+          greyLight: "#E8E9E5",
+          muted: "#858780",
+          greyMid: "#858780",
+          charcoal: "#252724",
+          text: "#252724",
+          dark: "#111310",
+          // Functional states
+          brand: "#5C7651",
+          hover: "#496041",
         },
       },
       fontFamily: {
-        sans: ["var(--font-dm-sans)", "Inter", "sans-serif"],
+        sans: ["var(--font-manrope)", "var(--font-dm-sans)", "Manrope", "DM Sans", "system-ui", "sans-serif"],
+        display: ["var(--font-manrope)", "var(--font-dm-sans)", "Manrope", "sans-serif"],
         serif: ["var(--font-cormorant)", "Georgia", "serif"],
       },
+      maxWidth: {
+        container: "1200px",
+      },
+      spacing: {
+        "section-desktop": "72px",
+        "section-compact": "56px",
+        "section-mobile": "44px",
+      },
       boxShadow: {
-        subtle: "0 2px 12px rgba(17, 19, 17, 0.04)",
-        card: "0 4px 24px -2px rgba(17, 19, 17, 0.06)",
-        float: "0 16px 40px -4px rgba(17, 19, 17, 0.10)",
-        elevated: "0 24px 60px -8px rgba(17, 19, 17, 0.14)",
+        subtle: "0 1px 3px rgba(37, 39, 36, 0.04), 0 4px 12px rgba(37, 39, 36, 0.03)",
+        card: "0 2px 8px rgba(37, 39, 36, 0.04), 0 12px 24px -4px rgba(37, 39, 36, 0.05)",
+        float: "0 8px 24px -4px rgba(37, 39, 36, 0.08)",
+        elevated: "0 16px 40px -8px rgba(37, 39, 36, 0.10)",
       },
       borderRadius: {
-        clinic: "1rem",
-        "clinic-lg": "1.5rem",
-        "clinic-xl": "2rem",
+        card: "18px",
+        "card-sm": "14px",
+        "card-lg": "22px",
       },
       animation: {
-        marquee: "marquee 35s linear infinite",
-        "marquee-slow": "marquee 45s linear infinite",
+        marquee: "marquee 32s linear infinite",
         "pulse-subtle": "pulseSubtle 3s ease-in-out infinite",
-        float: "float 6s ease-in-out infinite",
+        float: "float 5s ease-in-out infinite",
       },
       keyframes: {
         marquee: {
@@ -52,11 +65,11 @@ const config: Config = {
         },
         pulseSubtle: {
           "0%, 100%": { opacity: "1" },
-          "50%": { opacity: "0.6" },
+          "50%": { opacity: "0.65" },
         },
         float: {
           "0%, 100%": { transform: "translateY(0px)" },
-          "50%": { transform: "translateY(-10px)" },
+          "50%": { transform: "translateY(-6px)" },
         },
       },
     },
@@ -64,4 +77,3 @@ const config: Config = {
   plugins: [],
 };
 export default config;
-

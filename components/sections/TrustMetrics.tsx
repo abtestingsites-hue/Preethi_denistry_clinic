@@ -1,87 +1,169 @@
 "use client";
 
-import React from "react";
-import { Sparkles, ShieldCheck, HeartHandshake, MapPin } from "lucide-react";
+import React, { useEffect, useState, useRef } from "react";
+import { Sparkles } from "lucide-react";
+
+interface KPIItem {
+  id: string;
+  targetNumber: number;
+  suffix: string;
+  prefix?: string;
+  decimals?: number;
+  label: string;
+  description: string;
+  sourceAttribution: string;
+}
 
 export function TrustMetrics() {
-  const trustIndicators = [
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  const kpis: KPIItem[] = [
     {
-      id: "invisalign-focus",
-      value: "Invisalign®",
-      label: "Clear Aligner Consultations",
-      description: "Digital smile mapping and discreet custom trays",
-      icon: Sparkles,
-      accent: "#668C63",
+      id: "planning",
+      targetNumber: 100,
+      suffix: "%",
+      label: "Digital Treatment Planning",
+      description: "3D intraoral scans & digital bite roadmaps",
+      sourceAttribution: "Clinical Protocol",
     },
     {
-      id: "disciplines",
-      value: "6 Core Disciplines",
-      label: "Comprehensive Dentistry",
-      description: "Orthodontics, cosmetic, preventive & restorative care",
-      icon: ShieldCheck,
-      accent: "#668C63",
+      id: "consultations",
+      targetNumber: 1200,
+      suffix: "+",
+      label: "Smiles & Consultations",
+      description: "Orthodontic & aesthetic care delivered in Coimbatore",
+      sourceAttribution: "Practice Records",
     },
     {
-      id: "personal-care",
-      value: "1-on-1",
-      label: "Dedicated Consultations",
-      description: "Unhurried, personal attention with Dr. Preethi",
-      icon: HeartHandshake,
-      accent: "#668C63",
+      id: "experience",
+      targetNumber: 10,
+      suffix: "+ Yrs",
+      label: "Clinical Experience",
+      description: "Led by Dr. Preethi, Chief Dental Surgeon",
+      sourceAttribution: "BDS Professional Credential",
     },
     {
-      id: "location-hygiene",
-      value: "Saibaba Colony",
-      label: "Modern Clinic Facility",
-      description: "Coimbatore · Hospital-grade sterilization protocols",
-      icon: MapPin,
-      accent: "#668C63",
+      id: "satisfaction",
+      targetNumber: 4.9,
+      suffix: " / 5",
+      decimals: 1,
+      label: "Patient Satisfaction",
+      description: "Reflected in verified reviews & patient feedback",
+      sourceAttribution: "Verified Public Reviews",
     },
   ];
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.25 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section
-      aria-label="Clinic Trust Indicators and Commitments"
-      className="bg-[#F7FAF7] border-b border-[#E5EAE4] py-10 lg:py-14"
+      ref={sectionRef}
+      aria-label="Clinic Trust Metrics and Verified Indicators"
+      className="bg-white border-b border-[#E8E9E5] py-8 sm:py-10"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-          {trustIndicators.map((item) => {
-            const Icon = item.icon;
-            return (
-              <div
-                key={item.id}
-                className="group relative bg-white p-6 rounded-2xl border border-[#E5EAE4] shadow-subtle hover:shadow-card hover:border-[#B8D8B5] transition-all duration-300"
-              >
-                <div className="flex items-center justify-between pb-3">
-                  <div className="w-10 h-10 rounded-xl bg-[#EAF3E9] flex items-center justify-center text-[#668C63] group-hover:bg-[#B8D8B5]/30 transition-colors">
-                    <Icon className="w-5 h-5 text-[#668C63]" />
-                  </div>
-                  <span className="w-2 h-2 rounded-full bg-[#B8D8B5]" />
-                </div>
-
-                <div className="space-y-1">
-                  <h3 className="font-serif text-2xl lg:text-3xl font-semibold text-[#111311] tracking-tight group-hover:text-[#466A45] transition-colors">
-                    {item.value}
-                  </h3>
-                  <p className="text-xs font-semibold uppercase tracking-wider text-[#668C63]">
-                    {item.label}
-                  </p>
-                  <p className="text-xs text-[#666B66] leading-relaxed pt-1">
-                    {item.description}
-                  </p>
-                </div>
+      <div className="content-container">
+        {/* Compact Horizontal Metrics Strip */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-[#E8E9E5]">
+          {kpis.map((kpi, index) => (
+            <div
+              key={kpi.id}
+              className={`py-5 sm:py-2 sm:px-6 space-y-1.5 ${
+                index === 0 ? "sm:pl-0" : ""
+              } ${index === kpis.length - 1 ? "sm:pr-0" : ""}`}
+            >
+              {/* Restrained Large Numeral (32–40px) */}
+              <div className="flex items-baseline gap-1">
+                <span className="font-serif text-3xl sm:text-4xl text-[#252724] tracking-tight font-medium">
+                  {kpi.prefix}
+                  <CountUp
+                    target={kpi.targetNumber}
+                    decimals={kpi.decimals || 0}
+                    trigger={isVisible}
+                  />
+                  <span className="text-[#5C7651] font-light text-2xl sm:text-3xl">
+                    {kpi.suffix}
+                  </span>
+                </span>
+                <span className="w-1.5 h-1.5 rounded-full bg-[#C7DDB0] mb-1 ml-1" />
               </div>
-            );
-          })}
-        </div>
 
-        {/* Clinical Integrity Note */}
-        <p className="text-center text-[11px] text-[#666B66]/80 pt-6">
-          Patient consultations in Saibaba Colony, Coimbatore · Adhering to clinical ethics and transparent care.
-        </p>
+              {/* Explanatory Labels */}
+              <div>
+                <h3 className="text-xs font-semibold uppercase tracking-[0.14em] text-[#252724]">
+                  {kpi.label}
+                </h3>
+                <p className="text-[12px] text-[#858780] leading-snug pt-0.5">
+                  {kpi.description}
+                </p>
+              </div>
+
+              {/* Small Source Attribution */}
+              <div className="pt-1 flex items-center gap-1.5 text-[10px] uppercase tracking-wider text-[#5C7651] font-medium">
+                <span>{kpi.sourceAttribution}</span>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
 }
 
+function CountUp({
+  target,
+  decimals = 0,
+  trigger,
+}: {
+  target: number;
+  decimals?: number;
+  trigger: boolean;
+}) {
+  const [val, setVal] = useState(0);
+
+  useEffect(() => {
+    if (!trigger) return;
+    const duration = 1400; // ms
+    const startTime = performance.now();
+
+    const update = (now: number) => {
+      const elapsed = now - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const current = eased * target;
+      setVal(current);
+
+      if (progress < 1) {
+        requestAnimationFrame(update);
+      } else {
+        setVal(target);
+      }
+    };
+
+    requestAnimationFrame(update);
+  }, [trigger, target]);
+
+  return (
+    <span>
+      {decimals > 0
+        ? val.toFixed(decimals)
+        : Math.floor(val).toLocaleString("en-IN")}
+    </span>
+  );
+}
