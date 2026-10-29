@@ -42,7 +42,7 @@ export function FloatingContactBar({
           className="flex flex-col items-center justify-center py-2 px-1 text-xs font-semibold text-white bg-[#5C7651] hover:bg-[#455a3c] rounded-xl shadow-subtle transition-colors"
         >
           <Calendar className="w-4 h-4 mb-1" />
-          <span>Book Online</span>
+          <span>Book Appointment</span>
         </button>
       </div>
     </aside>

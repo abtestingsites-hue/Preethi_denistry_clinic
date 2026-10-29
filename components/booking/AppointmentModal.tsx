@@ -66,10 +66,10 @@ export function AppointmentModal({
         aria-hidden="true"
       />
 
-      {/* Modal Dialog Content: Mobile near-full sheet / Desktop centered rounded panel */}
+      {/* Modal Dialog Content: Mobile bottom sheet / Desktop centered 480–560px panel */}
       <div
         ref={modalRef}
-        className="relative w-full max-w-xl bg-white rounded-t-3xl sm:rounded-clinic-2xl shadow-elevated z-10 mt-auto sm:my-8 overflow-hidden animate-in fade-in zoom-in-95 duration-200 border border-[#E8E9E5] max-h-[95vh] sm:max-h-[90vh] flex flex-col"
+        className="relative w-full max-w-[520px] bg-white rounded-t-3xl sm:rounded-card shadow-card z-10 mt-auto sm:my-8 overflow-hidden animate-in fade-in zoom-in-95 duration-200 border border-[#E8E9E5] max-h-[95vh] sm:max-h-[90vh] flex flex-col"
       >
         {/* Top Floating Close Button */}
         <div className="absolute top-4 right-4 sm:top-5 sm:right-5 z-20">

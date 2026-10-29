@@ -41,11 +41,11 @@ export function FinalCTA({
       </div>
 
       {/* Main Conversion Stage */}
-      <div className="relative py-24 lg:py-32">
+      <div className="relative py-14 sm:py-18 lg:py-20">
         {/* Background Decorative Aligner Graphic & Refraction Aura */}
         <div className="absolute inset-0 pointer-events-none select-none overflow-hidden">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-[#5C7651]/12 rounded-full blur-3xl" />
-          <div className="absolute -top-24 -right-24 w-96 h-96 bg-[#C7DDB0]/10 rounded-full blur-2xl" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#5C7651]/12 rounded-full blur-3xl" />
+          <div className="absolute -top-24 -right-24 w-80 h-80 bg-[#C7DDB0]/10 rounded-full blur-2xl" />
 
           {/* Floating Aligner Tray Graphic Outline */}
           <div className="absolute -bottom-10 right-10 opacity-20 hidden md:block">
@@ -54,7 +54,7 @@ export function FinalCTA({
         </div>
 
         {/* Content Container */}
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
+        <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
           {/* Eyebrow */}
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-xs font-semibold tracking-[0.2em] uppercase text-[#C7DDB0]">
             <Sparkles className="w-3.5 h-3.5 text-[#C7DDB0]" />
@@ -62,13 +62,13 @@ export function FinalCTA({
           </div>
 
           {/* Headline */}
-          <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl text-white tracking-tight leading-[1.08] text-balance">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-[40px] text-white tracking-tight leading-[1.15] text-balance">
             Your Smile Journey <br />
             <span className="italic font-light text-[#C7DDB0]">Starts with a Conversation.</span>
           </h2>
 
           {/* Supporting Copy */}
-          <p className="text-base sm:text-lg text-white/80 leading-relaxed max-w-2xl mx-auto font-light">
+          <p className="text-sm sm:text-base text-white/80 leading-relaxed max-w-xl mx-auto font-light">
             Take the first step toward understanding your clear aligner or dental care options with an unhurried, one-on-one consultation with Dr. Preethi in Saibaba Colony.
           </p>
 

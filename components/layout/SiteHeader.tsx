@@ -68,10 +68,10 @@ export function SiteHeader({ onBookAppointmentClick }: SiteHeaderProps) {
     { label: "About", id: "about" },
     { label: "Treatments", id: "treatments" },
     { label: "Invisalign", id: "invisalign" },
-    { label: "Our Clinic", id: "gallery" },
+    { label: "Clinic Gallery", id: "gallery" },
     { label: "Meet Dr. Preethi", id: "dentist" },
-    { label: "The Journal", id: "blogs" },
-    { label: "Reviews", id: "testimonials" },
+    { label: "Patient Reviews", id: "testimonials" },
+    { label: "Blog", id: "blogs" },
     { label: "Contact", id: "contact" },
   ];
 
@@ -86,7 +86,7 @@ export function SiteHeader({ onBookAppointmentClick }: SiteHeaderProps) {
         )}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20">
+          <div className="flex items-center justify-between h-[72px]">
             {/* Wordmark / Brand Identity */}
             <a
               href="#hero"
@@ -191,7 +191,7 @@ export function SiteHeader({ onBookAppointmentClick }: SiteHeaderProps) {
                 className="hidden sm:inline-flex"
                 leftIcon={<Calendar className="w-3.5 h-3.5" />}
               >
-                Book Online
+                Book Appointment
               </Button>
 
               {/* Mobile Menu Trigger */}

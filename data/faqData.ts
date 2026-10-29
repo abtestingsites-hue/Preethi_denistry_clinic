@@ -28,11 +28,11 @@ export const faqData: FAQItem[] = [
       "Dr. Preethi’s Dentistry is located in Saibaba Colony, Coimbatore, Tamil Nadu 641011. The clinic is easily accessible with convenient local parking and prominent neighborhood landmarks. An interactive Google Maps directions tool is available in our Contact section below.",
   },
   {
-    id: "faq-what-to-bring",
+    id: "faq-what-to-expect",
     category: "consultation",
-    question: "What should I bring to my consultation?",
+    question: "What should I expect at my consultation?",
     answer:
-      "Please bring any recent dental records, X-rays taken within the past year, and a list of current medications or health conditions you may have. If you wear existing retainers or nightguards, bringing those along is also very helpful for clinical assessment.",
+      "At your consultation, Dr. Preethi conducts an unhurried, one-on-one examination to discuss your dental concerns and aesthetic goals. If you are exploring clear aligners, we perform a precision 3D digital intraoral scan to visualize your dental arch without uncomfortable putty trays, followed by a transparent discussion of treatment pathways.",
   },
   {
     id: "faq-contact-reception",
@@ -44,9 +44,9 @@ export const faqData: FAQItem[] = [
   {
     id: "faq-change-appointment",
     category: "booking",
-    question: "How can I change my appointment request?",
+    question: "How can I reschedule an appointment?",
     answer:
-      "If you need to reschedule or modify your appointment request, please contact our reception desk by phone or WhatsApp at least 24 hours prior to your slot. Our clinic staff will promptly help you choose a convenient alternate date or time.",
+      "If you need to reschedule or modify your appointment request, please contact our reception desk by phone or WhatsApp at least 24 hours prior to your scheduled time. Our clinic staff will gladly assist in finding an alternate date and time that fits your schedule.",
   },
 ];
 

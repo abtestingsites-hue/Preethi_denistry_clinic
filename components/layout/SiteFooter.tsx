@@ -23,8 +23,8 @@ export function SiteFooter() {
   return (
     <footer className="bg-[#111310] text-white border-t border-white/10">
       {/* Main Footer Grid */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-12">
+      <div className="content-container py-12 sm:py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-10">
           {/* Column 1: Brand & Identity (2 cols on large) */}
           <div className="lg:col-span-2 space-y-6">
             <div className="space-y-1">

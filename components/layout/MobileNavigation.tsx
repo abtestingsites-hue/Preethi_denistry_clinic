@@ -139,7 +139,7 @@ export function MobileNavigation({
             className="w-full shadow-card font-medium"
             leftIcon={<Calendar className="w-4 h-4" />}
           >
-            Book Online
+            Book Appointment
           </Button>
 
           <div className="space-y-2 text-xs text-[#858780] pt-1">

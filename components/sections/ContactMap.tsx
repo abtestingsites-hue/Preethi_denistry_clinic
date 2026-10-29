@@ -28,19 +28,19 @@ export function ContactMap({ onBookAppointment }: ContactMapProps) {
     <section
       id="contact"
       aria-label="Contact Information and Clinic Location"
-      className="py-20 lg:py-28 bg-white border-b border-[#E8E9E5]"
+      className="py-14 sm:py-18 lg:py-20 bg-white border-b border-[#E8E9E5]"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 lg:space-y-16">
+      <div className="content-container space-y-8 sm:space-y-10">
         {/* Section Header */}
-        <div className="max-w-3xl space-y-3">
-          <div className="flex items-center gap-2 text-xs font-semibold tracking-[0.2em] uppercase text-[#5C7651]">
+        <div className="max-w-2xl space-y-2">
+          <div className="flex items-center gap-2 text-xs font-semibold tracking-[0.18em] uppercase text-[#5C7651]">
             <Sparkles className="w-3.5 h-3.5" />
             <span>LOCATION & CLINICAL RECEPTION</span>
           </div>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#252724] tracking-tight leading-[1.15]">
+          <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl text-[#252724] tracking-tight leading-[1.18]">
             Visit Us in Coimbatore.
           </h2>
-          <p className="text-base sm:text-lg text-[#858780] leading-relaxed pt-1">
+          <p className="text-sm sm:text-base text-[#858780] leading-relaxed">
             Conveniently situated in Saibaba Colony with accessible parking and peaceful clinical surroundings. Reach our reception by phone, WhatsApp, or request an appointment online.
           </p>
         </div>
@@ -48,7 +48,7 @@ export function ContactMap({ onBookAppointment }: ContactMapProps) {
         {/* Split-Layout Grid (5 cols info & booking CTA, 7 cols responsive map) */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
           {/* Left Panel: Contact Information & Direct Action (5 cols) */}
-          <div className="lg:col-span-5 bg-[#F7F7F5] rounded-clinic-2xl border border-[#E8E9E5] p-7 sm:p-9 flex flex-col justify-between space-y-8 shadow-subtle">
+          <div className="lg:col-span-5 bg-[#F7F8F5] rounded-card border border-[#E8E9E5] p-6 sm:p-8 flex flex-col justify-between space-y-6 shadow-subtle">
             <div className="space-y-6">
               <div className="space-y-1">
                 <span className="text-xs font-semibold uppercase tracking-wider text-[#5C7651]">
@@ -150,7 +150,7 @@ export function ContactMap({ onBookAppointment }: ContactMapProps) {
           </div>
 
           {/* Right Panel: Embedded Google Map & Small Clinic Photo Overlay (7 cols) */}
-          <div className="lg:col-span-7 flex flex-col justify-between rounded-clinic-2xl overflow-hidden border border-[#E8E9E5] bg-white shadow-card min-h-[420px] sm:min-h-[480px] relative">
+          <div className="lg:col-span-7 flex flex-col justify-between rounded-card overflow-hidden border border-[#E8E9E5] bg-white shadow-card min-h-[420px] sm:min-h-[480px] relative">
             {/* Map Frame Container */}
             <div className="relative flex-1 w-full h-full min-h-[380px]">
               {!mapError ? (
