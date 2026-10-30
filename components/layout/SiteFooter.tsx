@@ -3,6 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { MapPin, Phone, Mail, Clock, ArrowUpRight, Sparkles } from "lucide-react";
+import { ClinicLogo } from "@/components/ui/ClinicLogo";
 import { clinicInfo } from "@/data/clinicInfo";
 
 export function SiteFooter() {
@@ -29,13 +30,8 @@ export function SiteFooter() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-10">
           {/* Col 1: Brand & Identity (4 cols) */}
           <div className="lg:col-span-4 space-y-4">
-            <div className="space-y-1">
-              <span className="font-serif text-2xl text-white font-semibold tracking-tight">
-                Dr. Preethi’s
-              </span>
-              <p className="text-[11px] tracking-[0.22em] uppercase text-[#C7DDB0] font-medium">
-                Dentistry · Saibaba Colony
-              </p>
+            <div className="pt-0.5">
+              <ClinicLogo variant="white" className="h-11 sm:h-12 w-auto opacity-95" />
             </div>
 
             <p className="text-xs text-white/70 leading-relaxed max-w-sm font-light">

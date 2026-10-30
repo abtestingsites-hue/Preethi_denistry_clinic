@@ -3,6 +3,7 @@
 import React, { useEffect } from "react";
 import { X, Calendar, MapPin, Phone, ArrowRight, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/Button";
+import { ClinicLogo } from "@/components/ui/ClinicLogo";
 import { clinicInfo } from "@/data/clinicInfo";
 import { cn } from "@/lib/utils";
 
@@ -92,13 +93,8 @@ export function MobileNavigation({
         <div className="space-y-6">
           {/* Header Row */}
           <div className="flex items-center justify-between pb-4 border-b border-[#E8E9E5]">
-            <div className="flex flex-col">
-              <span className="font-serif text-lg font-semibold text-[#252724]">
-                Dr. Preethi’s
-              </span>
-              <span className="text-[10px] tracking-widest uppercase text-[#858780]">
-                Dentistry · Coimbatore
-              </span>
+            <div className="flex items-center">
+              <ClinicLogo variant="dark" className="h-9 w-auto" />
             </div>
 
             <button

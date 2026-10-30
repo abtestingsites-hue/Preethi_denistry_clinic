@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { Calendar, Menu } from "lucide-react";
 import { Button } from "@/components/ui/Button";
+import { ClinicLogo } from "@/components/ui/ClinicLogo";
 import { MobileNavigation } from "./MobileNavigation";
 import { cn } from "@/lib/utils";
 
@@ -82,39 +83,17 @@ export function SiteHeader({ onBookAppointmentClick }: SiteHeaderProps) {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-[72px]">
-            {/* Wordmark / Brand Identity */}
+            {/* Wordmark / Official Brand Identity Logo */}
             <a
               href="#hero"
               onClick={(e) => {
                 e.preventDefault();
                 scrollToSection("hero");
               }}
-              className="flex items-center gap-3 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5C7651] rounded-lg p-1"
+              className="flex items-center group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5C7651] rounded-lg py-1 px-0.5"
+              aria-label="Dr. Preethi's Dentistry - Home"
             >
-              {/* Brand Aligner Arc Mark */}
-              <div className="w-10 h-10 rounded-full bg-[#C7DDB0]/40 border border-[#A9C49A]/50 flex items-center justify-center text-[#5C7651] group-hover:bg-[#C7DDB0]/60 transition-colors">
-                <svg
-                  className="w-5 h-5 text-[#5C7651]"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2.2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  aria-hidden="true"
-                >
-                  <path d="M4 14c2-5 7-9 12-7 4 1 5 4 4 7-1 2-3 3-5 3s-4-2-6-3-4 0-5 0" />
-                </svg>
-              </div>
-
-              <div className="flex flex-col">
-                <span className="font-serif text-xl sm:text-2xl text-[#252724] tracking-tight font-semibold leading-tight group-hover:text-[#5C7651] transition-colors">
-                  Dr. Preethi’s
-                </span>
-                <span className="text-[10px] tracking-[0.22em] uppercase text-[#858780] font-medium">
-                  Dentistry · Saibaba Colony
-                </span>
-              </div>
+              <ClinicLogo variant="dark" className="h-10 sm:h-12 w-auto" />
             </a>
 
             {/* Desktop Navigation Links */}
