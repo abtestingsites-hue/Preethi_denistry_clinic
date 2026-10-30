@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
-import { AnnouncementMarquee } from "@/components/layout/AnnouncementMarquee";
 import { SiteHeader } from "@/components/layout/SiteHeader";
+import { ScrollVelocityBand } from "@/components/ui/ScrollVelocityBand";
 import { EditorialHero } from "@/components/sections/EditorialHero";
 import { TrustMetrics } from "@/components/sections/TrustMetrics";
 import { ClinicAbout } from "@/components/sections/ClinicAbout";
@@ -14,7 +14,6 @@ import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
 import { BlogSection } from "@/components/sections/BlogSection";
 import { FAQAccordion } from "@/components/sections/FAQAccordion";
 import { ContactMap } from "@/components/sections/ContactMap";
-import { ScrollVelocityBand } from "@/components/ui/ScrollVelocityBand";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { BackToTop } from "@/components/ui/BackToTop";
 import { FloatingContactBar } from "@/components/ui/FloatingContactBar";
@@ -57,11 +56,11 @@ export default function HomePage() {
 
   return (
     <div className="flex flex-col min-h-screen bg-white">
-      {/* SECTION 01 — ANNOUNCEMENT MARQUEE (Above main navigation) */}
-      <AnnouncementMarquee onBookClick={() => handleOpenBooking()} />
-
-      {/* SECTION 02 — PREMIUM NAVIGATION */}
+      {/* NAVIGATION BAR */}
       <SiteHeader onBookAppointmentClick={() => handleOpenBooking()} />
+
+      {/* SPECIAL OFFER MARQUEE SCROLL BAR — ALIGNED DIRECTLY BELOW NAVBAR */}
+      <ScrollVelocityBand onBookClick={() => handleOpenBooking()} />
 
       <main className="flex-1">
         {/* SECTION 03 — OVERSIZED EDITORIAL HERO */}
@@ -70,9 +69,6 @@ export default function HomePage() {
           onExploreInvisalign={handleExploreInvisalign}
           onExploreClinic={handleExploreClinic}
         />
-
-        {/* CONTINUOUS SCROLLING TICKER BAND */}
-        <ScrollVelocityBand />
 
         {/* SECTION 04 — CLINIC TRUST METRICS */}
         <TrustMetrics />
