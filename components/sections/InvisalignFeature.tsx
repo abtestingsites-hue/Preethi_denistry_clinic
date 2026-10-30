@@ -39,15 +39,15 @@ export function InvisalignFeature({
     <section
       id="invisalign"
       aria-label="Signature Clear Aligner Experience"
-      className="py-18 sm:py-24 lg:py-28 bg-[#FAFAF7] border-b border-[#E7E9E2]"
+      className="py-14 sm:py-18 lg:py-20 bg-white border-b border-[#E8E9E5] scroll-mt-20"
     >
-      <div className="content-container space-y-10 lg:space-y-14">
+      <div className="content-container space-y-10 lg:space-y-12">
         {/* Two-Column Layout (Left: 3D Visual, Right: Journey & Process) */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           {/* Left Column: Contained 3D Dental Arch & Aligner (5 cols) */}
           <div className="lg:col-span-5 relative">
             <Aligner3DViewer
-              initialMode="tray-closeup"
+              initialMode="side-profile"
               showControls={true}
               interactive={true}
               compact={true}
@@ -55,36 +55,36 @@ export function InvisalignFeature({
           </div>
 
           {/* Right Column: Heading, Description, Process, CTA (7 cols) */}
-          <div className="lg:col-span-7 space-y-6">
+          <div className="lg:col-span-7 space-y-5">
             <div className="space-y-2">
-              <div className="flex items-center gap-2 text-xs font-semibold tracking-[0.18em] uppercase text-[#607C55]">
-                <Sparkles className="w-3.5 h-3.5 text-[#607C55]" />
+              <div className="flex items-center gap-2 text-xs font-semibold tracking-[0.18em] uppercase text-[#6a774b]">
+                <Sparkles className="w-3.5 h-3.5 text-[#6a774b]" />
                 <span>SIGNATURE ORTHODONTICS</span>
               </div>
-              <h2 className="font-serif text-3xl sm:text-4xl lg:text-[40px] text-[#20231F] tracking-tight leading-[1.15] font-normal">
+              <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl text-[#181A16] tracking-tight leading-[1.18]">
                 Precision in every step.
               </h2>
-              <p className="text-sm sm:text-base text-[#777D75] leading-relaxed pt-1">
+              <p className="text-sm sm:text-base text-[#858780] leading-relaxed pt-1">
                 Clear aligners gradually guide your teeth into optimal alignment using custom-molded, biocompatible biopolymer trays—free from brackets, metal wires, or dietary restrictions.
               </p>
             </div>
 
             {/* Compact 4-Step Process Indicator */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-1">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
               {steps.map((step) => (
                 <div
                   key={step.num}
-                  className="p-4 rounded-card-sm bg-[#F2F4EF] border border-[#E7E9E2] space-y-1"
+                  className="p-3.5 rounded-card-sm bg-[#F7F8F5] border border-[#E8E9E5] space-y-1"
                 >
                   <div className="flex items-center gap-2">
-                    <span className="font-mono text-[11px] font-bold text-[#607C55] px-2 py-0.5 rounded-full bg-[#DCE8CF]/50">
+                    <span className="font-mono text-[11px] font-bold text-[#6a774b] px-2 py-0.5 rounded-full bg-[#8f9d6f]/25">
                       {step.num}
                     </span>
-                    <h3 className="font-semibold text-xs text-[#20231F]">
+                    <h3 className="font-semibold text-xs text-[#181A16]">
                       {step.title}
                     </h3>
                   </div>
-                  <p className="text-[12px] text-[#777D75] leading-snug pl-7">
+                  <p className="text-[12px] text-[#858780] leading-snug pl-7">
                     {step.description}
                   </p>
                 </div>
@@ -92,10 +92,10 @@ export function InvisalignFeature({
             </div>
 
             {/* Clinical Advisory Statement */}
-            <div className="p-4 rounded-card-sm bg-[#F2F4EF] border border-[#E7E9E2] flex items-start gap-2.5 text-xs text-[#777D75]">
-              <Info className="w-4 h-4 text-[#607C55] shrink-0 mt-0.5" />
+            <div className="p-3.5 rounded-card-sm bg-[#F7F8F5] border border-[#E8E9E5] flex items-start gap-2.5 text-xs text-[#858780]">
+              <Info className="w-4 h-4 text-[#6a774b] shrink-0 mt-0.5" />
               <p>
-                <strong className="text-[#20231F]">Clinical Advisory:</strong> Treatment suitability and duration depend on individual bite complexity and Dr. Preethi’s clinical evaluation.
+                <strong className="text-[#181A16]">Clinical Advisory:</strong> Treatment suitability and duration depend on individual bite complexity and Dr. Preethi’s clinical evaluation.
               </p>
             </div>
 
@@ -105,7 +105,7 @@ export function InvisalignFeature({
                 variant="primary"
                 size="md"
                 onClick={onEnquireInvisalign}
-                className="text-xs sm:text-sm px-6 h-11 shadow-subtle bg-[#607C55] hover:bg-[#4E6645] text-white"
+                className="text-xs sm:text-sm px-6 py-2.5 shadow-subtle bg-[#6a774b] hover:bg-[#58633d]"
                 rightIcon={<ArrowRight className="w-3.5 h-3.5" />}
               >
                 Enquire About Clear Aligners

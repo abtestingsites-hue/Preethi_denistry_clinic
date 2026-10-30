@@ -7,7 +7,7 @@ import { MobileNavigation } from "./MobileNavigation";
 import { cn } from "@/lib/utils";
 
 interface SiteHeaderProps {
-  onBookAppointmentClick: () => void;
+  onBookAppointmentClick?: () => void;
 }
 
 export function SiteHeader({ onBookAppointmentClick }: SiteHeaderProps) {
@@ -25,10 +25,7 @@ export function SiteHeader({ onBookAppointmentClick }: SiteHeaderProps) {
         "treatments",
         "invisalign",
         "gallery",
-        "dentist",
         "testimonials",
-        "blogs",
-        "faq",
         "contact",
       ];
       const scrollPosition = window.scrollY + 140;
@@ -53,7 +50,7 @@ export function SiteHeader({ onBookAppointmentClick }: SiteHeaderProps) {
   const scrollToSection = (id: string) => {
     const el = document.getElementById(id);
     if (el) {
-      const headerOffset = 80;
+      const headerOffset = 76;
       const elPosition = el.getBoundingClientRect().top;
       const offsetPosition = elPosition + window.pageYOffset - headerOffset;
       window.scrollTo({
@@ -63,30 +60,28 @@ export function SiteHeader({ onBookAppointmentClick }: SiteHeaderProps) {
     }
   };
 
+  // Modified nav items: Removed "Meet Dr. Preethi", "Blog", and converted "Contact" into prominent button
   const navItems = [
     { label: "Home", id: "hero" },
     { label: "About", id: "about" },
     { label: "Treatments", id: "treatments" },
     { label: "Invisalign", id: "invisalign" },
     { label: "Clinic Gallery", id: "gallery" },
-    { label: "Meet Dr. Preethi", id: "dentist" },
     { label: "Patient Reviews", id: "testimonials" },
-    { label: "Blog", id: "blogs" },
-    { label: "Contact", id: "contact" },
   ];
 
   return (
     <>
       <header
         className={cn(
-          "sticky top-0 z-40 w-full transition-all duration-300",
+          "sticky top-0 z-50 w-full transition-all duration-300",
           isScrolled
-            ? "bg-[#FAFAF7]/95 backdrop-blur-md shadow-subtle border-b border-[#E7E9E2]"
-            : "bg-[#FAFAF7] border-b border-[#E7E9E2]/70"
+            ? "bg-white/95 backdrop-blur-md shadow-subtle border-b border-[#E8E9E5]"
+            : "bg-white border-b border-[#E8E9E5]/70"
         )}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-[74px]">
+          <div className="flex items-center justify-between h-[72px]">
             {/* Wordmark / Brand Identity */}
             <a
               href="#hero"
@@ -94,12 +89,12 @@ export function SiteHeader({ onBookAppointmentClick }: SiteHeaderProps) {
                 e.preventDefault();
                 scrollToSection("hero");
               }}
-              className="flex items-center gap-3 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#607C55] rounded-lg p-1"
+              className="flex items-center gap-3 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6a774b] rounded-lg p-1"
             >
               {/* Brand Aligner Arc Mark */}
-              <div className="w-10 h-10 rounded-full bg-[#DCE8CF]/40 border border-[#607C55]/30 flex items-center justify-center text-[#607C55] group-hover:bg-[#DCE8CF]/70 transition-colors">
+              <div className="w-10 h-10 rounded-full bg-[#8f9d6f]/25 border border-[#8f9d6f]/40 flex items-center justify-center text-[#6a774b] group-hover:bg-[#8f9d6f]/45 transition-colors">
                 <svg
-                  className="w-5 h-5 text-[#607C55]"
+                  className="w-5 h-5 text-[#6a774b]"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
@@ -113,10 +108,10 @@ export function SiteHeader({ onBookAppointmentClick }: SiteHeaderProps) {
               </div>
 
               <div className="flex flex-col">
-                <span className="font-serif text-xl sm:text-2xl text-[#20231F] tracking-tight font-normal leading-tight group-hover:text-[#607C55] transition-colors">
+                <span className="font-serif text-xl sm:text-2xl text-[#181A16] tracking-tight font-semibold leading-tight group-hover:text-[#6a774b] transition-colors">
                   Dr. Preethi’s
                 </span>
-                <span className="text-[10px] tracking-[0.22em] uppercase text-[#777D75] font-medium">
+                <span className="text-[10px] tracking-[0.22em] uppercase text-[#858780] font-medium">
                   Dentistry · Saibaba Colony
                 </span>
               </div>
@@ -125,7 +120,7 @@ export function SiteHeader({ onBookAppointmentClick }: SiteHeaderProps) {
             {/* Desktop Navigation Links */}
             <nav
               aria-label="Main Navigation"
-              className="hidden xl:flex items-center gap-6"
+              className="hidden lg:flex items-center gap-7"
             >
               {navItems.map((item) => {
                 const isActive = activeSection === item.id;
@@ -134,71 +129,36 @@ export function SiteHeader({ onBookAppointmentClick }: SiteHeaderProps) {
                     key={item.id}
                     onClick={() => scrollToSection(item.id)}
                     className={cn(
-                      "text-sm font-medium transition-colors relative py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#607C55] rounded",
+                      "text-sm font-medium transition-colors relative py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6a774b] rounded",
                       isActive
-                        ? "text-[#607C55] font-semibold"
-                        : "text-[#777D75] hover:text-[#20231F]"
+                        ? "text-[#6a774b] font-semibold"
+                        : "text-[#858780] hover:text-[#181A16]"
                     )}
                   >
                     <span>{item.label}</span>
                     {isActive && (
-                      <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#607C55] rounded-full" />
+                      <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#6a774b] rounded-full" />
                     )}
                   </button>
                 );
               })}
             </nav>
 
-            {/* Compact Nav for Large Screens (1024-1279px) */}
-            <nav
-              aria-label="Compact Main Navigation"
-              className="hidden lg:flex xl:hidden items-center gap-4"
-            >
-              {[
-                { label: "About", id: "about" },
-                { label: "Treatments", id: "treatments" },
-                { label: "Invisalign", id: "invisalign" },
-                { label: "Story", id: "aligner-experience" },
-                { label: "Clinic", id: "gallery" },
-                { label: "Doctor", id: "dentist" },
-                { label: "Reviews", id: "testimonials" },
-                { label: "Contact", id: "contact" },
-              ].map((item) => {
-                const isActive = activeSection === item.id;
-                return (
-                  <button
-                    key={item.id}
-                    onClick={() => scrollToSection(item.id)}
-                    className={cn(
-                      "text-xs font-medium transition-colors relative py-1",
-                      isActive
-                        ? "text-[#607C55] font-semibold"
-                        : "text-[#777D75] hover:text-[#20231F]"
-                    )}
-                  >
-                    <span>{item.label}</span>
-                  </button>
-                );
-              })}
-            </nav>
-
-            {/* Right Desktop CTA & Mobile Toggle */}
+            {/* Right: Prominent "Contact" Button & Mobile Toggle */}
             <div className="flex items-center gap-3">
-              <Button
-                variant="primary"
-                size="sm"
-                onClick={onBookAppointmentClick}
-                className="hidden sm:inline-flex h-11 bg-[#607C55] hover:bg-[#4E6645] text-white shadow-subtle px-5"
-                leftIcon={<Calendar className="w-3.5 h-3.5" />}
+              <button
+                type="button"
+                onClick={() => scrollToSection("contact")}
+                className="hidden sm:inline-flex items-center justify-center px-5 py-2 rounded-full text-xs sm:text-sm font-semibold text-white bg-[#6a774b] hover:bg-[#58633d] shadow-subtle hover:shadow-card transition-all active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6a774b]"
               >
-                Book Appointment
-              </Button>
+                Contact
+              </button>
 
               {/* Mobile Menu Trigger */}
               <button
                 onClick={() => setIsMobileMenuOpen(true)}
                 aria-label="Open navigation menu"
-                className="lg:hidden p-2 rounded-xl text-[#20231F] hover:bg-[#F2F4EF] border border-[#E7E9E2] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#607C55]"
+                className="lg:hidden p-2 rounded-xl text-[#181A16] hover:bg-[#F7F8F5] border border-[#E8E9E5] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6a774b]"
               >
                 <Menu className="w-5 h-5" />
               </button>
@@ -213,7 +173,7 @@ export function SiteHeader({ onBookAppointmentClick }: SiteHeaderProps) {
         onClose={() => setIsMobileMenuOpen(false)}
         activeSection={activeSection}
         onNavigate={scrollToSection}
-        onBookAppointment={onBookAppointmentClick}
+        onContact={() => scrollToSection("contact")}
       />
     </>
   );

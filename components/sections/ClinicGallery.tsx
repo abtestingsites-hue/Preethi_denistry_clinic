@@ -38,20 +38,20 @@ export function ClinicGallery() {
     <section
       id="gallery"
       aria-label="Clinic Spaces and Gallery"
-      className="py-18 sm:py-24 lg:py-28 bg-[#F2F4EF] border-b border-[#E7E9E2]"
+      className="scroll-mt-20 py-14 sm:py-18 lg:py-20 bg-[#F7F8F5] border-b border-[#E8E9E5]"
     >
       <div className="content-container space-y-8 sm:space-y-10">
         {/* Section Header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
           <div className="max-w-xl space-y-2">
-            <div className="flex items-center gap-2 text-xs font-semibold tracking-[0.18em] uppercase text-[#607C55]">
-              <Sparkles className="w-3.5 h-3.5 text-[#607C55]" />
+            <div className="flex items-center gap-2 text-xs font-semibold tracking-[0.18em] uppercase text-[#6a774b]">
+              <Sparkles className="w-3.5 h-3.5 text-[#6a774b]" />
               <span>AUTHENTIC CLINIC SPACES</span>
             </div>
-            <h2 className="font-serif text-3xl sm:text-4xl lg:text-[40px] text-[#20231F] tracking-tight leading-[1.15] font-normal">
+            <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl text-[#181A16] tracking-tight leading-[1.18]">
               Clinic Gallery.
             </h2>
-            <p className="text-sm text-[#777D75] leading-relaxed">
+            <p className="text-sm text-[#858780] leading-relaxed">
               Explore our reception lounge, consultation desks, and ergonomic treatment operatories in Saibaba Colony, Coimbatore.
             </p>
           </div>
@@ -59,9 +59,9 @@ export function ClinicGallery() {
           <button
             type="button"
             onClick={() => handleOpenLightbox(featuredIndex)}
-            className="px-5 py-2.5 rounded-full bg-white border border-[#E7E9E2] text-xs font-semibold text-[#20231F] hover:bg-[#DCE8CF]/40 hover:border-[#607C55] shadow-subtle inline-flex items-center gap-2 transition-all self-start sm:self-auto shrink-0"
+            className="px-4 py-2 rounded-full bg-white border border-[#E8E9E5] text-xs font-semibold text-[#181A16] hover:bg-[#8f9d6f]/15 hover:border-[#6a774b] shadow-subtle inline-flex items-center gap-2 transition-all self-start sm:self-auto shrink-0"
           >
-            <Eye className="w-3.5 h-3.5 text-[#607C55]" />
+            <Eye className="w-3.5 h-3.5 text-[#6a774b]" />
             <span>View All Photos</span>
           </button>
         </div>
@@ -71,7 +71,7 @@ export function ClinicGallery() {
           {/* Main Large Featured Image (7 cols) */}
           <div
             onClick={() => handleOpenLightbox(featuredIndex)}
-            className="lg:col-span-7 relative rounded-card overflow-hidden bg-white border border-[#E7E9E2] shadow-card group cursor-pointer min-h-[280px] sm:min-h-[360px]"
+            className="lg:col-span-7 relative rounded-card overflow-hidden bg-white border border-[#E8E9E5] shadow-card group cursor-pointer min-h-[280px] sm:min-h-[360px]"
           >
             <Image
               src={currentFeatured.fallbackUrl}
@@ -88,14 +88,14 @@ export function ClinicGallery() {
             </div>
 
             {/* Bottom Caption Pill */}
-            <div className="absolute bottom-3 left-3 right-3 p-3.5 rounded-xl bg-white/95 backdrop-blur-md border border-white/60 shadow-subtle text-[#20231F]">
-              <div className="flex items-center justify-between text-[11px] font-semibold uppercase tracking-wider text-[#607C55]">
+            <div className="absolute bottom-3 left-3 right-3 p-3.5 rounded-xl bg-white/95 backdrop-blur-md border border-white/60 shadow-subtle text-[#181A16]">
+              <div className="flex items-center justify-between text-[11px] font-semibold uppercase tracking-wider text-[#6a774b]">
                 <span>{currentFeatured.categoryLabel}</span>
-                <span className="font-mono text-[#777D75]">
+                <span className="font-mono text-[#858780]">
                   0{featuredIndex + 1} / 0{images.length}
                 </span>
               </div>
-              <h3 className="font-serif text-base sm:text-lg font-normal text-[#20231F] pt-0.5 truncate">
+              <h3 className="font-serif text-base sm:text-lg font-semibold text-[#181A16] pt-0.5 truncate">
                 {currentFeatured.title}
               </h3>
             </div>
@@ -109,7 +109,7 @@ export function ClinicGallery() {
                 <div
                   key={img.id}
                   onClick={() => setFeaturedIndex(idx)}
-                  className="relative rounded-card overflow-hidden bg-white border border-[#E7E9E2] shadow-subtle group cursor-pointer min-h-[160px] sm:min-h-[170px]"
+                  className="relative rounded-card overflow-hidden bg-white border border-[#E8E9E5] shadow-subtle group cursor-pointer min-h-[160px] sm:min-h-[170px]"
                 >
                   <Image
                     src={img.fallbackUrl}
@@ -121,10 +121,10 @@ export function ClinicGallery() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
 
                   <div className="absolute bottom-3 left-3 right-3 text-white">
-                    <span className="text-[10px] font-semibold uppercase tracking-wider text-[#DCE8CF] block">
+                    <span className="text-[10px] font-semibold uppercase tracking-wider text-[#8f9d6f] block">
                       {img.categoryLabel}
                     </span>
-                    <h4 className="font-serif text-sm font-normal truncate text-white">
+                    <h4 className="font-serif text-sm font-semibold truncate text-white">
                       {img.title}
                     </h4>
                   </div>

@@ -28,19 +28,19 @@ export function ContactMap({ onBookAppointment }: ContactMapProps) {
     <section
       id="contact"
       aria-label="Contact Information and Clinic Location"
-      className="py-18 sm:py-24 lg:py-28 bg-[#FAFAF7] border-b border-[#E7E9E2]"
+      className="scroll-mt-20 py-14 sm:py-18 lg:py-20 bg-white border-b border-[#E8E9E5]"
     >
       <div className="content-container space-y-8 sm:space-y-10">
         {/* Section Header */}
         <div className="max-w-2xl space-y-2">
-          <div className="flex items-center gap-2 text-xs font-semibold tracking-[0.18em] uppercase text-[#607C55]">
-            <Sparkles className="w-3.5 h-3.5 text-[#607C55]" />
+          <div className="flex items-center gap-2 text-xs font-semibold tracking-[0.18em] uppercase text-[#6a774b]">
+            <Sparkles className="w-3.5 h-3.5" />
             <span>LOCATION & CLINICAL RECEPTION</span>
           </div>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-[40px] text-[#20231F] tracking-tight leading-[1.15] font-normal">
+          <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl text-[#181A16] tracking-tight leading-[1.18]">
             Visit Us in Coimbatore.
           </h2>
-          <p className="text-sm sm:text-base text-[#777D75] leading-relaxed">
+          <p className="text-sm sm:text-base text-[#858780] leading-relaxed">
             Conveniently situated in Saibaba Colony with accessible parking and peaceful clinical surroundings. Reach our reception by phone, WhatsApp, or request an appointment online.
           </p>
         </div>
@@ -48,16 +48,16 @@ export function ContactMap({ onBookAppointment }: ContactMapProps) {
         {/* Split-Layout Grid (5 cols info & booking CTA, 7 cols responsive map) */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
           {/* Left Panel: Contact Information & Direct Action (5 cols) */}
-          <div className="lg:col-span-5 bg-[#F2F4EF] rounded-card border border-[#E7E9E2] p-6 sm:p-8 flex flex-col justify-between space-y-6 shadow-subtle">
+          <div className="lg:col-span-5 bg-[#F7F8F5] rounded-card border border-[#E8E9E5] p-6 sm:p-8 flex flex-col justify-between space-y-6 shadow-subtle">
             <div className="space-y-6">
               <div className="space-y-1">
-                <span className="text-xs font-semibold uppercase tracking-wider text-[#607C55]">
+                <span className="text-xs font-semibold uppercase tracking-wider text-[#6a774b]">
                   Saibaba Colony Practice
                 </span>
-                <h3 className="font-serif text-2xl sm:text-3xl text-[#20231F] font-normal">
+                <h3 className="font-serif text-2xl sm:text-3xl text-[#181A16]">
                   {clinicInfo.name}
                 </h3>
-                <p className="text-xs text-[#777D75]">
+                <p className="text-xs text-[#858780]">
                   Lead Clinician: {clinicInfo.leadDentist} (BDS)
                 </p>
               </div>
@@ -66,17 +66,17 @@ export function ContactMap({ onBookAppointment }: ContactMapProps) {
               <div className="space-y-4 text-xs sm:text-sm">
                 {/* Address */}
                 <div className="flex items-start gap-3.5">
-                  <div className="w-8 h-8 rounded-lg bg-white border border-[#E7E9E2] text-[#607C55] flex items-center justify-center shrink-0 mt-0.5 shadow-subtle">
-                    <MapPin className="w-4 h-4 text-[#607C55]" />
+                  <div className="w-8 h-8 rounded-lg bg-white border border-[#E8E9E5] text-[#6a774b] flex items-center justify-center shrink-0 mt-0.5 shadow-subtle">
+                    <MapPin className="w-4 h-4 text-[#6a774b]" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-[#20231F]">Clinic Address</h4>
-                    <p className="text-[#777D75] leading-relaxed">{clinicInfo.fullAddress}</p>
+                    <h4 className="font-semibold text-[#181A16]">Clinic Address</h4>
+                    <p className="text-[#858780] leading-relaxed">{clinicInfo.fullAddress}</p>
                     <a
                       href={clinicInfo.googleMapsDirectionsUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 text-xs font-semibold text-[#607C55] hover:underline mt-1"
+                      className="inline-flex items-center gap-1 text-xs font-semibold text-[#6a774b] hover:underline mt-1"
                     >
                       <span>Get Driving Directions</span>
                       <ArrowUpRight className="w-3 h-3" />
@@ -86,18 +86,18 @@ export function ContactMap({ onBookAppointment }: ContactMapProps) {
 
                 {/* Telephone */}
                 <div className="flex items-start gap-3.5">
-                  <div className="w-8 h-8 rounded-lg bg-white border border-[#E7E9E2] text-[#607C55] flex items-center justify-center shrink-0 mt-0.5 shadow-subtle">
-                    <Phone className="w-4 h-4 text-[#607C55]" />
+                  <div className="w-8 h-8 rounded-lg bg-white border border-[#E8E9E5] text-[#6a774b] flex items-center justify-center shrink-0 mt-0.5 shadow-subtle">
+                    <Phone className="w-4 h-4 text-[#6a774b]" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-[#20231F]">Reception Desk</h4>
+                    <h4 className="font-semibold text-[#181A16]">Reception Desk</h4>
                     <a
                       href={`tel:${clinicInfo.phoneRaw}`}
-                      className="text-[#777D75] hover:text-[#20231F] font-medium block"
+                      className="text-[#858780] hover:text-[#181A16] font-medium block"
                     >
                       {clinicInfo.phoneDisplay}
                     </a>
-                    <span className="text-[11px] text-[#777D75]">
+                    <span className="text-[11px] text-[#858780]">
                       Mon – Sat: 09:30 AM to 08:00 PM
                     </span>
                   </div>
@@ -105,15 +105,15 @@ export function ContactMap({ onBookAppointment }: ContactMapProps) {
 
                 {/* Hours */}
                 <div className="flex items-start gap-3.5">
-                  <div className="w-8 h-8 rounded-lg bg-white border border-[#E7E9E2] text-[#607C55] flex items-center justify-center shrink-0 mt-0.5 shadow-subtle">
-                    <Clock className="w-4 h-4 text-[#607C55]" />
+                  <div className="w-8 h-8 rounded-lg bg-white border border-[#E8E9E5] text-[#6a774b] flex items-center justify-center shrink-0 mt-0.5 shadow-subtle">
+                    <Clock className="w-4 h-4 text-[#6a774b]" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-[#20231F]">Consultation Timings</h4>
-                    <div className="space-y-1 text-xs text-[#777D75] mt-1">
+                    <h4 className="font-semibold text-[#181A16]">Consultation Timings</h4>
+                    <div className="space-y-1 text-xs text-[#858780] mt-1">
                       {clinicInfo.openingHours.map((h, i) => (
                         <p key={i}>
-                          <span className="font-medium text-[#20231F]">{h.day}:</span>{" "}
+                          <span className="font-medium text-[#181A16]">{h.day}:</span>{" "}
                           {h.hours}
                         </p>
                       ))}
@@ -124,12 +124,12 @@ export function ContactMap({ onBookAppointment }: ContactMapProps) {
             </div>
 
             {/* Panel CTAs */}
-            <div className="pt-6 border-t border-[#E7E9E2] space-y-3">
+            <div className="pt-6 border-t border-[#E8E9E5] space-y-3">
               <Button
                 variant="primary"
                 size="md"
                 onClick={onBookAppointment}
-                className="w-full h-11 bg-[#607C55] hover:bg-[#4E6645] text-white shadow-subtle"
+                className="w-full shadow-subtle"
                 leftIcon={<Calendar className="w-4 h-4" />}
               >
                 Book Appointment Online
@@ -140,9 +140,9 @@ export function ContactMap({ onBookAppointment }: ContactMapProps) {
                   href={clinicInfo.socialLinks.whatsapp}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full py-3 px-4 rounded-full border border-[#E7E9E2] bg-white text-[#20231F] text-xs font-semibold hover:bg-[#F2F4EF] hover:border-[#607C55] transition-all flex items-center justify-center gap-2"
+                  className="w-full py-3 px-4 rounded-full border border-[#E8E9E5] bg-white text-[#181A16] text-xs font-semibold hover:bg-[#F7F8F5] hover:border-[#6a774b] transition-all flex items-center justify-center gap-2"
                 >
-                  <MessageCircle className="w-4 h-4 text-[#607C55]" />
+                  <MessageCircle className="w-4 h-4 text-[#6a774b]" />
                   <span>Connect on WhatsApp</span>
                 </a>
               )}
@@ -150,7 +150,7 @@ export function ContactMap({ onBookAppointment }: ContactMapProps) {
           </div>
 
           {/* Right Panel: Embedded Google Map & Small Clinic Photo Overlay (7 cols) */}
-          <div className="lg:col-span-7 flex flex-col justify-between rounded-card overflow-hidden border border-[#E7E9E2] bg-white shadow-card min-h-[420px] sm:min-h-[480px] relative">
+          <div className="lg:col-span-7 flex flex-col justify-between rounded-card overflow-hidden border border-[#E8E9E5] bg-white shadow-card min-h-[420px] sm:min-h-[480px] relative">
             {/* Map Frame Container */}
             <div className="relative flex-1 w-full h-full min-h-[380px]">
               {!mapError ? (
@@ -168,8 +168,8 @@ export function ContactMap({ onBookAppointment }: ContactMapProps) {
                 />
               ) : (
                 /* Fallback Location Card */
-                <div className="absolute inset-0 flex flex-col items-center justify-center p-8 bg-[#F7F7F5] text-center space-y-3">
-                  <div className="w-12 h-12 rounded-full bg-[#C7DDB0]/40 flex items-center justify-center text-[#5C7651]">
+                <div className="absolute inset-0 flex flex-col items-center justify-center p-8 bg-[#F7F8F5] text-center space-y-3">
+                  <div className="w-12 h-12 rounded-full bg-[#8f9d6f]/40 flex items-center justify-center text-[#6a774b]">
                     <AlertCircle className="w-6 h-6" />
                   </div>
                   <h4 className="font-serif text-xl font-semibold text-[#252724]">
@@ -182,7 +182,7 @@ export function ContactMap({ onBookAppointment }: ContactMapProps) {
                     href={clinicInfo.googleMapsDirectionsUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#5C7651] text-white text-xs font-semibold hover:bg-[#455a3c] transition-colors"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#6a774b] text-white text-xs font-semibold hover:bg-[#58633d] transition-colors"
                   >
                     <Navigation className="w-3.5 h-3.5" />
                     <span>Open in Google Maps</span>
@@ -217,7 +217,7 @@ export function ContactMap({ onBookAppointment }: ContactMapProps) {
                 href={clinicInfo.googleMapsDirectionsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 font-semibold text-[#5C7651] hover:underline shrink-0"
+                className="inline-flex items-center gap-1.5 font-semibold text-[#6a774b] hover:underline shrink-0"
               >
                 <span>Open in Google Maps</span>
                 <ArrowUpRight className="w-3.5 h-3.5" />

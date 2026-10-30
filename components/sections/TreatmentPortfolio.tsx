@@ -34,19 +34,19 @@ export function TreatmentPortfolio({
     <section
       id="treatments"
       aria-label="Dental Services Portfolio"
-      className="py-18 sm:py-24 lg:py-28 bg-[#F2F4EF] border-b border-[#E7E9E2]"
+      className="py-14 sm:py-18 lg:py-20 bg-[#F7F8F5] border-b border-[#E8E9E5] scroll-mt-20"
     >
       <div className="content-container space-y-8 sm:space-y-10">
         {/* Section Header */}
         <div className="max-w-2xl space-y-2.5">
-          <div className="flex items-center gap-2 text-xs font-semibold tracking-[0.18em] uppercase text-[#607C55]">
-            <span className="w-5 h-[1.5px] bg-[#607C55]" />
+          <div className="flex items-center gap-2 text-xs font-semibold tracking-[0.18em] uppercase text-[#6a774b]">
+            <span className="w-5 h-[1.5px] bg-[#6a774b]" />
             <span>CLINICAL DISCIPLINES & CARE</span>
           </div>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-[40px] text-[#20231F] tracking-tight leading-[1.15] font-normal">
+          <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl text-[#181A16] tracking-tight leading-[1.18]">
             Treatment Portfolio.
           </h2>
-          <p className="text-sm sm:text-base text-[#777D75] leading-relaxed">
+          <p className="text-sm sm:text-base text-[#858780] leading-relaxed">
             From discreet clear-aligner orthodontics to conservative aesthetic restorations and preventive therapy, each treatment balances biological health with natural aesthetics.
           </p>
         </div>
@@ -56,28 +56,28 @@ export function TreatmentPortfolio({
           {/* Row 1: Featured Invisalign Panel (7 cols) + Cosmetic Dentistry (5 cols) */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
             {/* Panel 1: Featured Clear Aligners (7 cols) */}
-            <div className="lg:col-span-7 rounded-card overflow-hidden border border-[#E7E9E2] bg-white shadow-card flex flex-col justify-between group hover:border-[#607C55] transition-all duration-300">
-              <div className="relative h-56 sm:h-64 w-full overflow-hidden bg-[#171B16]">
+            <div className="lg:col-span-7 rounded-card overflow-hidden border border-[#E8E9E5] bg-white shadow-card hover:shadow-elevated hover:border-[#8f9d6f] flex flex-col justify-between group transition-all duration-300">
+              <div className="relative h-56 sm:h-64 w-full overflow-hidden bg-gradient-to-br from-[#FAFAF8] via-white to-[#F7F8F5]">
                 <Image
                   src={invisalignItem.image}
                   alt={invisalignItem.imageAlt}
                   fill
-                  className="object-cover object-center transition-transform duration-500 group-hover:scale-[1.03]"
+                  className="object-contain p-4 transition-transform duration-500 group-hover:scale-105"
                   sizes="(max-width: 1024px) 100vw, 60vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
 
                 <div className="absolute top-4 left-4 right-4 flex items-center justify-between">
-                  <span className="text-[11px] font-semibold uppercase tracking-wider px-3 py-1 rounded-full bg-white/95 text-[#20231F] shadow-subtle">
+                  <span className="text-[11px] font-semibold uppercase tracking-wider px-3 py-1 rounded-full bg-white/95 text-[#181A16] shadow-subtle border border-white/60">
                     {invisalignItem.badge || "Signature Treatment"}
                   </span>
-                  <div className="w-8 h-8 rounded-full bg-white/95 flex items-center justify-center text-[#607C55] shadow-subtle">
+                  <div className="w-8 h-8 rounded-full bg-white/95 flex items-center justify-center text-[#6a774b] shadow-subtle">
                     <Sparkles className="w-4 h-4" />
                   </div>
                 </div>
 
                 <div className="absolute bottom-4 left-4 right-4 text-white">
-                  <h3 className="font-serif text-xl sm:text-2xl font-normal">
+                  <h3 className="font-serif text-xl sm:text-2xl font-semibold">
                     {invisalignItem.title}
                   </h3>
                   <p className="text-xs text-white/90 line-clamp-2 pt-0.5 font-light">
@@ -86,11 +86,11 @@ export function TreatmentPortfolio({
                 </div>
               </div>
 
-              <div className="p-5 sm:p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 border-t border-[#E7E9E2]">
+              <div className="p-5 sm:p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 border-t border-[#E8E9E5]">
                 <button
                   type="button"
                   onClick={() => handleOpenDetail(invisalignItem)}
-                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#607C55] hover:text-[#20231F] transition-colors"
+                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#6a774b] hover:text-[#181A16] transition-colors"
                 >
                   <span>Explore Treatment Details</span>
                   <ArrowUpRight className="w-3.5 h-3.5" />
@@ -99,7 +99,7 @@ export function TreatmentPortfolio({
                 <button
                   type="button"
                   onClick={() => onBookTreatment(invisalignItem.title)}
-                  className="px-5 py-2.5 rounded-full bg-[#607C55] text-white text-xs font-semibold hover:bg-[#4E6645] transition-colors shadow-subtle inline-flex items-center gap-1.5"
+                  className="px-4 py-2 rounded-full bg-[#6a774b] text-white text-xs font-semibold hover:bg-[#58633d] transition-colors shadow-subtle inline-flex items-center gap-1.5"
                 >
                   <span>Book Consultation</span>
                   <ArrowRight className="w-3 h-3" />
@@ -108,28 +108,28 @@ export function TreatmentPortfolio({
             </div>
 
             {/* Panel 2: Cosmetic Dentistry (5 cols) */}
-            <div className="lg:col-span-5 rounded-card overflow-hidden border border-[#E7E9E2] bg-white shadow-card flex flex-col justify-between group hover:border-[#607C55] transition-all duration-300">
-              <div className="relative h-56 sm:h-64 w-full overflow-hidden bg-[#171B16]">
+            <div className="lg:col-span-5 rounded-card overflow-hidden border border-[#E8E9E5] bg-white shadow-card hover:shadow-elevated hover:border-[#8f9d6f] flex flex-col justify-between group transition-all duration-300">
+              <div className="relative h-56 sm:h-64 w-full overflow-hidden bg-[#111310]">
                 <Image
                   src={cosmeticItem.image}
                   alt={cosmeticItem.imageAlt}
                   fill
-                  className="object-cover object-center transition-transform duration-500 group-hover:scale-[1.03]"
+                  className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
                   sizes="(max-width: 1024px) 100vw, 40vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
 
                 <div className="absolute top-4 left-4 right-4 flex items-center justify-between">
-                  <span className="text-[11px] font-semibold uppercase tracking-wider px-3 py-1 rounded-full bg-white/95 text-[#20231F] shadow-subtle">
+                  <span className="text-[11px] font-semibold uppercase tracking-wider px-3 py-1 rounded-full bg-white/95 text-[#181A16] shadow-subtle">
                     Aesthetic Dentistry
                   </span>
-                  <div className="w-8 h-8 rounded-full bg-white/95 flex items-center justify-center text-[#607C55] shadow-subtle">
+                  <div className="w-8 h-8 rounded-full bg-white/95 flex items-center justify-center text-[#6a774b] shadow-subtle">
                     <Smile className="w-4 h-4" />
                   </div>
                 </div>
 
                 <div className="absolute bottom-4 left-4 right-4 text-white">
-                  <h3 className="font-serif text-xl sm:text-2xl font-normal">
+                  <h3 className="font-serif text-xl sm:text-2xl font-semibold">
                     {cosmeticItem.title}
                   </h3>
                   <p className="text-xs text-white/90 line-clamp-2 pt-0.5 font-light">
@@ -138,11 +138,11 @@ export function TreatmentPortfolio({
                 </div>
               </div>
 
-              <div className="p-5 sm:p-6 flex items-center justify-between gap-3 border-t border-[#E7E9E2]">
+              <div className="p-5 sm:p-6 flex items-center justify-between gap-3 border-t border-[#E8E9E5]">
                 <button
                   type="button"
                   onClick={() => handleOpenDetail(cosmeticItem)}
-                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#607C55] hover:text-[#20231F] transition-colors"
+                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#6a774b] hover:text-[#181A16] transition-colors"
                 >
                   <span>Explore Details</span>
                   <ArrowUpRight className="w-3.5 h-3.5" />
@@ -151,7 +151,7 @@ export function TreatmentPortfolio({
                 <button
                   type="button"
                   onClick={() => onBookTreatment(cosmeticItem.title)}
-                  className="text-xs font-semibold text-[#20231F] hover:text-[#607C55] underline underline-offset-4"
+                  className="text-xs font-semibold text-[#181A16] hover:text-[#6a774b] underline underline-offset-4"
                 >
                   Book Consult
                 </button>
@@ -162,30 +162,30 @@ export function TreatmentPortfolio({
           {/* Row 2: Supporting Panels (3 balanced 4-col panels) */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
             {/* General Dentistry (4 cols) */}
-            <div className="rounded-card overflow-hidden border border-[#E7E9E2] bg-white p-5 sm:p-6 shadow-subtle hover:shadow-card hover:border-[#607C55] transition-all duration-300 flex flex-col justify-between space-y-4 group">
+            <div className="rounded-card overflow-hidden border border-[#E8E9E5] bg-white p-5 sm:p-6 shadow-subtle hover:shadow-elevated hover:border-[#8f9d6f] transition-all duration-300 flex flex-col justify-between space-y-4 group">
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
-                  <div className="w-9 h-9 rounded-xl bg-[#F2F4EF] border border-[#E7E9E2] flex items-center justify-center text-[#607C55]">
-                    <Layers className="w-4 h-4 text-[#607C55]" />
+                  <div className="w-9 h-9 rounded-xl bg-[#F7F8F5] border border-[#E8E9E5] flex items-center justify-center text-[#6a774b]">
+                    <Layers className="w-4 h-4 text-[#6a774b]" />
                   </div>
-                  <span className="font-mono text-xs text-[#777D75]">02</span>
+                  <span className="font-mono text-xs text-[#858780]">02</span>
                 </div>
 
                 <div className="space-y-1">
-                  <h3 className="font-serif text-lg sm:text-xl font-normal text-[#20231F] group-hover:text-[#607C55] transition-colors">
+                  <h3 className="font-serif text-lg sm:text-xl font-semibold text-[#181A16] group-hover:text-[#6a774b] transition-colors">
                     {generalItem.title}
                   </h3>
-                  <p className="text-xs text-[#777D75] leading-relaxed line-clamp-3">
+                  <p className="text-xs text-[#858780] leading-relaxed line-clamp-3">
                     {generalItem.shortDescription}
                   </p>
                 </div>
               </div>
 
-              <div className="pt-3 border-t border-[#E7E9E2] flex items-center justify-between text-xs">
+              <div className="pt-3 border-t border-[#E8E9E5] flex items-center justify-between text-xs">
                 <button
                   type="button"
                   onClick={() => handleOpenDetail(generalItem)}
-                  className="inline-flex items-center gap-1 font-semibold text-[#607C55] hover:underline"
+                  className="inline-flex items-center gap-1 font-semibold text-[#6a774b] hover:underline"
                 >
                   <span>Overview</span>
                   <ArrowUpRight className="w-3 h-3" />
@@ -194,7 +194,7 @@ export function TreatmentPortfolio({
                 <button
                   type="button"
                   onClick={() => onBookTreatment(generalItem.title)}
-                  className="text-[11px] font-medium text-[#777D75] hover:text-[#20231F] underline"
+                  className="text-[11px] font-medium text-[#858780] hover:text-[#181A16] underline"
                 >
                   Book
                 </button>
@@ -202,30 +202,30 @@ export function TreatmentPortfolio({
             </div>
 
             {/* Preventive Dental Care (4 cols) */}
-            <div className="rounded-card overflow-hidden border border-[#E7E9E2] bg-white p-5 sm:p-6 shadow-subtle hover:shadow-card hover:border-[#607C55] transition-all duration-300 flex flex-col justify-between space-y-4 group">
+            <div className="rounded-card overflow-hidden border border-[#E8E9E5] bg-white p-5 sm:p-6 shadow-subtle hover:shadow-elevated hover:border-[#8f9d6f] transition-all duration-300 flex flex-col justify-between space-y-4 group">
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
-                  <div className="w-9 h-9 rounded-xl bg-[#F2F4EF] border border-[#E7E9E2] flex items-center justify-center text-[#607C55]">
-                    <Shield className="w-4 h-4 text-[#607C55]" />
+                  <div className="w-9 h-9 rounded-xl bg-[#F7F8F5] border border-[#E8E9E5] flex items-center justify-center text-[#6a774b]">
+                    <Shield className="w-4 h-4 text-[#6a774b]" />
                   </div>
-                  <span className="font-mono text-xs text-[#777D75]">03</span>
+                  <span className="font-mono text-xs text-[#858780]">03</span>
                 </div>
 
                 <div className="space-y-1">
-                  <h3 className="font-serif text-lg sm:text-xl font-normal text-[#20231F] group-hover:text-[#607C55] transition-colors">
+                  <h3 className="font-serif text-lg sm:text-xl font-semibold text-[#181A16] group-hover:text-[#6a774b] transition-colors">
                     {preventiveItem.title}
                   </h3>
-                  <p className="text-xs text-[#777D75] leading-relaxed line-clamp-3">
+                  <p className="text-xs text-[#858780] leading-relaxed line-clamp-3">
                     {preventiveItem.shortDescription}
                   </p>
                 </div>
               </div>
 
-              <div className="pt-3 border-t border-[#E7E9E2] flex items-center justify-between text-xs">
+              <div className="pt-3 border-t border-[#E8E9E5] flex items-center justify-between text-xs">
                 <button
                   type="button"
                   onClick={() => handleOpenDetail(preventiveItem)}
-                  className="inline-flex items-center gap-1 font-semibold text-[#607C55] hover:underline"
+                  className="inline-flex items-center gap-1 font-semibold text-[#6a774b] hover:underline"
                 >
                   <span>Overview</span>
                   <ArrowUpRight className="w-3 h-3" />
@@ -234,7 +234,7 @@ export function TreatmentPortfolio({
                 <button
                   type="button"
                   onClick={() => onBookTreatment(preventiveItem.title)}
-                  className="text-[11px] font-medium text-[#777D75] hover:text-[#20231F] underline"
+                  className="text-[11px] font-medium text-[#858780] hover:text-[#181A16] underline"
                 >
                   Book
                 </button>
@@ -242,30 +242,30 @@ export function TreatmentPortfolio({
             </div>
 
             {/* Restorative Dentistry (4 cols) */}
-            <div className="rounded-card overflow-hidden border border-[#E7E9E2] bg-white p-5 sm:p-6 shadow-subtle hover:shadow-card hover:border-[#607C55] transition-all duration-300 flex flex-col justify-between space-y-4 group">
+            <div className="rounded-card overflow-hidden border border-[#E8E9E5] bg-white p-5 sm:p-6 shadow-subtle hover:shadow-elevated hover:border-[#8f9d6f] transition-all duration-300 flex flex-col justify-between space-y-4 group">
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
-                  <div className="w-9 h-9 rounded-xl bg-[#F2F4EF] border border-[#E7E9E2] flex items-center justify-center text-[#607C55]">
-                    <Crown className="w-4 h-4 text-[#607C55]" />
+                  <div className="w-9 h-9 rounded-xl bg-[#F7F8F5] border border-[#E8E9E5] flex items-center justify-center text-[#6a774b]">
+                    <Crown className="w-4 h-4 text-[#6a774b]" />
                   </div>
-                  <span className="font-mono text-xs text-[#777D75]">04</span>
+                  <span className="font-mono text-xs text-[#858780]">04</span>
                 </div>
 
                 <div className="space-y-1">
-                  <h3 className="font-serif text-lg sm:text-xl font-normal text-[#20231F] group-hover:text-[#607C55] transition-colors">
+                  <h3 className="font-serif text-lg sm:text-xl font-semibold text-[#181A16] group-hover:text-[#6a774b] transition-colors">
                     {restorativeItem.title}
                   </h3>
-                  <p className="text-xs text-[#777D75] leading-relaxed line-clamp-3">
+                  <p className="text-xs text-[#858780] leading-relaxed line-clamp-3">
                     {restorativeItem.shortDescription}
                   </p>
                 </div>
               </div>
 
-              <div className="pt-3 border-t border-[#E7E9E2] flex items-center justify-between text-xs">
+              <div className="pt-3 border-t border-[#E8E9E5] flex items-center justify-between text-xs">
                 <button
                   type="button"
                   onClick={() => handleOpenDetail(restorativeItem)}
-                  className="inline-flex items-center gap-1 font-semibold text-[#607C55] hover:underline"
+                  className="inline-flex items-center gap-1 font-semibold text-[#6a774b] hover:underline"
                 >
                   <span>Overview</span>
                   <ArrowUpRight className="w-3 h-3" />
@@ -274,7 +274,7 @@ export function TreatmentPortfolio({
                 <button
                   type="button"
                   onClick={() => onBookTreatment(restorativeItem.title)}
-                  className="text-[11px] font-medium text-[#777D75] hover:text-[#20231F] underline"
+                  className="text-[11px] font-medium text-[#858780] hover:text-[#181A16] underline"
                 >
                   Book
                 </button>

@@ -27,8 +27,8 @@ export const metadata: Metadata = {
     "Aesthetic Dental Clinic Coimbatore",
     "Orthodontic Consultations Coimbatore",
   ],
-  authors: [{ name: "Dr. Preethi" }, { name: "ARTIBOTS INNOVATION PRIVATE LIMITED" }],
-  creator: "ARTIBOTS INNOVATION PRIVATE LIMITED",
+  authors: [{ name: "Dr. Preethi" }],
+  creator: "Dr. Preethi’s Dentistry",
   publisher: "Dr. Preethi’s Dentistry",
   robots: {
     index: true,

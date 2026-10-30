@@ -1,7 +1,6 @@
 /**
  * Dr. Preethi's Dentistry — Gallery & Clinic Space Assets Registry
  *
- * NOTE FOR ARTIBOTS & CLINIC MEDIA MANAGEMENT:
  * The photography references match the actual clinic spaces:
  * 1. Reception & Waiting Area: Warm off-white/ivory walls, grey upholstered seating, architectural lighting
  * 2. Invisalign Experience: Clear aligner display, digital scans, discreet orthodontic branding

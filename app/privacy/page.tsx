@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { ArrowLeft, Shield, Sparkles } from "lucide-react";
-import { clinicInfo, agencyCredit } from "@/data/clinicInfo";
+import { clinicInfo } from "@/data/clinicInfo";
 
 export const metadata = {
   title: "Privacy Policy | Dr. Preethi’s Dentistry",
@@ -15,7 +15,7 @@ export default function PrivacyPage() {
         {/* Navigation Back */}
         <Link
           href="/"
-          className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[#5C7651] hover:text-[#252724] transition-colors"
+          className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[#6a774b] hover:text-[#252724] transition-colors"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Return to Homepage</span>
@@ -23,8 +23,8 @@ export default function PrivacyPage() {
 
         {/* Header */}
         <div className="space-y-3 border-b border-[#E8E9E5] pb-8">
-          <div className="flex items-center gap-2 text-xs font-semibold tracking-[0.2em] uppercase text-[#5C7651]">
-            <Shield className="w-4 h-4 text-[#5C7651]" />
+          <div className="flex items-center gap-2 text-xs font-semibold tracking-[0.2em] uppercase text-[#6a774b]">
+            <Shield className="w-4 h-4 text-[#6a774b]" />
             <span>PATIENT PRIVACY & CONFIDENTIALITY</span>
           </div>
           <h1 className="font-serif text-3xl sm:text-5xl text-[#252724] tracking-tight">
@@ -107,8 +107,7 @@ export default function PrivacyPage() {
 
         {/* Footer Credit */}
         <div className="pt-8 border-t border-[#E8E9E5] text-xs text-[#858780] flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p>© 2026 {clinicInfo.name}. All rights reserved.</p>
-          <p>Digital Architecture by {agencyCredit.name}</p>
+          <p>© 2026 {clinicInfo.name}. All rights reserved. Saibaba Colony, Coimbatore.</p>
         </div>
       </div>
     </main>

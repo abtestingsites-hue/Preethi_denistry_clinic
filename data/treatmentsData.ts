@@ -39,8 +39,8 @@ export const treatmentsData: Treatment[] = [
     ],
     idealFor:
       "Patients seeking orthodontic alignment with minimal aesthetic disruption to professional or social life.",
-    image: "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=900&q=80",
-    imageAlt: "Invisalign clear aligner demonstration at Dr. Preethi's Dentistry",
+    image: "/aligner-presentation.png",
+    imageAlt: "Invisalign clear aligner presentation at Dr. Preethi's Dentistry",
     accentIcon: "aligner",
   },
   {

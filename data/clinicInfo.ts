@@ -1,7 +1,6 @@
 /**
  * Dr. Preethi's Dentistry — Central Configuration & Verified Clinic Details
  *
- * NOTE FOR ARTIBOTS & CLINIC ADMINISTRATORS:
  * All clinic contact details, hours, and addresses below can be updated here.
  * Fields marked with `verified: false` indicate details awaiting clinic confirmation
  * before live production deployment.
@@ -81,13 +80,5 @@ export const clinicInfo: ClinicContactInfo = {
     label: "Invisalign® Clear Aligners",
     description: "Modern orthodontic alignment with discreet, removable clear aligners.",
   },
-};
-
-export const agencyCredit = {
-  name: "ARTIBOTS INNOVATION PRIVATE LIMITED",
-  shortName: "Artibots",
-  cin: "U28299TZ2025PTC035623",
-  location: "Coimbatore, Tamil Nadu",
-  projectRef: "AIPL/PROP/DENTAL/2026/002",
 };
 

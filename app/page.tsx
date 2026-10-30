@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import { AnnouncementMarquee } from "@/components/layout/AnnouncementMarquee";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { EditorialHero } from "@/components/sections/EditorialHero";
-import { CinematicAlignerStory } from "@/components/sections/CinematicAlignerStory";
 import { TrustMetrics } from "@/components/sections/TrustMetrics";
 import { ClinicAbout } from "@/components/sections/ClinicAbout";
 import { TreatmentPortfolio } from "@/components/sections/TreatmentPortfolio";
@@ -61,7 +60,7 @@ export default function HomePage() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-[#FAFAF7]">
+    <div className="flex flex-col min-h-screen bg-white">
       {/* SECTION 01 — ANNOUNCEMENT MARQUEE (Above main navigation) */}
       <AnnouncementMarquee onBookClick={() => handleOpenBooking()} />
 
@@ -69,21 +68,14 @@ export default function HomePage() {
       <SiteHeader onBookAppointmentClick={() => handleOpenBooking()} />
 
       <main className="flex-1">
-        {/* SECTION 03 — EDITORIAL HERO */}
+        {/* SECTION 03 — OVERSIZED EDITORIAL HERO */}
         <EditorialHero
           onBookAppointment={() => handleOpenBooking()}
           onExploreInvisalign={handleExploreInvisalign}
           onExploreClinic={handleExploreClinic}
         />
 
-        {/* SECTION 04 (V5 HERO EXTENSION) — CINEMATIC SCROLL-DRIVEN ALIGNER STORY */}
-        <CinematicAlignerStory
-          onBookAppointment={() =>
-            handleOpenBooking("Invisalign® & Clear Aligners")
-          }
-        />
-
-        {/* SECTION 05 — CLINIC TRUST METRICS */}
+        {/* SECTION 04 — CLINIC TRUST METRICS */}
         <TrustMetrics />
 
         {/* SECTION 05 — ABOUT THE CLINIC */}

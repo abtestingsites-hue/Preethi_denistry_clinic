@@ -61,7 +61,7 @@ export function BlogDetailModal({
         <button
           onClick={onClose}
           aria-label="Close article"
-          className="absolute top-5 right-5 z-20 p-2.5 rounded-full bg-white/90 backdrop-blur-md text-[#252724] hover:bg-[#F7F7F5] shadow-subtle transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5C7651]"
+          className="absolute top-5 right-5 z-20 p-2.5 rounded-full bg-white/90 backdrop-blur-md text-[#252724] hover:bg-[#F7F7F5] shadow-subtle transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6a774b]"
         >
           <X className="w-5 h-5" />
         </button>
@@ -81,7 +81,7 @@ export function BlogDetailModal({
 
             <div className="absolute bottom-6 left-6 right-6 text-white space-y-2">
               <div className="flex flex-wrap items-center gap-2 text-xs">
-                <span className="font-semibold uppercase tracking-wider px-3 py-0.5 rounded-full bg-[#C7DDB0] text-[#111310]">
+                <span className="font-semibold uppercase tracking-wider px-3 py-0.5 rounded-full bg-[#8f9d6f] text-[#111310]">
                   {article.categoryLabel}
                 </span>
                 <span className="text-white/80 flex items-center gap-1 font-mono text-[11px]">
@@ -104,8 +104,8 @@ export function BlogDetailModal({
           <div className="p-6 sm:p-10 space-y-8">
             {/* Author Attribution Strip */}
             <div className="flex items-center gap-3 pb-6 border-b border-[#E8E9E5] text-xs text-[#858780]">
-              <div className="w-10 h-10 rounded-full bg-[#C7DDB0]/40 flex items-center justify-center text-[#5C7651] font-bold">
-                <User className="w-5 h-5 text-[#5C7651]" />
+              <div className="w-10 h-10 rounded-full bg-[#8f9d6f]/40 flex items-center justify-center text-[#6a774b] font-bold">
+                <User className="w-5 h-5 text-[#6a774b]" />
               </div>
               <div>
                 <p className="font-semibold text-[#252724]">{article.author}</p>
@@ -137,14 +137,14 @@ export function BlogDetailModal({
             {/* Doctor's Clinical Tips Callout */}
             {article.content.clinicalTips && article.content.clinicalTips.length > 0 && (
               <div className="p-6 rounded-2xl bg-[#F7F7F5] border border-[#E8E9E5] space-y-3">
-                <h4 className="text-xs font-bold uppercase tracking-wider text-[#5C7651] flex items-center gap-2">
-                  <Sparkles className="w-4 h-4 text-[#5C7651]" />
+                <h4 className="text-xs font-bold uppercase tracking-wider text-[#6a774b] flex items-center gap-2">
+                  <Sparkles className="w-4 h-4 text-[#6a774b]" />
                   <span>Clinical Tips from Dr. Preethi</span>
                 </h4>
                 <ul className="space-y-2.5">
                   {article.content.clinicalTips.map((tip, idx) => (
                     <li key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-[#252724]">
-                      <CheckCircle2 className="w-4 h-4 text-[#5C7651] shrink-0 mt-0.5" />
+                      <CheckCircle2 className="w-4 h-4 text-[#6a774b] shrink-0 mt-0.5" />
                       <span>{tip}</span>
                     </li>
                   ))}
@@ -153,8 +153,8 @@ export function BlogDetailModal({
             )}
 
             {/* Clinical Takeaway */}
-            <div className="p-5 rounded-2xl bg-[#C7DDB0]/20 border border-[#A9C49A]/30 text-xs sm:text-sm text-[#252724] leading-relaxed">
-              <strong className="text-[#5C7651] uppercase tracking-wide block pb-1 text-[11px]">
+            <div className="p-5 rounded-2xl bg-[#8f9d6f]/20 border border-[#8f9d6f]/30 text-xs sm:text-sm text-[#252724] leading-relaxed">
+              <strong className="text-[#6a774b] uppercase tracking-wide block pb-1 text-[11px]">
                 Key Takeaway
               </strong>
               <p>{article.content.takeaway}</p>

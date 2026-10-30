@@ -61,7 +61,7 @@ export function TreatmentDetailModal({
         <button
           onClick={onClose}
           aria-label="Close treatment details"
-          className="absolute top-5 right-5 z-20 p-2.5 rounded-full bg-white/90 backdrop-blur-md text-[#252724] hover:bg-[#F7F7F5] shadow-subtle transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5C7651]"
+          className="absolute top-5 right-5 z-20 p-2.5 rounded-full bg-white/90 backdrop-blur-md text-[#252724] hover:bg-[#F7F7F5] shadow-subtle transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6a774b]"
         >
           <X className="w-5 h-5" />
         </button>
@@ -79,7 +79,7 @@ export function TreatmentDetailModal({
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
             <div className="absolute bottom-6 left-6 right-6 text-white space-y-1.5">
               {treatment.badge && (
-                <span className="inline-block text-[11px] font-semibold uppercase tracking-[0.2em] px-3 py-1 rounded-full bg-[#C7DDB0] text-[#111310]">
+                <span className="inline-block text-[11px] font-semibold uppercase tracking-[0.2em] px-3 py-1 rounded-full bg-[#8f9d6f] text-[#111310]">
                   {treatment.badge}
                 </span>
               )}
@@ -93,7 +93,7 @@ export function TreatmentDetailModal({
           <div className="p-6 sm:p-8 space-y-6">
             {/* Full Description */}
             <div className="space-y-2">
-              <h4 className="text-xs font-semibold uppercase tracking-wider text-[#5C7651]">
+              <h4 className="text-xs font-semibold uppercase tracking-wider text-[#6a774b]">
                 Overview & Clinical Philosophy
               </h4>
               <p className="text-sm sm:text-base text-[#252724] leading-relaxed">
@@ -106,13 +106,13 @@ export function TreatmentDetailModal({
               {/* Clinical Benefits */}
               <div className="p-5 rounded-2xl bg-[#F7F7F5] border border-[#E8E9E5] space-y-3">
                 <h5 className="text-xs font-bold uppercase tracking-wider text-[#252724] flex items-center gap-2">
-                  <Sparkles className="w-4 h-4 text-[#5C7651]" />
+                  <Sparkles className="w-4 h-4 text-[#6a774b]" />
                   <span>Key Patient Advantages</span>
                 </h5>
                 <ul className="space-y-2">
                   {treatment.benefits.map((benefit, idx) => (
                     <li key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-[#858780]">
-                      <CheckCircle2 className="w-4 h-4 text-[#5C7651] shrink-0 mt-0.5" />
+                      <CheckCircle2 className="w-4 h-4 text-[#6a774b] shrink-0 mt-0.5" />
                       <span>{benefit}</span>
                     </li>
                   ))}
@@ -122,13 +122,13 @@ export function TreatmentDetailModal({
               {/* What to Expect */}
               <div className="p-5 rounded-2xl bg-[#F7F7F5] border border-[#E8E9E5] space-y-3">
                 <h5 className="text-xs font-bold uppercase tracking-wider text-[#252724] flex items-center gap-2">
-                  <Clock className="w-4 h-4 text-[#5C7651]" />
+                  <Clock className="w-4 h-4 text-[#6a774b]" />
                   <span>What To Expect</span>
                 </h5>
                 <ol className="space-y-2">
                   {treatment.whatToExpect.map((step, idx) => (
                     <li key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-[#858780]">
-                      <span className="w-5 h-5 rounded-full bg-[#C7DDB0]/40 text-[#5C7651] font-semibold text-[10px] flex items-center justify-center shrink-0 mt-0.5">
+                      <span className="w-5 h-5 rounded-full bg-[#8f9d6f]/40 text-[#6a774b] font-semibold text-[10px] flex items-center justify-center shrink-0 mt-0.5">
                         {idx + 1}
                       </span>
                       <span>{step}</span>
@@ -139,8 +139,8 @@ export function TreatmentDetailModal({
             </div>
 
             {/* Ideal Candidate */}
-            <div className="p-4 rounded-2xl bg-[#C7DDB0]/20 border border-[#A9C49A]/40 text-xs sm:text-sm space-y-1">
-              <span className="font-semibold text-[#5C7651] uppercase tracking-wide text-[11px]">
+            <div className="p-4 rounded-2xl bg-[#8f9d6f]/20 border border-[#8f9d6f]/40 text-xs sm:text-sm space-y-1">
+              <span className="font-semibold text-[#6a774b] uppercase tracking-wide text-[11px]">
                 Ideal Candidate
               </span>
               <p className="text-[#252724] leading-relaxed">{treatment.idealFor}</p>

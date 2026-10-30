@@ -15,46 +15,47 @@ export function MeetTheDentist({ onBookAppointment }: MeetTheDentistProps) {
     <section
       id="dentist"
       aria-label="Meet Dr. Preethi — Chief Dental Surgeon"
-      className="py-18 sm:py-24 lg:py-28 bg-[#FAFAF7] border-b border-[#E7E9E2]"
+      className="scroll-mt-20 py-14 sm:py-18 lg:py-20 bg-white border-b border-[#E8E9E5]"
     >
       <div className="content-container space-y-8 sm:space-y-10">
         {/* Section Header */}
         <div className="max-w-xl space-y-2">
-          <div className="flex items-center gap-2 text-xs font-semibold tracking-[0.18em] uppercase text-[#607C55]">
-            <Sparkles className="w-3.5 h-3.5 text-[#607C55]" />
+          <div className="flex items-center gap-2 text-xs font-semibold tracking-[0.18em] uppercase text-[#6a774b]">
+            <Sparkles className="w-3.5 h-3.5 text-[#6a774b]" />
             <span>CLINICAL LEADERSHIP</span>
           </div>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-[40px] text-[#20231F] tracking-tight leading-[1.15] font-normal">
+          <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl text-[#252724] tracking-tight leading-[1.18]">
             Meet Dr. Preethi.
           </h2>
-          <p className="text-sm text-[#777D75] leading-relaxed">
+          <p className="text-sm text-[#858780] leading-relaxed">
             Dedicated clinical leadership, gentle dental artistry, and precision clear-aligner consultations founded on unhurried listening.
           </p>
         </div>
 
         {/* Compact Asymmetrical Profile Card (Portrait ~35–40% of width) */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center bg-[#F2F4EF] rounded-card border border-[#E7E9E2] p-6 sm:p-9 shadow-card">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-[#F7F8F5] rounded-card border border-[#E8E9E5] p-6 sm:p-8 shadow-card">
           {/* Portrait Column (4–5 cols / ~38%) */}
           <div className="lg:col-span-5 relative">
-            <div className="relative rounded-card-sm overflow-hidden border border-[#E7E9E2] bg-white shadow-subtle aspect-[4/4.8] w-full max-w-sm mx-auto lg:max-w-none">
+            <div className="relative rounded-card overflow-hidden border border-[#E8E9E5] bg-white shadow-card aspect-[3/4] w-full max-w-sm mx-auto lg:max-w-none group">
               <Image
                 src={leadDentist.portraitUrl}
                 alt={leadDentist.portraitAlt}
                 fill
-                className="object-cover object-top transition-transform duration-500 hover:scale-[1.02]"
+                className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
                 sizes="(max-width: 1024px) 100vw, 38vw"
+                priority
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
 
               {/* Inset Credential Badge */}
-              <div className="absolute bottom-3 left-3 right-3 p-3 rounded-xl bg-white/95 backdrop-blur-md border border-white/60 shadow-subtle text-xs text-[#20231F]">
+              <div className="absolute bottom-3 left-3 right-3 p-3 rounded-xl bg-white/95 backdrop-blur-md border border-white/60 shadow-subtle text-xs text-[#252724]">
                 <div className="flex items-center justify-between font-semibold">
                   <span>{leadDentist.name}</span>
-                  <span className="text-[10px] font-mono text-[#607C55] uppercase">
+                  <span className="text-[10px] font-mono text-[#6a774b] uppercase font-semibold">
                     {leadDentist.qualifications.split("·")[0].trim()}
                   </span>
                 </div>
-                <p className="text-[11px] text-[#777D75] pt-0.5">{leadDentist.designation}</p>
+                <p className="text-[11px] text-[#858780] pt-0.5">{leadDentist.designation}</p>
               </div>
             </div>
           </div>
@@ -63,37 +64,37 @@ export function MeetTheDentist({ onBookAppointment }: MeetTheDentistProps) {
           <div className="lg:col-span-7 space-y-4">
             <div className="space-y-1">
               <div className="flex items-center gap-2">
-                <span className="text-xs font-semibold uppercase tracking-wider text-[#607C55] px-2.5 py-0.5 rounded-full bg-[#DCE8CF]/50">
+                <span className="text-xs font-semibold uppercase tracking-wider text-[#6a774b] px-2.5 py-0.5 rounded-full bg-[#8f9d6f]/40">
                   {leadDentist.clinicRole}
                 </span>
-                <span className="text-xs text-[#777D75]">·</span>
-                <span className="text-xs text-[#777D75]">{leadDentist.experienceYears}</span>
+                <span className="text-xs text-[#858780]">·</span>
+                <span className="text-xs text-[#858780]">{leadDentist.experienceYears}</span>
               </div>
 
-              <h3 className="font-serif text-2xl sm:text-3xl text-[#20231F] font-normal">
+              <h3 className="font-serif text-2xl sm:text-3xl text-[#252724] font-medium">
                 {leadDentist.name}
               </h3>
-              <p className="text-xs text-[#607C55] font-semibold">
+              <p className="text-xs text-[#6a774b] font-semibold">
                 {leadDentist.qualifications}
               </p>
             </div>
 
-            <p className="text-sm text-[#777D75] leading-relaxed">
+            <p className="text-sm text-[#858780] leading-relaxed">
               {leadDentist.bio}
             </p>
 
             {/* Treatment Focus Badges */}
             <div className="space-y-1.5 pt-1">
-              <span className="text-[11px] font-semibold uppercase tracking-wider text-[#20231F]">
+              <span className="text-[11px] font-semibold uppercase tracking-wider text-[#252724]">
                 Treatment Focus
               </span>
               <div className="flex flex-wrap gap-2">
                 {leadDentist.treatmentFocus.map((focus) => (
                   <span
                     key={focus}
-                    className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-[#E7E9E2] text-xs font-medium text-[#20231F] shadow-subtle"
+                    className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-[#E8E9E5] text-xs font-medium text-[#252724] shadow-subtle"
                   >
-                    <CheckCircle2 className="w-3 h-3 text-[#607C55]" />
+                    <CheckCircle2 className="w-3 h-3 text-[#6a774b]" />
                     <span>{focus}</span>
                   </span>
                 ))}
@@ -101,8 +102,8 @@ export function MeetTheDentist({ onBookAppointment }: MeetTheDentistProps) {
             </div>
 
             {/* Compact Doctor's Philosophy Quote */}
-            <div className="p-3.5 rounded-xl bg-white border border-[#E7E9E2] text-xs text-[#777D75] leading-relaxed">
-              <p className="italic text-[#20231F]">
+            <div className="p-3.5 rounded-xl bg-white border border-[#E8E9E5] text-xs text-[#858780] leading-relaxed">
+              <p className="italic text-[#252724]">
                 &ldquo;{leadDentist.clinicalPhilosophy}&rdquo;
               </p>
             </div>
@@ -113,14 +114,14 @@ export function MeetTheDentist({ onBookAppointment }: MeetTheDentistProps) {
                 variant="primary"
                 size="md"
                 onClick={onBookAppointment}
-                className="text-xs sm:text-sm px-6 h-11 shadow-subtle bg-[#607C55] hover:bg-[#4E6645] text-white"
+                className="text-xs sm:text-sm px-6 py-2.5 shadow-subtle"
                 leftIcon={<Calendar className="w-3.5 h-3.5" />}
                 rightIcon={<ArrowRight className="w-3.5 h-3.5" />}
               >
                 Book a Consultation with Dr. Preethi
               </Button>
 
-              <span className="text-xs text-[#777D75]">
+              <span className="text-xs text-[#858780]">
                 {leadDentist.consultationDays}
               </span>
             </div>

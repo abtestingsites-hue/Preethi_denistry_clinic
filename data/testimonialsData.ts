@@ -1,7 +1,6 @@
 /**
  * Dr. Preethi's Dentistry — Patient Stories & Verified Feedback
  *
- * NOTE FOR ARTIBOTS & CLINIC ADMINISTRATORS:
  * In strict adherence to ethical medical guidelines and client verification:
  * Patient testimonials displayed below represent verified clinic feedback samples
  * gathered with patient consent. Unverified claims, awards, and fabricated ratings

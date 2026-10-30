@@ -1,7 +1,6 @@
 /**
  * Dr. Preethi's Dentistry — Appointment Request Service (Mock Adapter)
  *
- * NOTE FOR ARTIBOTS BACKEND ENGINEERS:
  * This module encapsulates all validation and appointment submission logic for Phase 2.
  * In frontend scope, submissions are handled locally via simulated async network delay.
  * In future backend integration, swap the body of `submitAppointmentRequest()` to invoke

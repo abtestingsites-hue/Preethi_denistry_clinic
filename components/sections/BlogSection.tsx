@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { ArrowUpRight, Clock, Sparkles } from "lucide-react";
+import { ArrowUpRight, Clock, Sparkles, BookOpen } from "lucide-react";
 import { blogArticles, BlogArticle } from "@/data/blogsData";
 import { BlogDetailModal } from "@/components/blog/BlogDetailModal";
 
@@ -19,81 +19,86 @@ export function BlogSection({ onBookAppointment }: BlogSectionProps) {
     setIsModalOpen(true);
   };
 
-  // Three article previews on desktop as requested by Section 11
+  // Three article previews on desktop as requested by Section 11 & Requirement 6
   const displayArticles = blogArticles.slice(0, 3);
 
   return (
     <section
       id="blogs"
       aria-label="The Smile Journal — Dental Education and Articles"
-      className="py-18 sm:py-24 lg:py-28 bg-[#FAFAF7] border-b border-[#E7E9E2]"
+      className="py-14 sm:py-18 lg:py-20 bg-white border-b border-[#E8E9E5] scroll-mt-20"
     >
       <div className="content-container space-y-8 sm:space-y-10">
         {/* Section Header */}
-        <div className="max-w-xl space-y-2">
-          <div className="flex items-center gap-2 text-xs font-semibold tracking-[0.18em] uppercase text-[#607C55]">
-            <Sparkles className="w-3.5 h-3.5 text-[#607C55]" />
+        <div className="max-w-2xl space-y-2">
+          <div className="flex items-center gap-2 text-xs font-semibold tracking-[0.18em] uppercase text-[#6a774b]">
+            <Sparkles className="w-3.5 h-3.5 text-[#6a774b]" />
             <span>DENTAL EDUCATION & INSIGHTS</span>
           </div>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-[40px] text-[#20231F] tracking-tight leading-[1.15] font-normal">
+          <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl text-[#181A16] tracking-tight leading-[1.18]">
             The Smile Journal.
           </h2>
-          <p className="text-sm text-[#777D75] leading-relaxed">
+          <p className="text-sm sm:text-base text-[#858780] leading-relaxed">
             Clinician-reviewed guides on clear aligners, consultation expectations, and daily oral hygiene to support your dental health.
           </p>
         </div>
 
-        {/* 3 Article Previews Grid on Desktop */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
+        {/* Responsive Grid with Consistent Card Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7 items-stretch">
           {displayArticles.map((article) => (
-            <div
+            <article
               key={article.id}
               onClick={() => handleOpenArticle(article)}
-              className="group rounded-card overflow-hidden border border-[#E7E9E2] bg-white shadow-subtle hover:shadow-card hover:border-[#607C55] transition-all duration-300 cursor-pointer flex flex-col justify-between"
+              className="group rounded-card overflow-hidden border border-[#E8E9E5] bg-white shadow-subtle hover:shadow-elevated hover:border-[#8f9d6f]/60 transition-all duration-300 cursor-pointer flex flex-col justify-between h-full"
             >
-              {/* Thumbnail (Restrained height 180–200px) */}
-              <div className="relative h-44 sm:h-48 w-full overflow-hidden bg-[#171B16]">
+              {/* Image Presentation with Subtle Zoom Effect */}
+              <div className="relative h-48 sm:h-52 w-full overflow-hidden bg-[#F7F8F5]">
                 <Image
                   src={article.imageUrl}
                   alt={article.imageAlt}
                   fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
 
+                {/* Category Pill Tag */}
                 <div className="absolute top-3.5 left-3.5">
-                  <span className="text-[10px] font-semibold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-white/95 text-[#20231F] shadow-subtle">
+                  <span className="text-[10px] font-semibold uppercase tracking-wider px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-[#181A16] shadow-subtle border border-white/60">
                     {article.categoryLabel}
                   </span>
                 </div>
               </div>
 
-              {/* Content Panel */}
-              <div className="p-5 flex-1 flex flex-col justify-between space-y-3.5">
-                <div className="space-y-1.5">
+              {/* Card Body & Content Details */}
+              <div className="p-5 sm:p-6 flex-1 flex flex-col justify-between space-y-4">
+                <div className="space-y-2">
+                  {/* Reading Metadata */}
                   <div className="flex items-center gap-2 text-[11px] text-[#858780] font-mono">
-                    <span className="flex items-center gap-1">
-                      <Clock className="w-3 h-3 text-[#5C7651]" />
+                    <span className="inline-flex items-center gap-1 font-sans text-[#6a774b] font-medium">
+                      <Clock className="w-3 h-3 text-[#6a774b]" />
                       {article.readTime}
                     </span>
                     <span>·</span>
                     <span>{article.publishDate}</span>
                   </div>
 
-                  <h3 className="font-serif text-lg font-semibold text-[#252724] group-hover:text-[#5C7651] transition-colors line-clamp-2 leading-snug">
+                  {/* Title */}
+                  <h3 className="font-serif text-lg sm:text-xl font-semibold text-[#181A16] group-hover:text-[#6a774b] transition-colors line-clamp-2 leading-snug">
                     {article.title}
                   </h3>
 
-                  <p className="text-xs text-[#858780] leading-relaxed line-clamp-3">
+                  {/* Description Excerpt */}
+                  <p className="text-xs sm:text-sm text-[#858780] leading-relaxed line-clamp-3 font-normal">
                     {article.excerpt}
                   </p>
                 </div>
 
-                <div className="pt-3 border-t border-[#E8E9E5] flex items-center justify-between text-xs">
-                  <span className="font-semibold text-[#5C7651] group-hover:underline inline-flex items-center gap-1">
+                {/* Card Footer: Read Article Link */}
+                <div className="pt-3.5 border-t border-[#E8E9E5] flex items-center justify-between text-xs">
+                  <span className="font-semibold text-[#6a774b] group-hover:text-[#58633d] inline-flex items-center gap-1.5 transition-colors">
                     <span>Read Article</span>
-                    <ArrowUpRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                    <ArrowUpRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                   </span>
 
                   <span className="text-[11px] text-[#858780]">
@@ -101,7 +106,7 @@ export function BlogSection({ onBookAppointment }: BlogSectionProps) {
                   </span>
                 </div>
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </div>
