@@ -59,23 +59,23 @@ export function Aligner3DViewer({
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       className={cn(
-        "relative rounded-card bg-gradient-to-b from-[#F7F8F5] via-white to-[#F7F8F5] border border-[#E8E9E5] shadow-card flex flex-col justify-between overflow-hidden select-none",
+        "relative rounded-card bg-gradient-to-b from-[#FAFAF7] via-white to-[#F2F4EF] border border-[#E7E9E2] shadow-card flex flex-col justify-between overflow-hidden select-none",
         compact ? "p-4 sm:p-5" : "p-5 sm:p-7",
         className
       )}
       style={{ perspective: 1000 }}
     >
       {/* Top Header Bar: Perspective Mode Switcher Pills */}
-      <div className="relative z-20 flex flex-wrap items-center justify-between gap-2 pb-3 border-b border-[#E8E9E5]/70">
-        <div className="flex items-center gap-1.5 bg-white p-1 rounded-full border border-[#E8E9E5] text-[11px] shadow-subtle">
+      <div className="relative z-20 flex flex-wrap items-center justify-between gap-2 pb-3 border-b border-[#E7E9E2]">
+        <div className="flex items-center gap-1.5 bg-white p-1 rounded-full border border-[#E7E9E2] text-[11px] shadow-subtle">
           <button
             type="button"
             onClick={() => setActiveMode("upper-arch")}
             className={cn(
               "px-3 py-1 rounded-full font-medium transition-colors",
               activeMode === "upper-arch"
-                ? "bg-[#5C7651] text-white"
-                : "text-[#858780] hover:text-[#252724]"
+                ? "bg-[#607C55] text-white"
+                : "text-[#777D75] hover:text-[#20231F]"
             )}
           >
             Upper Arch
@@ -86,8 +86,8 @@ export function Aligner3DViewer({
             className={cn(
               "px-3 py-1 rounded-full font-medium transition-colors",
               activeMode === "tray-closeup"
-                ? "bg-[#5C7651] text-white"
-                : "text-[#858780] hover:text-[#252724]"
+                ? "bg-[#607C55] text-white"
+                : "text-[#777D75] hover:text-[#20231F]"
             )}
           >
             Transparency
@@ -98,8 +98,8 @@ export function Aligner3DViewer({
             className={cn(
               "px-3 py-1 rounded-full font-medium transition-colors hidden sm:inline-block",
               activeMode === "isolated-tray"
-                ? "bg-[#5C7651] text-white"
-                : "text-[#858780] hover:text-[#252724]"
+                ? "bg-[#607C55] text-white"
+                : "text-[#777D75] hover:text-[#20231F]"
             )}
           >
             Isolated Tray
@@ -113,12 +113,12 @@ export function Aligner3DViewer({
           className={cn(
             "inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] font-semibold border transition-all",
             trayVisible
-              ? "bg-[#C7DDB0]/40 text-[#5C7651] border-[#A9C49A]/50"
-              : "bg-white text-[#858780] border-[#E8E9E5]"
+              ? "bg-[#DCE8CF]/60 text-[#607C55] border-[#607C55]/40"
+              : "bg-white text-[#777D75] border-[#E7E9E2]"
           )}
           title="Toggle aligner tray visualization"
         >
-          <Sparkles className="w-3 h-3 text-[#5C7651]" />
+          <Sparkles className="w-3 h-3 text-[#607C55]" />
           <span>{trayVisible ? "Aligner: Fitted" : "Natural Arch"}</span>
         </button>
       </div>
@@ -324,21 +324,21 @@ export function Aligner3DViewer({
         </div>
 
         {/* Small Floating Visual Credential Badge */}
-        <div className="absolute bottom-2 right-2 sm:right-4 z-20 px-3 py-2 rounded-xl bg-white/95 backdrop-blur-md border border-[#E8E9E5] shadow-subtle flex items-center gap-2 text-xs">
-          <span className="w-2 h-2 rounded-full bg-[#5C7651]" />
-          <span className="font-semibold text-[#252724]">0.75 mm Biopolymer</span>
-          <span className="text-[10px] text-[#858780] hidden sm:inline">· Custom Calibrated</span>
+        <div className="absolute bottom-2 right-2 sm:right-4 z-20 px-3 py-2 rounded-xl bg-white/95 backdrop-blur-md border border-[#E7E9E2] shadow-subtle flex items-center gap-2 text-xs">
+          <span className="w-2 h-2 rounded-full bg-[#607C55]" />
+          <span className="font-semibold text-[#20231F]">0.75 mm Biopolymer</span>
+          <span className="text-[10px] text-[#777D75] hidden sm:inline">· Custom Calibrated</span>
         </div>
       </motion.div>
 
       {/* Bottom Footer Info Strip */}
       {showControls && (
-        <div className="relative z-20 pt-3 border-t border-[#E8E9E5]/70 flex items-center justify-between text-xs text-[#858780]">
-          <div className="flex items-center gap-1.5 text-[#252724] font-medium">
-            <CheckCircle2 className="w-3.5 h-3.5 text-[#5C7651]" />
+        <div className="relative z-20 pt-3 border-t border-[#E7E9E2] flex items-center justify-between text-xs text-[#777D75]">
+          <div className="flex items-center gap-1.5 text-[#20231F] font-medium">
+            <CheckCircle2 className="w-3.5 h-3.5 text-[#607C55]" />
             <span>Digital 3D Smile Scanning</span>
           </div>
-          <span className="text-[11px] font-mono text-[#858780]">
+          <span className="text-[11px] font-mono text-[#777D75]">
             Saibaba Colony Practice
           </span>
         </div>

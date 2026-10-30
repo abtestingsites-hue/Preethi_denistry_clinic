@@ -69,14 +69,14 @@ export function AppointmentModal({
       {/* Modal Dialog Content: Mobile bottom sheet / Desktop centered 480–560px panel */}
       <div
         ref={modalRef}
-        className="relative w-full max-w-[520px] bg-white rounded-t-3xl sm:rounded-card shadow-card z-10 mt-auto sm:my-8 overflow-hidden animate-in fade-in zoom-in-95 duration-200 border border-[#E8E9E5] max-h-[95vh] sm:max-h-[90vh] flex flex-col"
+        className="relative w-full max-w-[520px] bg-[#FAFAF7] rounded-t-3xl sm:rounded-card shadow-card z-10 mt-auto sm:my-8 overflow-hidden animate-in fade-in zoom-in-95 duration-200 border border-[#E7E9E2] max-h-[95vh] sm:max-h-[90vh] flex flex-col"
       >
         {/* Top Floating Close Button */}
         <div className="absolute top-4 right-4 sm:top-5 sm:right-5 z-20">
           <button
             onClick={onClose}
             aria-label="Close booking dialog"
-            className="p-2.5 rounded-full bg-[#F7F7F5] text-[#252724] hover:bg-[#E8E9E5] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5C7651]"
+            className="p-2.5 rounded-full bg-[#F2F4EF] text-[#20231F] hover:bg-[#E7E9E2] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#607C55]"
           >
             <X className="w-5 h-5" />
           </button>

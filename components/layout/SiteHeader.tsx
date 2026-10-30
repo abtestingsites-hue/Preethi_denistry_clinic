@@ -81,12 +81,12 @@ export function SiteHeader({ onBookAppointmentClick }: SiteHeaderProps) {
         className={cn(
           "sticky top-0 z-40 w-full transition-all duration-300",
           isScrolled
-            ? "bg-white/95 backdrop-blur-md shadow-subtle border-b border-[#E8E9E5]"
-            : "bg-white border-b border-[#E8E9E5]/60"
+            ? "bg-[#FAFAF7]/95 backdrop-blur-md shadow-subtle border-b border-[#E7E9E2]"
+            : "bg-[#FAFAF7] border-b border-[#E7E9E2]/70"
         )}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-[72px]">
+          <div className="flex items-center justify-between h-[74px]">
             {/* Wordmark / Brand Identity */}
             <a
               href="#hero"
@@ -94,12 +94,12 @@ export function SiteHeader({ onBookAppointmentClick }: SiteHeaderProps) {
                 e.preventDefault();
                 scrollToSection("hero");
               }}
-              className="flex items-center gap-3 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5C7651] rounded-lg p-1"
+              className="flex items-center gap-3 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#607C55] rounded-lg p-1"
             >
               {/* Brand Aligner Arc Mark */}
-              <div className="w-10 h-10 rounded-full bg-[#C7DDB0]/30 border border-[#A9C49A]/50 flex items-center justify-center text-[#5C7651] group-hover:bg-[#C7DDB0]/60 transition-colors">
+              <div className="w-10 h-10 rounded-full bg-[#DCE8CF]/40 border border-[#607C55]/30 flex items-center justify-center text-[#607C55] group-hover:bg-[#DCE8CF]/70 transition-colors">
                 <svg
-                  className="w-5 h-5 text-[#5C7651]"
+                  className="w-5 h-5 text-[#607C55]"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
@@ -113,10 +113,10 @@ export function SiteHeader({ onBookAppointmentClick }: SiteHeaderProps) {
               </div>
 
               <div className="flex flex-col">
-                <span className="font-serif text-xl sm:text-2xl text-[#252724] tracking-tight font-semibold leading-tight group-hover:text-[#5C7651] transition-colors">
+                <span className="font-serif text-xl sm:text-2xl text-[#20231F] tracking-tight font-normal leading-tight group-hover:text-[#607C55] transition-colors">
                   Dr. Preethi’s
                 </span>
-                <span className="text-[10px] tracking-[0.22em] uppercase text-[#858780] font-medium">
+                <span className="text-[10px] tracking-[0.22em] uppercase text-[#777D75] font-medium">
                   Dentistry · Saibaba Colony
                 </span>
               </div>
@@ -134,15 +134,15 @@ export function SiteHeader({ onBookAppointmentClick }: SiteHeaderProps) {
                     key={item.id}
                     onClick={() => scrollToSection(item.id)}
                     className={cn(
-                      "text-sm font-medium transition-colors relative py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5C7651] rounded",
+                      "text-sm font-medium transition-colors relative py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#607C55] rounded",
                       isActive
-                        ? "text-[#5C7651] font-semibold"
-                        : "text-[#858780] hover:text-[#252724]"
+                        ? "text-[#607C55] font-semibold"
+                        : "text-[#777D75] hover:text-[#20231F]"
                     )}
                   >
                     <span>{item.label}</span>
                     {isActive && (
-                      <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#5C7651] rounded-full" />
+                      <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#607C55] rounded-full" />
                     )}
                   </button>
                 );
@@ -158,9 +158,9 @@ export function SiteHeader({ onBookAppointmentClick }: SiteHeaderProps) {
                 { label: "About", id: "about" },
                 { label: "Treatments", id: "treatments" },
                 { label: "Invisalign", id: "invisalign" },
+                { label: "Story", id: "aligner-experience" },
                 { label: "Clinic", id: "gallery" },
                 { label: "Doctor", id: "dentist" },
-                { label: "Journal", id: "blogs" },
                 { label: "Reviews", id: "testimonials" },
                 { label: "Contact", id: "contact" },
               ].map((item) => {
@@ -172,8 +172,8 @@ export function SiteHeader({ onBookAppointmentClick }: SiteHeaderProps) {
                     className={cn(
                       "text-xs font-medium transition-colors relative py-1",
                       isActive
-                        ? "text-[#5C7651] font-semibold"
-                        : "text-[#858780] hover:text-[#252724]"
+                        ? "text-[#607C55] font-semibold"
+                        : "text-[#777D75] hover:text-[#20231F]"
                     )}
                   >
                     <span>{item.label}</span>
@@ -188,7 +188,7 @@ export function SiteHeader({ onBookAppointmentClick }: SiteHeaderProps) {
                 variant="primary"
                 size="sm"
                 onClick={onBookAppointmentClick}
-                className="hidden sm:inline-flex"
+                className="hidden sm:inline-flex h-11 bg-[#607C55] hover:bg-[#4E6645] text-white shadow-subtle px-5"
                 leftIcon={<Calendar className="w-3.5 h-3.5" />}
               >
                 Book Appointment
@@ -198,7 +198,7 @@ export function SiteHeader({ onBookAppointmentClick }: SiteHeaderProps) {
               <button
                 onClick={() => setIsMobileMenuOpen(true)}
                 aria-label="Open navigation menu"
-                className="lg:hidden p-2 rounded-xl text-[#252724] hover:bg-[#F7F7F5] border border-[#E8E9E5] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5C7651]"
+                className="lg:hidden p-2 rounded-xl text-[#20231F] hover:bg-[#F2F4EF] border border-[#E7E9E2] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#607C55]"
               >
                 <Menu className="w-5 h-5" />
               </button>

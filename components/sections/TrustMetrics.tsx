@@ -76,11 +76,11 @@ export function TrustMetrics() {
     <section
       ref={sectionRef}
       aria-label="Clinic Trust Metrics and Verified Indicators"
-      className="bg-white border-b border-[#E8E9E5] py-8 sm:py-10"
+      className="bg-[#FAFAF7] border-b border-[#E7E9E2] py-10 sm:py-12"
     >
       <div className="content-container">
         {/* Compact Horizontal Metrics Strip */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-[#E8E9E5]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-[#E7E9E2]">
           {kpis.map((kpi, index) => (
             <div
               key={kpi.id}
@@ -88,34 +88,34 @@ export function TrustMetrics() {
                 index === 0 ? "sm:pl-0" : ""
               } ${index === kpis.length - 1 ? "sm:pr-0" : ""}`}
             >
-              {/* Restrained Large Numeral (32–40px) */}
+              {/* Restrained Large Numeral (34–40px) */}
               <div className="flex items-baseline gap-1">
-                <span className="font-serif text-3xl sm:text-4xl text-[#252724] tracking-tight font-medium">
+                <span className="font-serif text-3xl sm:text-4xl text-[#20231F] tracking-tight font-normal">
                   {kpi.prefix}
                   <CountUp
                     target={kpi.targetNumber}
                     decimals={kpi.decimals || 0}
                     trigger={isVisible}
                   />
-                  <span className="text-[#5C7651] font-light text-2xl sm:text-3xl">
+                  <span className="text-[#607C55] font-light text-2xl sm:text-3xl">
                     {kpi.suffix}
                   </span>
                 </span>
-                <span className="w-1.5 h-1.5 rounded-full bg-[#C7DDB0] mb-1 ml-1" />
+                <span className="w-1.5 h-1.5 rounded-full bg-[#DCE8CF] mb-1 ml-1" />
               </div>
 
               {/* Explanatory Labels */}
               <div>
-                <h3 className="text-xs font-semibold uppercase tracking-[0.14em] text-[#252724]">
+                <h3 className="text-xs font-semibold uppercase tracking-[0.14em] text-[#20231F]">
                   {kpi.label}
                 </h3>
-                <p className="text-[12px] text-[#858780] leading-snug pt-0.5">
+                <p className="text-[12px] text-[#777D75] leading-snug pt-0.5">
                   {kpi.description}
                 </p>
               </div>
 
               {/* Small Source Attribution */}
-              <div className="pt-1 flex items-center gap-1.5 text-[10px] uppercase tracking-wider text-[#5C7651] font-medium">
+              <div className="pt-1 flex items-center gap-1.5 text-[10px] uppercase tracking-wider text-[#607C55] font-medium">
                 <span>{kpi.sourceAttribution}</span>
               </div>
             </div>

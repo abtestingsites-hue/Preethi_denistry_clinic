@@ -26,19 +26,19 @@ export function BlogSection({ onBookAppointment }: BlogSectionProps) {
     <section
       id="blogs"
       aria-label="The Smile Journal — Dental Education and Articles"
-      className="py-14 sm:py-18 lg:py-20 bg-white border-b border-[#E8E9E5]"
+      className="py-18 sm:py-24 lg:py-28 bg-[#FAFAF7] border-b border-[#E7E9E2]"
     >
       <div className="content-container space-y-8 sm:space-y-10">
         {/* Section Header */}
         <div className="max-w-xl space-y-2">
-          <div className="flex items-center gap-2 text-xs font-semibold tracking-[0.18em] uppercase text-[#5C7651]">
-            <Sparkles className="w-3.5 h-3.5 text-[#5C7651]" />
+          <div className="flex items-center gap-2 text-xs font-semibold tracking-[0.18em] uppercase text-[#607C55]">
+            <Sparkles className="w-3.5 h-3.5 text-[#607C55]" />
             <span>DENTAL EDUCATION & INSIGHTS</span>
           </div>
-          <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl text-[#252724] tracking-tight leading-[1.18]">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-[40px] text-[#20231F] tracking-tight leading-[1.15] font-normal">
             The Smile Journal.
           </h2>
-          <p className="text-sm text-[#858780] leading-relaxed">
+          <p className="text-sm text-[#777D75] leading-relaxed">
             Clinician-reviewed guides on clear aligners, consultation expectations, and daily oral hygiene to support your dental health.
           </p>
         </div>
@@ -49,10 +49,10 @@ export function BlogSection({ onBookAppointment }: BlogSectionProps) {
             <div
               key={article.id}
               onClick={() => handleOpenArticle(article)}
-              className="group rounded-card overflow-hidden border border-[#E8E9E5] bg-white shadow-subtle hover:shadow-card hover:border-[#A9C49A] transition-all duration-300 cursor-pointer flex flex-col justify-between"
+              className="group rounded-card overflow-hidden border border-[#E7E9E2] bg-white shadow-subtle hover:shadow-card hover:border-[#607C55] transition-all duration-300 cursor-pointer flex flex-col justify-between"
             >
               {/* Thumbnail (Restrained height 180–200px) */}
-              <div className="relative h-44 sm:h-48 w-full overflow-hidden bg-[#111310]">
+              <div className="relative h-44 sm:h-48 w-full overflow-hidden bg-[#171B16]">
                 <Image
                   src={article.imageUrl}
                   alt={article.imageAlt}
@@ -63,7 +63,7 @@ export function BlogSection({ onBookAppointment }: BlogSectionProps) {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
 
                 <div className="absolute top-3.5 left-3.5">
-                  <span className="text-[10px] font-semibold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-white/95 text-[#252724] shadow-subtle">
+                  <span className="text-[10px] font-semibold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-white/95 text-[#20231F] shadow-subtle">
                     {article.categoryLabel}
                   </span>
                 </div>

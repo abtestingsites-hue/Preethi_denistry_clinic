@@ -9,37 +9,36 @@
   --font-dm-sans: "DM Sans", "Manrope", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-cormorant: "Cormorant Garamond", Georgia, serif;
 
-  /* Version 4 Refined Minimalism Palette */
-  --color-primary-white: #FFFFFF;
-  --color-warm-white: #F7F8F5;
-  --color-pistachio: #C7DDB0;
-  --color-soft-sage: #A9C49A;
-  --color-deep-green: #5C7651;
-  --color-light-grey: #E8E9E5;
-  --color-medium-grey: #858780;
-  --color-charcoal: #252724;
-  --color-near-black: #111310;
+  /* Version 5 Luxury Editorial & Cinematic Palette */
+  --color-primary-bg: #FAFAF7;
+  --color-secondary-bg: #F2F4EF;
+  --color-primary-text: #20231F;
+  --color-secondary-text: #777D75;
+  --color-brand-green: #607C55;
+  --color-soft-pistachio: #DCE8CF;
+  --color-border: #E7E9E2;
+  --color-dark-section: #171B16;
 }
 
 @layer base {
   html {
     scroll-behavior: smooth;
-    background-color: #FFFFFF;
-    color: #252724;
+    background-color: #FAFAF7;
+    color: #20231F;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
   body {
-    background-color: #FFFFFF;
-    color: #252724;
+    background-color: #FAFAF7;
+    color: #20231F;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
     overflow-x: hidden;
   }
 
   ::selection {
-    background-color: #C7DDB0;
-    color: #111310;
+    background-color: #DCE8CF;
+    color: #171B16;
   }
 }
 
@@ -49,34 +48,34 @@
   }
   
   .backdrop-blur-glass {
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
   }
 
   .border-hairline {
     border-width: 1px;
-    border-color: #E8E9E5;
+    border-color: #E7E9E2;
   }
 
   .content-container {
-    max-width: 1200px;
+    max-width: 1240px;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
+    padding-left: 5%;
+    padding-right: 5%;
   }
 
   @screen sm {
     .content-container {
-      padding-left: 1.75rem;
-      padding-right: 1.75rem;
+      padding-left: 6%;
+      padding-right: 6%;
     }
   }
 
   @screen lg {
     .content-container {
-      padding-left: 2.5rem;
-      padding-right: 2.5rem;
+      padding-left: 6.5%;
+      padding-right: 6.5%;
     }
   }
 }
@@ -88,16 +87,16 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #F7F8F5;
+  background: #FAFAF7;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #C7DDB0;
+  background: #DCE8CF;
   border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #5C7651;
+  background: #607C55;
 }
 
 /* Respect Reduced Motion Preferences */
