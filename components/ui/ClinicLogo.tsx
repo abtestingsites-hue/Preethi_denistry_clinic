@@ -25,11 +25,12 @@ export function ClinicLogo({
       <Image
         src={src}
         alt="Dr. Preethi’s Dentistry — Invisalign® Provider"
-        width={339}
-        height={104}
+        width={344}
+        height={107}
         priority={priority}
-        className="h-full w-auto max-h-[46px] object-contain transition-transform duration-300 group-hover:scale-[1.02]"
+        className="h-full w-auto max-h-[48px] object-contain transition-transform duration-300 group-hover:scale-[1.02]"
       />
     </div>
   );
 }
+
