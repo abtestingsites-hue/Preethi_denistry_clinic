@@ -15,7 +15,7 @@ export default function TermsPage() {
         {/* Back Link */}
         <Link
           href="/"
-          className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[#6a774b] hover:text-[#252724] transition-colors"
+          className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[#5C7651] hover:text-[#252724] transition-colors"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Return to Homepage</span>
@@ -23,8 +23,8 @@ export default function TermsPage() {
 
         {/* Header */}
         <div className="space-y-3 border-b border-[#E8E9E5] pb-8">
-          <div className="flex items-center gap-2 text-xs font-semibold tracking-[0.2em] uppercase text-[#6a774b]">
-            <FileText className="w-4 h-4 text-[#6a774b]" />
+          <div className="flex items-center gap-2 text-xs font-semibold tracking-[0.2em] uppercase text-[#5C7651]">
+            <FileText className="w-4 h-4 text-[#5C7651]" />
             <span>TERMS OF SERVICE & CLINICAL DISCLAIMER</span>
           </div>
           <h1 className="font-serif text-3xl sm:text-5xl text-[#252724] tracking-tight">
@@ -53,7 +53,7 @@ export default function TermsPage() {
             <p className="text-[#858780]">
               All content on this website—including treatment overviews, Invisalign® descriptions, diagrams, and oral health guidelines—is provided for informational and educational purposes only. It is not intended to be a substitute for professional clinical advice, formal diagnosis, or individualized treatment.
             </p>
-            <div className="p-4 rounded-2xl bg-[#8f9d6f]/25 border border-[#8f9d6f]/50 text-xs sm:text-sm text-[#252724]">
+            <div className="p-4 rounded-2xl bg-[#C7DDB0]/25 border border-[#C7DDB0]/50 text-xs sm:text-sm text-[#252724]">
               Always seek the advice of a qualified dental professional regarding any medical condition or orthodontic alignment goals.
             </div>
           </section>

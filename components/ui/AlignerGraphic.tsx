@@ -31,7 +31,7 @@ export function AlignerGraphic({
       aria-hidden="true"
     >
       {/* Background Soft Pistachio & Sage Refraction Aura */}
-      <div className="absolute inset-0 bg-gradient-to-tr from-[#8f9d6f]/35 via-[#8f9d6f]/20 to-[#FFFFFF]/60 blur-3xl rounded-full transform scale-90" />
+      <div className="absolute inset-0 bg-gradient-to-tr from-[#C7DDB0]/35 via-[#C7DDB0]/20 to-[#FFFFFF]/60 blur-3xl rounded-full transform scale-90" />
 
       {/* Clear Aligner Tray SVG with Precision Dental Geometry */}
       <svg
@@ -45,18 +45,18 @@ export function AlignerGraphic({
           <linearGradient id="v4AlignerGlassGrad" x1="20" y1="20" x2="320" y2="220" gradientUnits="userSpaceOnUse">
             <stop offset="0%" stopColor="#FFFFFF" stopOpacity="0.9" />
             <stop offset="25%" stopColor="#F7F7F5" stopOpacity="0.7" />
-            <stop offset="50%" stopColor="#8f9d6f" stopOpacity="0.35" />
+            <stop offset="50%" stopColor="#C7DDB0" stopOpacity="0.35" />
             <stop offset="75%" stopColor="#FFFFFF" stopOpacity="0.8" />
-            <stop offset="100%" stopColor="#8f9d6f" stopOpacity="0.45" />
+            <stop offset="100%" stopColor="#C7DDB0" stopOpacity="0.45" />
           </linearGradient>
 
           {/* Tray Edge Reflection Gradient */}
           <linearGradient id="v4TrayRimGrad" x1="10" y1="10" x2="330" y2="120" gradientUnits="userSpaceOnUse">
-            <stop offset="0%" stopColor="#8f9d6f" stopOpacity="0.95" />
-            <stop offset="35%" stopColor="#6a774b" stopOpacity="0.75" />
+            <stop offset="0%" stopColor="#C7DDB0" stopOpacity="0.95" />
+            <stop offset="35%" stopColor="#5C7651" stopOpacity="0.75" />
             <stop offset="55%" stopColor="#FFFFFF" stopOpacity="0.98" />
-            <stop offset="80%" stopColor="#8f9d6f" stopOpacity="0.85" />
-            <stop offset="100%" stopColor="#8f9d6f" stopOpacity="0.9" />
+            <stop offset="80%" stopColor="#C7DDB0" stopOpacity="0.85" />
+            <stop offset="100%" stopColor="#C7DDB0" stopOpacity="0.9" />
           </linearGradient>
 
           {/* Incisal Ridge Highlighting */}
@@ -68,8 +68,8 @@ export function AlignerGraphic({
 
           {/* Laser-Etched Coordinate Marker Gradient */}
           <linearGradient id="v4LaserGrad" x1="0" y1="0" x2="0" y2="10" gradientUnits="userSpaceOnUse">
-            <stop offset="0%" stopColor="#6a774b" />
-            <stop offset="100%" stopColor="#8f9d6f" />
+            <stop offset="0%" stopColor="#5C7651" />
+            <stop offset="100%" stopColor="#C7DDB0" />
           </linearGradient>
         </defs>
 

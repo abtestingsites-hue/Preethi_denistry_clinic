@@ -89,12 +89,12 @@ export function SiteHeader({ onBookAppointmentClick }: SiteHeaderProps) {
                 e.preventDefault();
                 scrollToSection("hero");
               }}
-              className="flex items-center gap-3 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6a774b] rounded-lg p-1"
+              className="flex items-center gap-3 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5C7651] rounded-lg p-1"
             >
               {/* Brand Aligner Arc Mark */}
-              <div className="w-10 h-10 rounded-full bg-[#8f9d6f]/25 border border-[#8f9d6f]/40 flex items-center justify-center text-[#6a774b] group-hover:bg-[#8f9d6f]/45 transition-colors">
+              <div className="w-10 h-10 rounded-full bg-[#C7DDB0]/40 border border-[#A9C49A]/50 flex items-center justify-center text-[#5C7651] group-hover:bg-[#C7DDB0]/60 transition-colors">
                 <svg
-                  className="w-5 h-5 text-[#6a774b]"
+                  className="w-5 h-5 text-[#5C7651]"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
@@ -108,7 +108,7 @@ export function SiteHeader({ onBookAppointmentClick }: SiteHeaderProps) {
               </div>
 
               <div className="flex flex-col">
-                <span className="font-serif text-xl sm:text-2xl text-[#181A16] tracking-tight font-semibold leading-tight group-hover:text-[#6a774b] transition-colors">
+                <span className="font-serif text-xl sm:text-2xl text-[#252724] tracking-tight font-semibold leading-tight group-hover:text-[#5C7651] transition-colors">
                   Dr. Preethi’s
                 </span>
                 <span className="text-[10px] tracking-[0.22em] uppercase text-[#858780] font-medium">
@@ -129,15 +129,15 @@ export function SiteHeader({ onBookAppointmentClick }: SiteHeaderProps) {
                     key={item.id}
                     onClick={() => scrollToSection(item.id)}
                     className={cn(
-                      "text-sm font-medium transition-colors relative py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6a774b] rounded",
+                      "text-sm font-medium transition-colors relative py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5C7651] rounded",
                       isActive
-                        ? "text-[#6a774b] font-semibold"
-                        : "text-[#858780] hover:text-[#181A16]"
+                        ? "text-[#5C7651] font-semibold"
+                        : "text-[#858780] hover:text-[#252724]"
                     )}
                   >
                     <span>{item.label}</span>
                     {isActive && (
-                      <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#6a774b] rounded-full" />
+                      <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#5C7651] rounded-full" />
                     )}
                   </button>
                 );
@@ -149,7 +149,7 @@ export function SiteHeader({ onBookAppointmentClick }: SiteHeaderProps) {
               <button
                 type="button"
                 onClick={() => scrollToSection("contact")}
-                className="hidden sm:inline-flex items-center justify-center px-5 py-2 rounded-full text-xs sm:text-sm font-semibold text-white bg-[#6a774b] hover:bg-[#58633d] shadow-subtle hover:shadow-card transition-all active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6a774b]"
+                className="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold text-white bg-[#5C7651] hover:bg-[#496041] shadow-subtle hover:shadow-card transition-all active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5C7651]"
               >
                 Contact
               </button>
@@ -158,7 +158,7 @@ export function SiteHeader({ onBookAppointmentClick }: SiteHeaderProps) {
               <button
                 onClick={() => setIsMobileMenuOpen(true)}
                 aria-label="Open navigation menu"
-                className="lg:hidden p-2 rounded-xl text-[#181A16] hover:bg-[#F7F8F5] border border-[#E8E9E5] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6a774b]"
+                className="lg:hidden p-2 rounded-xl text-[#252724] hover:bg-[#F7F8F5] border border-[#E8E9E5] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5C7651]"
               >
                 <Menu className="w-5 h-5" />
               </button>

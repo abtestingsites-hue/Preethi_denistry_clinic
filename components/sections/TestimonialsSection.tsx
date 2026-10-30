@@ -31,11 +31,11 @@ export function TestimonialsSection() {
         {/* Section Header with Verified Google Reviews Pill */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
           <div className="max-w-xl space-y-2">
-            <div className="flex items-center gap-2 text-xs font-semibold tracking-[0.18em] uppercase text-[#6a774b]">
-              <Sparkles className="w-3.5 h-3.5 text-[#6a774b]" />
+            <div className="flex items-center gap-2 text-xs font-semibold tracking-[0.18em] uppercase text-[#5C7651]">
+              <Sparkles className="w-3.5 h-3.5 text-[#5C7651]" />
               <span>PATIENT EXPERIENCES</span>
             </div>
-            <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl text-[#181A16] tracking-tight leading-[1.18]">
+            <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl text-[#252724] tracking-tight leading-[1.18]">
               Smiles That Speak for Themselves.
             </h2>
             <p className="text-sm text-[#858780] leading-relaxed">
@@ -46,12 +46,12 @@ export function TestimonialsSection() {
           {/* Compact Google Reviews Rating Card */}
           <div className="p-3.5 rounded-xl bg-white border border-[#E8E9E5] shadow-subtle hover:shadow-card transition-shadow flex items-center gap-3.5 shrink-0 self-start sm:self-auto">
             <div className="space-y-0.5">
-              <div className="flex items-center gap-1 text-[#6a774b]">
+              <div className="flex items-center gap-1 text-[#5C7651]">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="w-3.5 h-3.5 fill-current" />
                 ))}
               </div>
-              <p className="text-xs font-bold text-[#181A16]">4.9 / 5 Rating</p>
+              <p className="text-xs font-bold text-[#252724]">4.9 / 5 Rating</p>
               <span className="text-[10px] text-[#858780] block">Verified Google Reviews</span>
             </div>
 
@@ -59,7 +59,7 @@ export function TestimonialsSection() {
               href={testimonialsConfig.googleReviewsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-lg bg-[#F7F8F5] hover:bg-[#8f9d6f]/20 text-[#6a774b] transition-colors"
+              className="p-2 rounded-lg bg-[#F7F8F5] hover:bg-[#C7DDB0]/20 text-[#5C7651] transition-colors"
               aria-label="Open Google Maps Reviews"
             >
               <ExternalLink className="w-3.5 h-3.5" />
@@ -86,39 +86,39 @@ export function TestimonialsSection() {
               {/* Card Header: Star Rating & Treatment Badge */}
               <div className="flex flex-wrap items-center justify-between gap-3 pb-3 border-b border-[#E8E9E5]/70">
                 <div className="flex items-center gap-2">
-                  <div className="flex items-center gap-1 text-[#6a774b]">
+                  <div className="flex items-center gap-1 text-[#5C7651]">
                     {[...Array(currentTestimonial.ratingStars)].map((_, i) => (
                       <Star key={i} className="w-4 h-4 fill-current" />
                     ))}
                   </div>
-                  <span className="text-xs font-semibold text-[#181A16] px-2 py-0.5 rounded-full bg-[#F7F8F5] border border-[#E8E9E5]">
+                  <span className="text-xs font-semibold text-[#252724] px-2 py-0.5 rounded-full bg-[#F7F8F5] border border-[#E8E9E5]">
                     5.0 Verified Experience
                   </span>
                 </div>
 
-                <span className="text-[11px] font-semibold uppercase tracking-wider px-3 py-1 rounded-full bg-[#8f9d6f]/20 text-[#6a774b] border border-[#8f9d6f]/30">
+                <span className="text-[11px] font-semibold uppercase tracking-wider px-3 py-1 rounded-full bg-[#C7DDB0]/20 text-[#5C7651] border border-[#C7DDB0]/30">
                   {currentTestimonial.treatmentTag}
                 </span>
               </div>
 
               {/* Patient Feedback Quote Typography */}
-              <blockquote className="font-serif text-lg sm:text-xl lg:text-2xl text-[#181A16] leading-relaxed italic max-w-4xl font-normal">
+              <blockquote className="font-serif text-lg sm:text-xl lg:text-2xl text-[#252724] leading-relaxed italic max-w-4xl font-normal">
                 &ldquo;{currentTestimonial.feedbackText}&rdquo;
               </blockquote>
 
               {/* Card Footer: Patient Profile & Verification */}
               <div className="pt-4 border-t border-[#E8E9E5] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div className="flex items-center gap-3.5">
-                  <div className="w-11 h-11 rounded-full bg-[#6a774b] text-white flex items-center justify-center font-bold text-sm shadow-subtle ring-2 ring-[#8f9d6f]/25">
+                  <div className="w-11 h-11 rounded-full bg-[#5C7651] text-white flex items-center justify-center font-bold text-sm shadow-subtle ring-2 ring-[#C7DDB0]/25">
                     {currentTestimonial.initials}
                   </div>
                   <div>
-                    <h3 className="font-semibold text-sm sm:text-base text-[#181A16]">
+                    <h3 className="font-semibold text-sm sm:text-base text-[#252724]">
                       {currentTestimonial.patientName}
                     </h3>
                     <div className="flex items-center gap-2 text-xs text-[#858780] pt-0.5">
-                      <span className="inline-flex items-center gap-1 text-[#6a774b] font-medium">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-[#6a774b]" />
+                      <span className="inline-flex items-center gap-1 text-[#5C7651] font-medium">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-[#5C7651]" />
                         <span>{currentTestimonial.source}</span>
                       </span>
                       <span>·</span>
@@ -134,7 +134,7 @@ export function TestimonialsSection() {
                       type="button"
                       onClick={handlePrev}
                       aria-label="Previous testimonial"
-                      className="p-2 rounded-full text-[#181A16] hover:bg-white hover:text-[#6a774b] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6a774b]"
+                      className="p-2 rounded-full text-[#252724] hover:bg-white hover:text-[#5C7651] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5C7651]"
                     >
                       <ChevronLeft className="w-4 h-4" />
                     </button>
@@ -145,7 +145,7 @@ export function TestimonialsSection() {
                       type="button"
                       onClick={handleNext}
                       aria-label="Next testimonial"
-                      className="p-2 rounded-full text-[#181A16] hover:bg-white hover:text-[#6a774b] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6a774b]"
+                      className="p-2 rounded-full text-[#252724] hover:bg-white hover:text-[#5C7651] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5C7651]"
                     >
                       <ChevronRight className="w-4 h-4" />
                     </button>
@@ -167,7 +167,7 @@ export function TestimonialsSection() {
               className={cn(
                 "h-2 rounded-full transition-all duration-300",
                 activeIndex === idx
-                  ? "w-8 bg-[#6a774b]"
+                  ? "w-8 bg-[#5C7651]"
                   : "w-2 bg-[#E8E9E5] hover:bg-[#858780]"
               )}
             />

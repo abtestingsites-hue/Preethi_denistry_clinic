@@ -31,32 +31,32 @@ export function AnnouncementMarquee({
               {clinicAnnouncements.map((item) => (
                 <div
                   key={`set1-${item.id}`}
-                  className="flex items-center gap-3 text-xs sm:text-sm text-[#181A16]"
+                  className="flex items-center gap-3 text-xs sm:text-sm text-[#252724]"
                 >
-                  <span className="inline-flex items-center justify-center p-1 rounded-full bg-[#8f9d6f]/25 text-[#6a774b]">
-                    <Sparkles className="w-3 h-3 text-[#6a774b]" aria-hidden="true" />
+                  <span className="inline-flex items-center justify-center p-1 rounded-full bg-[#C7DDB0]/25 text-[#5C7651]">
+                    <Sparkles className="w-3 h-3 text-[#5C7651]" aria-hidden="true" />
                   </span>
                   {item.badge && (
-                    <span className="font-semibold text-[#6a774b] tracking-wide uppercase text-[10px] px-2 py-0.5 rounded-full bg-[#8f9d6f]/20 border border-[#8f9d6f]/30">
+                    <span className="font-semibold text-[#5C7651] tracking-wide uppercase text-[10px] px-2 py-0.5 rounded-full bg-[#C7DDB0]/20 border border-[#C7DDB0]/30">
                       {item.badge}
                     </span>
                   )}
-                  <span className="font-medium text-[#181A16]">{item.text}</span>
+                  <span className="font-medium text-[#252724]">{item.text}</span>
                   {item.highlight && (
-                    <span className="font-semibold text-[#6a774b] hidden md:inline">
+                    <span className="font-semibold text-[#5C7651] hidden md:inline">
                       · {item.highlight}
                     </span>
                   )}
                   {item.ctaText && onBookClick && (
                     <button
                       onClick={onBookClick}
-                      className="inline-flex items-center gap-1 font-semibold text-[#6a774b] hover:text-[#181A16] underline underline-offset-4 ml-1 transition-colors"
+                      className="inline-flex items-center gap-1 font-semibold text-[#5C7651] hover:text-[#252724] underline underline-offset-4 ml-1 transition-colors"
                     >
                       <span>{item.ctaText}</span>
                       <ArrowRight className="w-3 h-3" />
                     </button>
                   )}
-                  <span className="text-[#8f9d6f] text-sm select-none" aria-hidden="true">
+                  <span className="text-[#C7DDB0] text-sm select-none" aria-hidden="true">
                     ✦
                   </span>
                 </div>
@@ -68,32 +68,32 @@ export function AnnouncementMarquee({
               {clinicAnnouncements.map((item) => (
                 <div
                   key={`set2-${item.id}`}
-                  className="flex items-center gap-3 text-xs sm:text-sm text-[#181A16]"
+                  className="flex items-center gap-3 text-xs sm:text-sm text-[#252724]"
                 >
-                  <span className="inline-flex items-center justify-center p-1 rounded-full bg-[#8f9d6f]/25 text-[#6a774b]">
-                    <Sparkles className="w-3 h-3 text-[#6a774b]" />
+                  <span className="inline-flex items-center justify-center p-1 rounded-full bg-[#C7DDB0]/25 text-[#5C7651]">
+                    <Sparkles className="w-3 h-3 text-[#5C7651]" />
                   </span>
                   {item.badge && (
-                    <span className="font-semibold text-[#6a774b] tracking-wide uppercase text-[10px] px-2 py-0.5 rounded-full bg-[#8f9d6f]/20 border border-[#8f9d6f]/30">
+                    <span className="font-semibold text-[#5C7651] tracking-wide uppercase text-[10px] px-2 py-0.5 rounded-full bg-[#C7DDB0]/20 border border-[#C7DDB0]/30">
                       {item.badge}
                     </span>
                   )}
-                  <span className="font-medium text-[#181A16]">{item.text}</span>
+                  <span className="font-medium text-[#252724]">{item.text}</span>
                   {item.highlight && (
-                    <span className="font-semibold text-[#6a774b] hidden md:inline">
+                    <span className="font-semibold text-[#5C7651] hidden md:inline">
                       · {item.highlight}
                     </span>
                   )}
                   {item.ctaText && onBookClick && (
                     <button
                       onClick={onBookClick}
-                      className="inline-flex items-center gap-1 font-semibold text-[#6a774b] hover:text-[#181A16] underline underline-offset-4 ml-1 transition-colors"
+                      className="inline-flex items-center gap-1 font-semibold text-[#5C7651] hover:text-[#252724] underline underline-offset-4 ml-1 transition-colors"
                     >
                       <span>{item.ctaText}</span>
                       <ArrowRight className="w-3 h-3" />
                     </button>
                   )}
-                  <span className="text-[#8f9d6f] text-sm select-none">
+                  <span className="text-[#C7DDB0] text-sm select-none">
                     ✦
                   </span>
                 </div>

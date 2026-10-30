@@ -90,23 +90,23 @@ export function TrustMetrics() {
             >
               {/* Restrained Large Numeral (32–40px) */}
               <div className="flex items-baseline gap-1">
-                <span className="font-serif text-3xl sm:text-4xl text-[#181A16] tracking-tight font-medium">
+                <span className="font-serif text-3xl sm:text-4xl text-[#252724] tracking-tight font-medium">
                   {kpi.prefix}
                   <CountUp
                     target={kpi.targetNumber}
                     decimals={kpi.decimals || 0}
                     trigger={isVisible}
                   />
-                  <span className="text-[#6a774b] font-light text-2xl sm:text-3xl">
+                  <span className="text-[#5C7651] font-light text-2xl sm:text-3xl">
                     {kpi.suffix}
                   </span>
                 </span>
-                <span className="w-1.5 h-1.5 rounded-full bg-[#8f9d6f] mb-1 ml-1" />
+                <span className="w-1.5 h-1.5 rounded-full bg-[#C7DDB0] mb-1 ml-1" />
               </div>
 
               {/* Explanatory Labels */}
               <div>
-                <h3 className="text-xs font-semibold uppercase tracking-[0.14em] text-[#181A16]">
+                <h3 className="text-xs font-semibold uppercase tracking-[0.14em] text-[#252724]">
                   {kpi.label}
                 </h3>
                 <p className="text-[12px] text-[#858780] leading-snug pt-0.5">
@@ -115,7 +115,7 @@ export function TrustMetrics() {
               </div>
 
               {/* Small Source Attribution */}
-              <div className="pt-1 flex items-center gap-1.5 text-[10px] uppercase tracking-wider text-[#6a774b] font-medium">
+              <div className="pt-1 flex items-center gap-1.5 text-[10px] uppercase tracking-wider text-[#5C7651] font-medium">
                 <span>{kpi.sourceAttribution}</span>
               </div>
             </div>

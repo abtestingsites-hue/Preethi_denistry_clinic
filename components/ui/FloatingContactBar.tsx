@@ -19,9 +19,9 @@ export function FloatingContactBar({
       <div className="max-w-md mx-auto grid grid-cols-3 gap-2">
         <a
           href={`tel:${clinicInfo.phoneRaw}`}
-          className="flex flex-col items-center justify-center py-2 px-1 text-xs font-medium text-[#181A16] hover:text-[#6a774b] hover:bg-[#F7F8F5] rounded-xl transition-colors border border-transparent hover:border-[#E8E9E5]"
+          className="flex flex-col items-center justify-center py-2 px-1 text-xs font-medium text-[#252724] hover:text-[#5C7651] hover:bg-[#F7F8F5] rounded-xl transition-colors border border-transparent hover:border-[#E8E9E5]"
         >
-          <Phone className="w-4 h-4 mb-1 text-[#6a774b]" />
+          <Phone className="w-4 h-4 mb-1 text-[#5C7651]" />
           <span>Call Reception</span>
         </a>
 
@@ -30,16 +30,16 @@ export function FloatingContactBar({
             href={clinicInfo.socialLinks.whatsapp}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex flex-col items-center justify-center py-2 px-1 text-xs font-medium text-[#181A16] hover:text-[#6a774b] hover:bg-[#F7F8F5] rounded-xl transition-colors border border-transparent hover:border-[#E8E9E5]"
+            className="flex flex-col items-center justify-center py-2 px-1 text-xs font-medium text-[#252724] hover:text-[#5C7651] hover:bg-[#F7F8F5] rounded-xl transition-colors border border-transparent hover:border-[#E8E9E5]"
           >
-            <MessageCircle className="w-4 h-4 mb-1 text-[#6a774b]" />
+            <MessageCircle className="w-4 h-4 mb-1 text-[#5C7651]" />
             <span>WhatsApp</span>
           </a>
         )}
 
         <button
           onClick={onOpenBookingModal}
-          className="flex flex-col items-center justify-center py-2 px-1 text-xs font-semibold text-white bg-[#6a774b] hover:bg-[#58633d] rounded-xl shadow-subtle transition-colors"
+          className="flex flex-col items-center justify-center py-2 px-1 text-xs font-semibold text-white bg-[#5C7651] hover:bg-[#496041] rounded-xl shadow-subtle transition-colors"
         >
           <Calendar className="w-4 h-4 mb-1" />
           <span>Book Appointment</span>

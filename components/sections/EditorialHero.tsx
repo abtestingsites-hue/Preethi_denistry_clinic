@@ -21,11 +21,11 @@ export function EditorialHero({
     <section
       id="hero"
       aria-label="Dr. Preethi's Dentistry Hero"
-      className="relative bg-white text-[#181A16] border-b border-[#E8E9E5] overflow-hidden py-10 sm:py-14 lg:py-16 scroll-mt-20"
+      className="relative bg-white text-[#252724] border-b border-[#E8E9E5] overflow-hidden py-10 sm:py-14 lg:py-16 scroll-mt-20"
     >
       {/* Background Soft Studio Gradients */}
-      <div className="absolute top-0 right-1/4 w-[420px] h-[420px] bg-gradient-to-br from-[#8f9d6f]/15 via-[#6a774b]/08 to-transparent rounded-full blur-3xl pointer-events-none -z-0" />
-      <div className="absolute bottom-0 left-10 w-[360px] h-[360px] bg-gradient-to-tr from-[#F7F8F5] via-[#8f9d6f]/10 to-transparent rounded-full blur-2xl pointer-events-none -z-0" />
+      <div className="absolute top-0 right-1/4 w-[420px] h-[420px] bg-gradient-to-br from-[#C7DDB0]/15 via-[#5C7651]/08 to-transparent rounded-full blur-3xl pointer-events-none -z-0" />
+      <div className="absolute bottom-0 left-10 w-[360px] h-[360px] bg-gradient-to-tr from-[#F7F8F5] via-[#C7DDB0]/10 to-transparent rounded-full blur-2xl pointer-events-none -z-0" />
 
       {/* Main 12-Column Centered Container (Max 1200px) */}
       <div className="content-container relative z-10">
@@ -38,8 +38,8 @@ export function EditorialHero({
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.45, ease: "easeOut" }}
             >
-              <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#F7F8F5] border border-[#E8E9E5] text-[11px] font-semibold tracking-[0.2em] uppercase text-[#6a774b]">
-                <Sparkles className="w-3 h-3 text-[#6a774b]" />
+              <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#F7F8F5] border border-[#E8E9E5] text-[11px] font-semibold tracking-[0.2em] uppercase text-[#5C7651]">
+                <Sparkles className="w-3 h-3 text-[#5C7651]" />
                 <span>MODERN DENTISTRY · COIMBATORE</span>
               </span>
             </motion.div>
@@ -50,13 +50,13 @@ export function EditorialHero({
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.55, delay: 0.1, ease: "easeOut" }}
             >
-              <h1 className="font-serif text-3xl sm:text-5xl lg:text-[3.5rem] tracking-tight leading-[1.12] text-[#181A16] text-balance">
+              <h1 className="font-serif text-3xl sm:text-5xl lg:text-[3.5rem] tracking-tight leading-[1.12] text-[#252724] text-balance">
                 A clearer path <br />
                 to your{" "}
-                <span className="relative inline-block text-[#181A16]">
+                <span className="relative inline-block text-[#252724]">
                   <span className="relative z-10">confident smile</span>
                   <span
-                    className="absolute inset-x-0 bottom-1 sm:bottom-1.5 h-3 sm:h-3.5 bg-[#8f9d6f]/35 -z-0 rounded-sm"
+                    className="absolute inset-x-0 bottom-1 sm:bottom-1.5 h-3 sm:h-3.5 bg-[#C7DDB0]/35 -z-0 rounded-sm"
                     aria-hidden="true"
                   />
                 </span>
@@ -86,7 +86,7 @@ export function EditorialHero({
                 variant="primary"
                 size="md"
                 onClick={onBookAppointment}
-                className="font-medium px-6 py-3 text-sm shadow-subtle hover:shadow-card bg-[#6a774b] hover:bg-[#58633d]"
+                className="font-medium px-6 py-3 text-sm shadow-subtle hover:shadow-card bg-[#5C7651] hover:bg-[#496041]"
                 rightIcon={<ArrowRight className="w-4 h-4" />}
               >
                 Book an Appointment
@@ -96,7 +96,7 @@ export function EditorialHero({
                 variant="outline"
                 size="md"
                 onClick={onExploreInvisalign}
-                className="bg-white border-[#E8E9E5] text-[#181A16] hover:bg-[#F7F8F5] hover:border-[#6a774b] px-6 py-3 text-sm font-medium"
+                className="bg-white border-[#E8E9E5] text-[#252724] hover:bg-[#F7F8F5] hover:border-[#5C7651] px-6 py-3 text-sm font-medium"
               >
                 Explore Clear Aligners
               </Button>
@@ -109,15 +109,15 @@ export function EditorialHero({
               transition={{ duration: 0.5, delay: 0.4 }}
               className="pt-2 flex flex-wrap items-center gap-y-2 gap-x-5 text-xs text-[#858780]"
             >
-              <div className="flex items-center gap-1.5 text-[#6a774b] font-medium">
-                <MapPin className="w-3.5 h-3.5 text-[#6a774b]" />
+              <div className="flex items-center gap-1.5 text-[#5C7651] font-medium">
+                <MapPin className="w-3.5 h-3.5 text-[#5C7651]" />
                 <span>Saibaba Colony, Coimbatore · Tamil Nadu</span>
               </div>
 
               <span className="text-[#E8E9E5] hidden sm:inline">|</span>
 
-              <div className="flex items-center gap-1.5 font-medium text-[#181A16]">
-                <Clock className="w-3.5 h-3.5 text-[#6a774b]" />
+              <div className="flex items-center gap-1.5 font-medium text-[#252724]">
+                <Clock className="w-3.5 h-3.5 text-[#5C7651]" />
                 <span>Consultations by Appointment</span>
               </div>
             </motion.div>
@@ -130,15 +130,15 @@ export function EditorialHero({
               className="pt-3 border-t border-[#E8E9E5] flex flex-wrap items-center gap-y-2 gap-x-6 text-xs text-[#858780]"
             >
               <div className="flex items-center gap-1.5">
-                <CheckCircle2 className="w-3.5 h-3.5 text-[#6a774b]" />
+                <CheckCircle2 className="w-3.5 h-3.5 text-[#5C7651]" />
                 <span>Invisalign® Suite</span>
               </div>
               <div className="flex items-center gap-1.5">
-                <CheckCircle2 className="w-3.5 h-3.5 text-[#6a774b]" />
+                <CheckCircle2 className="w-3.5 h-3.5 text-[#5C7651]" />
                 <span>Unhurried 1-on-1 Care</span>
               </div>
               <div className="flex items-center gap-1.5">
-                <CheckCircle2 className="w-3.5 h-3.5 text-[#6a774b]" />
+                <CheckCircle2 className="w-3.5 h-3.5 text-[#5C7651]" />
                 <span>Hospital-Grade Hygiene</span>
               </div>
             </motion.div>

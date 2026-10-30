@@ -29,11 +29,11 @@ export function FAQAccordion({ onBookAppointment }: FAQAccordionProps) {
         <div className="max-w-3xl mx-auto space-y-8 sm:space-y-10">
           {/* Section Header */}
           <div className="text-center space-y-2">
-            <div className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.18em] uppercase text-[#6a774b]">
+            <div className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.18em] uppercase text-[#5C7651]">
               <Sparkles className="w-3.5 h-3.5" />
               <span>FREQUENTLY ASKED QUESTIONS</span>
             </div>
-            <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl text-[#181A16] tracking-tight leading-[1.18]">
+            <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl text-[#252724] tracking-tight leading-[1.18]">
               Questions Before Your Visit?
             </h2>
             <p className="text-xs sm:text-sm text-[#858780] max-w-lg mx-auto leading-relaxed">
@@ -54,7 +54,7 @@ export function FAQAccordion({ onBookAppointment }: FAQAccordionProps) {
                   className={cn(
                     "rounded-card-sm border transition-all duration-300 overflow-hidden bg-white",
                     isOpen
-                      ? "border-[#8f9d6f] shadow-subtle"
+                      ? "border-[#C7DDB0] shadow-subtle"
                       : "border-[#E8E9E5] hover:border-[#858780]/40"
                   )}
                 >
@@ -65,13 +65,13 @@ export function FAQAccordion({ onBookAppointment }: FAQAccordionProps) {
                       aria-expanded={isOpen}
                       aria-controls={answerId}
                       onClick={() => toggleItem(item.id)}
-                      className="w-full py-4 px-5 text-left flex items-center justify-between gap-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6a774b]"
+                      className="w-full py-4 px-5 text-left flex items-center justify-between gap-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5C7651]"
                     >
                       <span className="flex items-center gap-3">
-                        <span className="font-mono text-xs text-[#6a774b] font-semibold">
+                        <span className="font-mono text-xs text-[#5C7651] font-semibold">
                           0{index + 1}
                         </span>
-                        <span className="font-serif text-base sm:text-lg font-semibold text-[#181A16]">
+                        <span className="font-serif text-base sm:text-lg font-semibold text-[#252724]">
                           {item.question}
                         </span>
                       </span>
@@ -80,8 +80,8 @@ export function FAQAccordion({ onBookAppointment }: FAQAccordionProps) {
                         className={cn(
                           "w-7 h-7 rounded-full flex items-center justify-center shrink-0 transition-colors",
                           isOpen
-                            ? "bg-[#6a774b] text-white"
-                            : "bg-[#F7F8F5] text-[#181A16]"
+                            ? "bg-[#5C7651] text-white"
+                            : "bg-[#F7F8F5] text-[#252724]"
                         )}
                       >
                         {isOpen ? <Minus className="w-3.5 h-3.5" /> : <Plus className="w-3.5 h-3.5" />}
@@ -100,7 +100,7 @@ export function FAQAccordion({ onBookAppointment }: FAQAccordionProps) {
                         : "max-h-0 pb-0 pt-0 opacity-0 overflow-hidden"
                     )}
                   >
-                    <p className="pl-6 border-l-2 border-[#8f9d6f]">{item.answer}</p>
+                    <p className="pl-6 border-l-2 border-[#C7DDB0]">{item.answer}</p>
                   </div>
                 </div>
               );
@@ -109,15 +109,15 @@ export function FAQAccordion({ onBookAppointment }: FAQAccordionProps) {
 
           {/* Footer Enquiry Prompt */}
           <div className="p-4 rounded-card-sm bg-white border border-[#E8E9E5] flex flex-col sm:flex-row items-center justify-between gap-3 text-xs shadow-subtle">
-            <div className="flex items-center gap-2.5 text-[#181A16]">
-              <HelpCircle className="w-4 h-4 text-[#6a774b] shrink-0" />
+            <div className="flex items-center gap-2.5 text-[#252724]">
+              <HelpCircle className="w-4 h-4 text-[#5C7651] shrink-0" />
               <span>Have a specific clinical or scheduling question?</span>
             </div>
             {onBookAppointment && (
               <button
                 type="button"
                 onClick={onBookAppointment}
-                className="font-semibold text-[#6a774b] hover:underline shrink-0"
+                className="font-semibold text-[#5C7651] hover:underline shrink-0"
               >
                 Ask in Your Appointment Request
               </button>

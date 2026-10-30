@@ -31,11 +31,11 @@ export function BlogSection({ onBookAppointment }: BlogSectionProps) {
       <div className="content-container space-y-8 sm:space-y-10">
         {/* Section Header */}
         <div className="max-w-2xl space-y-2">
-          <div className="flex items-center gap-2 text-xs font-semibold tracking-[0.18em] uppercase text-[#6a774b]">
-            <Sparkles className="w-3.5 h-3.5 text-[#6a774b]" />
+          <div className="flex items-center gap-2 text-xs font-semibold tracking-[0.18em] uppercase text-[#5C7651]">
+            <Sparkles className="w-3.5 h-3.5 text-[#5C7651]" />
             <span>DENTAL EDUCATION & INSIGHTS</span>
           </div>
-          <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl text-[#181A16] tracking-tight leading-[1.18]">
+          <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl text-[#252724] tracking-tight leading-[1.18]">
             The Smile Journal.
           </h2>
           <p className="text-sm sm:text-base text-[#858780] leading-relaxed">
@@ -49,7 +49,7 @@ export function BlogSection({ onBookAppointment }: BlogSectionProps) {
             <article
               key={article.id}
               onClick={() => handleOpenArticle(article)}
-              className="group rounded-card overflow-hidden border border-[#E8E9E5] bg-white shadow-subtle hover:shadow-elevated hover:border-[#8f9d6f]/60 transition-all duration-300 cursor-pointer flex flex-col justify-between h-full"
+              className="group rounded-card overflow-hidden border border-[#E8E9E5] bg-white shadow-subtle hover:shadow-elevated hover:border-[#C7DDB0]/60 transition-all duration-300 cursor-pointer flex flex-col justify-between h-full"
             >
               {/* Image Presentation with Subtle Zoom Effect */}
               <div className="relative h-48 sm:h-52 w-full overflow-hidden bg-[#F7F8F5]">
@@ -64,7 +64,7 @@ export function BlogSection({ onBookAppointment }: BlogSectionProps) {
 
                 {/* Category Pill Tag */}
                 <div className="absolute top-3.5 left-3.5">
-                  <span className="text-[10px] font-semibold uppercase tracking-wider px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-[#181A16] shadow-subtle border border-white/60">
+                  <span className="text-[10px] font-semibold uppercase tracking-wider px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-[#252724] shadow-subtle border border-white/60">
                     {article.categoryLabel}
                   </span>
                 </div>
@@ -75,8 +75,8 @@ export function BlogSection({ onBookAppointment }: BlogSectionProps) {
                 <div className="space-y-2">
                   {/* Reading Metadata */}
                   <div className="flex items-center gap-2 text-[11px] text-[#858780] font-mono">
-                    <span className="inline-flex items-center gap-1 font-sans text-[#6a774b] font-medium">
-                      <Clock className="w-3 h-3 text-[#6a774b]" />
+                    <span className="inline-flex items-center gap-1 font-sans text-[#5C7651] font-medium">
+                      <Clock className="w-3 h-3 text-[#5C7651]" />
                       {article.readTime}
                     </span>
                     <span>·</span>
@@ -84,7 +84,7 @@ export function BlogSection({ onBookAppointment }: BlogSectionProps) {
                   </div>
 
                   {/* Title */}
-                  <h3 className="font-serif text-lg sm:text-xl font-semibold text-[#181A16] group-hover:text-[#6a774b] transition-colors line-clamp-2 leading-snug">
+                  <h3 className="font-serif text-lg sm:text-xl font-semibold text-[#252724] group-hover:text-[#5C7651] transition-colors line-clamp-2 leading-snug">
                     {article.title}
                   </h3>
 
@@ -96,7 +96,7 @@ export function BlogSection({ onBookAppointment }: BlogSectionProps) {
 
                 {/* Card Footer: Read Article Link */}
                 <div className="pt-3.5 border-t border-[#E8E9E5] flex items-center justify-between text-xs">
-                  <span className="font-semibold text-[#6a774b] group-hover:text-[#58633d] inline-flex items-center gap-1.5 transition-colors">
+                  <span className="font-semibold text-[#5C7651] group-hover:text-[#496041] inline-flex items-center gap-1.5 transition-colors">
                     <span>Read Article</span>
                     <ArrowUpRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                   </span>

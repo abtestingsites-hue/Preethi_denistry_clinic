@@ -1,18 +1,19 @@
 /**
  * Dr. Preethi's Dentistry — Gallery & Clinic Space Assets Registry
  *
- * The photography references match the actual clinic spaces:
- * 1. Reception & Waiting Area: Warm off-white/ivory walls, grey upholstered seating, architectural lighting
- * 2. Invisalign Experience: Clear aligner display, digital scans, discreet orthodontic branding
- * 3. Treatment Operatories & Dental Chair: State-of-the-art ergonomic dental chairs and lighting
- * 4. Equipment & Sterilization: Precision ultrasonic equipment, hospital-grade hygiene
- * 5. Clinic Interiors & Architecture: Subtle green trims, glass partitions, private consultation suites
+ * Authentic clinic photographs from Saibaba Colony, Coimbatore practice:
+ * - Clinic.png: Reception & Arrival Lounge (custom green branding, comfortable seating)
+ * - Clinic2.png: Main Corridor & Clinic Wayfinding (glass partitions, clean architectural lines)
+ * - Clinic3.png: Primary Operatory & Ergonomic Dental Chair
+ * - Clinic4.png: Clinical Operatory with Shadowless Lighting & Advanced Units
+ * - Clinic5.png: Natural Light Treatment Room
+ * - Clinic6.png: Sterile Operatory & Precision Workstation
+ * - Clinic7.png: Signature Treatment Operatory with Circular Ambient Lighting Ring
  */
 
 export type GalleryCategory =
   | "all"
   | "reception"
-  | "waiting"
   | "treatment"
   | "equipment"
   | "invisalign"
@@ -34,98 +35,110 @@ export interface ClinicImageItem {
 
 export const clinicGalleryCategories = [
   { id: "all" as GalleryCategory, label: "All Spaces" },
-  { id: "reception" as GalleryCategory, label: "Reception" },
-  { id: "waiting" as GalleryCategory, label: "Waiting Area" },
-  { id: "treatment" as GalleryCategory, label: "Treatment Rooms" },
-  { id: "equipment" as GalleryCategory, label: "Dental Equipment" },
-  { id: "invisalign" as GalleryCategory, label: "Invisalign Experience" },
-  { id: "interiors" as GalleryCategory, label: "Clinic Interiors" },
+  { id: "reception" as GalleryCategory, label: "Reception Lounge" },
+  { id: "treatment" as GalleryCategory, label: "Treatment Suites" },
+  { id: "equipment" as GalleryCategory, label: "Clinical Equipment" },
+  { id: "invisalign" as GalleryCategory, label: "Invisalign® Suite" },
+  { id: "interiors" as GalleryCategory, label: "Clinic Architecture" },
 ];
 
 export const clinicGalleryImages: ClinicImageItem[] = [
   {
-    id: "reception-lounge",
+    id: "clinic-reception",
     category: "reception",
-    categoryLabel: "Reception",
+    categoryLabel: "Reception Lounge",
     title: "Welcoming Reception & Arrival Lounge",
     description:
-      "Warm ivory architectural walls, comfortable seating, and soft ambient lighting designed to put patients at ease the moment they arrive in Saibaba Colony.",
-    expectedFilename: "01_reception_lounge_dr_preethi.webp",
-    assetPath: "/images/clinic/reception-lounge.webp",
-    fallbackUrl: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=85",
-    width: 1200,
-    height: 800,
+      "Warm off-white walls, comfortable patient seating, and signature pistachio-green branding designed to create an unhurried, calming arrival in Saibaba Colony.",
+    expectedFilename: "Clinic.png",
+    assetPath: "/Clinic.png",
+    fallbackUrl: "/Clinic.png",
+    width: 838,
+    height: 630,
     featured: true,
   },
   {
-    id: "invisalign-branding",
+    id: "clinic-operatory-signature",
     category: "invisalign",
-    categoryLabel: "Invisalign Experience",
-    title: "Dedicated Invisalign® Consultation Suite",
+    categoryLabel: "Invisalign® Suite",
+    title: "Signature Treatment Suite & Circular Ambient Lighting",
     description:
-      "Modern digital consultation zone equipped for smile visualization, clear aligner demonstration, and personalized orthodontic roadmapping.",
-    expectedFilename: "03_invisalign_consultation_corner.webp",
-    assetPath: "/images/clinic/invisalign-branding.webp",
-    fallbackUrl: "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=1200&q=85",
-    width: 1200,
-    height: 900,
+      "Contemporary dental operatory featuring an architectural circular LED ceiling halo, custom sage cabinetry, and ergonomic dental seating for clear-aligner consultations.",
+    expectedFilename: "Clinic7.png",
+    assetPath: "/Clinic7.png",
+    fallbackUrl: "/Clinic7.png",
+    width: 840,
+    height: 602,
     featured: true,
   },
   {
-    id: "treatment-suite-1",
-    category: "treatment",
-    categoryLabel: "Treatment Rooms",
-    title: "Primary Clinical Operatory & Ergonomic Dental Chair",
-    description:
-      "Precision treatment operatory featuring an advanced contoured dental chair, shadowless surgical lighting, and an uncluttered sterile layout.",
-    expectedFilename: "02_dental_operatory_chair_primary.webp",
-    assetPath: "/images/clinic/dental-operatory-chair.webp",
-    fallbackUrl: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1200&q=85",
-    width: 1200,
-    height: 800,
-    featured: false,
-  },
-  {
-    id: "waiting-area-comfort",
-    category: "waiting",
-    categoryLabel: "Waiting Area",
-    title: "Serene Waiting Lounge & Patient Comfort",
-    description:
-      "A quiet, unhurried space tailored with plush grey upholstery, natural greenery accents, and filtered natural illumination.",
-    expectedFilename: "04_waiting_lounge_comfort.webp",
-    assetPath: "/images/clinic/waiting-lounge.webp",
-    fallbackUrl: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1200&q=85",
-    width: 1200,
-    height: 800,
-    featured: false,
-  },
-  {
-    id: "precision-equipment",
-    category: "equipment",
-    categoryLabel: "Dental Equipment",
-    title: "High-Precision Hygiene & Ultrasonic Scaling Units",
-    description:
-      "Advanced micro-ultrasonic scalers and sterile clinical instruments adhering to rigorous infection-control protocols.",
-    expectedFilename: "05_precision_hygiene_equipment.webp",
-    assetPath: "/images/clinic/hygiene-sterilization.webp",
-    fallbackUrl: "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=1200&q=85",
-    width: 1200,
-    height: 800,
-    featured: false,
-  },
-  {
-    id: "consultation-suite-interior",
+    id: "clinic-corridor",
     category: "interiors",
-    categoryLabel: "Clinic Interiors",
-    title: "Private Diagnostic & Consultation Desk",
+    categoryLabel: "Clinic Architecture",
+    title: "Practice Corridor & Architectural Wayfinding",
     description:
-      "Glass-partitioned private space for transparent treatment plan reviews, patient questions, and personalized dental education.",
-    expectedFilename: "06_private_consultation_desk.webp",
-    assetPath: "/images/clinic/consultation-suite.webp",
-    fallbackUrl: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=85",
-    width: 1200,
-    height: 800,
+      "Clean architectural corridor with discreet glass entrance, wall signage, and serene lighting leading to private consultation suites.",
+    expectedFilename: "Clinic2.png",
+    assetPath: "/Clinic2.png",
+    fallbackUrl: "/Clinic2.png",
+    width: 475,
+    height: 635,
+    featured: false,
+  },
+  {
+    id: "clinic-treatment-suite",
+    category: "treatment",
+    categoryLabel: "Treatment Suites",
+    title: "Primary Clinical Operatory & Digital Screen",
+    description:
+      "State-of-the-art treatment room with contoured ergonomic chair, patient-facing diagnostic screen, and hygienic cabinetry layout.",
+    expectedFilename: "Clinic3.png",
+    assetPath: "/Clinic3.png",
+    fallbackUrl: "/Clinic3.png",
+    width: 478,
+    height: 630,
+    featured: false,
+  },
+  {
+    id: "clinic-equipment-view",
+    category: "equipment",
+    categoryLabel: "Clinical Equipment",
+    title: "Precision Dental Delivery Unit & Shadowless Lamp",
+    description:
+      "Advanced dental delivery console, surgical illumination arm, and sterile instrument tray engineered for gentle, precise dental care.",
+    expectedFilename: "Clinic4.png",
+    assetPath: "/Clinic4.png",
+    fallbackUrl: "/Clinic4.png",
+    width: 477,
+    height: 636,
+    featured: false,
+  },
+  {
+    id: "clinic-window-operatory",
+    category: "treatment",
+    categoryLabel: "Treatment Suites",
+    title: "Operatory with Filtered Natural Illumination",
+    description:
+      "Comfortable treatment setting with natural daylight, privacy blinds, and tranquil surroundings for restorative and cosmetic appointments.",
+    expectedFilename: "Clinic5.png",
+    assetPath: "/Clinic5.png",
+    fallbackUrl: "/Clinic5.png",
+    width: 486,
+    height: 635,
+    featured: false,
+  },
+  {
+    id: "clinic-sterile-station",
+    category: "equipment",
+    categoryLabel: "Clinical Equipment",
+    title: "Sterile Operatory & Custom Cabinetry",
+    description:
+      "Hygienic workspace with custom green cabinetry, ultrasonic sterilization protocols, and overhead LED focus for detailed clinical procedures.",
+    expectedFilename: "Clinic6.png",
+    assetPath: "/Clinic6.png",
+    fallbackUrl: "/Clinic6.png",
+    width: 476,
+    height: 642,
     featured: false,
   },
 ];
-

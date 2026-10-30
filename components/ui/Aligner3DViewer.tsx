@@ -110,8 +110,8 @@ export function Aligner3DViewer({
                 className={cn(
                   "px-3 py-1 rounded-full font-medium transition-all duration-200",
                   activeMode === mode
-                    ? "bg-[#6a774b] text-white shadow-subtle"
-                    : "text-[#858780] hover:text-[#181A16]"
+                    ? "bg-[#5C7651] text-white shadow-subtle"
+                    : "text-[#858780] hover:text-[#252724]"
                 )}
               >
                 {viewAssets[mode].label}
@@ -120,8 +120,8 @@ export function Aligner3DViewer({
           </div>
 
           {/* Active Feature Badge */}
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#8f9d6f]/20 border border-[#8f9d6f]/35 text-[11px] font-semibold text-[#6a774b]">
-            <Sparkles className="w-3 h-3 text-[#6a774b]" />
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#C7DDB0]/20 border border-[#C7DDB0]/35 text-[11px] font-semibold text-[#5C7651]">
+            <Sparkles className="w-3 h-3 text-[#5C7651]" />
             <span>{currentAsset.badge}</span>
           </span>
         </div>
@@ -137,7 +137,7 @@ export function Aligner3DViewer({
         className="relative my-auto flex flex-col items-center justify-center py-4 sm:py-6 min-h-[280px] sm:min-h-[320px]"
       >
         {/* Soft Radial Ambient Lighting */}
-        <div className="absolute inset-0 bg-radial from-[#8f9d6f]/15 via-[#6a774b]/05 to-transparent blur-3xl rounded-full pointer-events-none" />
+        <div className="absolute inset-0 bg-radial from-[#C7DDB0]/15 via-[#5C7651]/05 to-transparent blur-3xl rounded-full pointer-events-none" />
 
         {/* Floating 3D Aligner Object Container */}
         <motion.div
@@ -187,8 +187,8 @@ export function Aligner3DViewer({
 
         {/* Subtle 3D Depth Indicator Pill */}
         <div className="absolute bottom-2 right-2 sm:right-4 z-20 px-3 py-1.5 rounded-xl bg-white/95 backdrop-blur-md border border-[#E8E9E5] shadow-subtle flex items-center gap-2 text-xs">
-          <span className="w-2 h-2 rounded-full bg-[#6a774b] animate-pulse" />
-          <span className="font-semibold text-[#181A16]">3D Product Inspection</span>
+          <span className="w-2 h-2 rounded-full bg-[#5C7651] animate-pulse" />
+          <span className="font-semibold text-[#252724]">3D Product Inspection</span>
           <span className="text-[10px] text-[#858780] hidden sm:inline">· Move Cursor to Tilt</span>
         </div>
       </motion.div>
@@ -196,8 +196,8 @@ export function Aligner3DViewer({
       {/* Bottom Footer Info Strip */}
       {showControls && (
         <div className="relative z-20 pt-3 border-t border-[#E8E9E5]/70 flex items-center justify-between text-xs text-[#858780]">
-          <div className="flex items-center gap-1.5 text-[#181A16] font-medium">
-            <CheckCircle2 className="w-3.5 h-3.5 text-[#6a774b]" />
+          <div className="flex items-center gap-1.5 text-[#252724] font-medium">
+            <CheckCircle2 className="w-3.5 h-3.5 text-[#5C7651]" />
             <span>Digital 3D Smile Scanning</span>
           </div>
           <span className="text-[11px] font-mono text-[#858780]">

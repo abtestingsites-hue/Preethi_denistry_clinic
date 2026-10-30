@@ -93,7 +93,7 @@ export function MobileNavigation({
           {/* Header Row */}
           <div className="flex items-center justify-between pb-4 border-b border-[#E8E9E5]">
             <div className="flex flex-col">
-              <span className="font-serif text-lg font-semibold text-[#181A16]">
+              <span className="font-serif text-lg font-semibold text-[#252724]">
                 Dr. Preethi’s
               </span>
               <span className="text-[10px] tracking-widest uppercase text-[#858780]">
@@ -104,7 +104,7 @@ export function MobileNavigation({
             <button
               onClick={onClose}
               aria-label="Close menu"
-              className="p-2 rounded-full bg-[#F7F8F5] text-[#181A16] hover:bg-[#E8E9E5] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6a774b]"
+              className="p-2 rounded-full bg-[#F7F8F5] text-[#252724] hover:bg-[#E8E9E5] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5C7651]"
             >
               <X className="w-5 h-5" />
             </button>
@@ -121,8 +121,8 @@ export function MobileNavigation({
                   className={cn(
                     "w-full text-left py-2.5 px-3.5 rounded-xl text-sm font-medium transition-colors flex items-center justify-between",
                     isActive
-                      ? "bg-[#F7F8F5] text-[#6a774b] font-semibold border-l-2 border-[#6a774b]"
-                      : "text-[#181A16] hover:bg-[#F7F8F5]"
+                      ? "bg-[#F7F8F5] text-[#5C7651] font-semibold border-l-2 border-[#5C7651]"
+                      : "text-[#252724] hover:bg-[#F7F8F5]"
                   )}
                 >
                   <span>{item.label}</span>
@@ -146,15 +146,15 @@ export function MobileNavigation({
           </Button>
 
           <div className="space-y-2 text-xs text-[#858780] pt-1">
-            <div className="flex items-center gap-2 text-[#181A16]">
-              <MapPin className="w-3.5 h-3.5 text-[#6a774b] shrink-0" />
+            <div className="flex items-center gap-2 text-[#252724]">
+              <MapPin className="w-3.5 h-3.5 text-[#5C7651] shrink-0" />
               <span>Saibaba Colony, Coimbatore · Tamil Nadu</span>
             </div>
             <div className="flex items-center gap-2">
-              <Phone className="w-3.5 h-3.5 text-[#6a774b] shrink-0" />
+              <Phone className="w-3.5 h-3.5 text-[#5C7651] shrink-0" />
               <a
                 href={`tel:${clinicInfo.phoneRaw}`}
-                className="hover:text-[#181A16] transition-colors"
+                className="hover:text-[#252724] transition-colors"
               >
                 {clinicInfo.phoneDisplay}
               </a>

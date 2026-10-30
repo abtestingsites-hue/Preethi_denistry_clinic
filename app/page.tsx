@@ -14,7 +14,7 @@ import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
 import { BlogSection } from "@/components/sections/BlogSection";
 import { FAQAccordion } from "@/components/sections/FAQAccordion";
 import { ContactMap } from "@/components/sections/ContactMap";
-import { FinalCTA } from "@/components/sections/FinalCTA";
+import { ScrollVelocityBand } from "@/components/ui/ScrollVelocityBand";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { BackToTop } from "@/components/ui/BackToTop";
 import { FloatingContactBar } from "@/components/ui/FloatingContactBar";
@@ -55,10 +55,6 @@ export default function HomePage() {
     scrollToSection("gallery");
   };
 
-  const handleContactClinic = () => {
-    scrollToSection("contact");
-  };
-
   return (
     <div className="flex flex-col min-h-screen bg-white">
       {/* SECTION 01 — ANNOUNCEMENT MARQUEE (Above main navigation) */}
@@ -74,6 +70,9 @@ export default function HomePage() {
           onExploreInvisalign={handleExploreInvisalign}
           onExploreClinic={handleExploreClinic}
         />
+
+        {/* CONTINUOUS SCROLLING TICKER BAND */}
+        <ScrollVelocityBand />
 
         {/* SECTION 04 — CLINIC TRUST METRICS */}
         <TrustMetrics />
@@ -121,12 +120,6 @@ export default function HomePage() {
         {/* SECTION 14 — CONTACT AND EMBEDDED MAP */}
         <ContactMap
           onBookAppointment={() => handleOpenBooking()}
-        />
-
-        {/* SECTION 15 — FINAL CTA WITH SCROLLING BANNER */}
-        <FinalCTA
-          onBookAppointment={() => handleOpenBooking()}
-          onContactClinic={handleContactClinic}
         />
       </main>
 

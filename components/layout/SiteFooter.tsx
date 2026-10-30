@@ -33,7 +33,7 @@ export function SiteFooter() {
               <span className="font-serif text-2xl text-white font-semibold tracking-tight">
                 Dr. Preethi’s
               </span>
-              <p className="text-[11px] tracking-[0.22em] uppercase text-[#8f9d6f] font-medium">
+              <p className="text-[11px] tracking-[0.22em] uppercase text-[#C7DDB0] font-medium">
                 Dentistry · Saibaba Colony
               </p>
             </div>
@@ -42,7 +42,7 @@ export function SiteFooter() {
               Contemporary dental care, unhurried consultations, and custom Invisalign® clear aligners in Saibaba Colony, Coimbatore.
             </p>
 
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs text-[#8f9d6f]">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs text-[#C7DDB0]">
               <Sparkles className="w-3.5 h-3.5" />
               <span>Invisalign® Consultations by Appointment</span>
             </div>
@@ -50,7 +50,7 @@ export function SiteFooter() {
 
           {/* Col 2: Navigation Links Column 1 (3 cols) */}
           <div className="lg:col-span-3 space-y-3">
-            <h3 className="text-xs font-semibold uppercase tracking-[0.18em] text-[#8f9d6f]">
+            <h3 className="text-xs font-semibold uppercase tracking-[0.18em] text-[#C7DDB0]">
               Quick Links
             </h3>
             <ul className="space-y-2 text-xs text-white/75">
@@ -69,7 +69,7 @@ export function SiteFooter() {
 
           {/* Col 3: Navigation Links Column 2 (2 cols) */}
           <div className="lg:col-span-2 space-y-3">
-            <h3 className="text-xs font-semibold uppercase tracking-[0.18em] text-[#8f9d6f]">
+            <h3 className="text-xs font-semibold uppercase tracking-[0.18em] text-[#C7DDB0]">
               Resources
             </h3>
             <ul className="space-y-2 text-xs text-white/75">
@@ -97,16 +97,16 @@ export function SiteFooter() {
 
           {/* Col 4: Contact & Hours (3 cols) */}
           <div className="lg:col-span-3 space-y-3">
-            <h3 className="text-xs font-semibold uppercase tracking-[0.18em] text-[#8f9d6f]">
+            <h3 className="text-xs font-semibold uppercase tracking-[0.18em] text-[#C7DDB0]">
               Clinic Contact
             </h3>
             <ul className="space-y-2.5 text-xs text-white/75">
               <li className="flex items-start gap-2">
-                <MapPin className="w-3.5 h-3.5 text-[#8f9d6f] shrink-0 mt-0.5" />
+                <MapPin className="w-3.5 h-3.5 text-[#C7DDB0] shrink-0 mt-0.5" />
                 <span>{clinicInfo.fullAddress}</span>
               </li>
               <li className="flex items-center gap-2">
-                <Phone className="w-3.5 h-3.5 text-[#8f9d6f] shrink-0" />
+                <Phone className="w-3.5 h-3.5 text-[#C7DDB0] shrink-0" />
                 <a
                   href={`tel:${clinicInfo.phoneRaw}`}
                   className="hover:text-white transition-colors"
@@ -115,7 +115,7 @@ export function SiteFooter() {
                 </a>
               </li>
               <li className="flex items-center gap-2">
-                <Clock className="w-3.5 h-3.5 text-[#8f9d6f] shrink-0" />
+                <Clock className="w-3.5 h-3.5 text-[#C7DDB0] shrink-0" />
                 <span>Mon – Sat: 09:30 AM – 08:00 PM</span>
               </li>
             </ul>

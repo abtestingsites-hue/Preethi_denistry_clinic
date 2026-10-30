@@ -76,7 +76,7 @@ export function AppointmentModal({
           <button
             onClick={onClose}
             aria-label="Close booking dialog"
-            className="p-2.5 rounded-full bg-[#F7F8F5] text-[#181A16] hover:bg-[#E8E9E5] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6a774b]"
+            className="p-2.5 rounded-full bg-[#F7F8F5] text-[#252724] hover:bg-[#E8E9E5] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5C7651]"
           >
             <X className="w-5 h-5" />
           </button>

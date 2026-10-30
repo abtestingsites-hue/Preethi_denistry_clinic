@@ -9,16 +9,16 @@
   --font-dm-sans: "DM Sans", "Manrope", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-cormorant: "Cormorant Garamond", Georgia, serif;
 
-  /* Version 4 Refined Minimalism Palette (Authentic Clinic Green Palette) */
+  /* Version 4 Refined Minimalism Palette (Authentic Clinic Green & Crisp Off-White) */
   --color-primary-white: #FFFFFF;
   --color-warm-white: #F7F8F5;
-  --color-pistachio: #8f9d6f;
-  --color-soft-sage: #8f9d6f;
-  --color-deep-green: #6a774b;
-  --color-brand-green: #6a774b;
+  --color-pistachio: #C7DDB0;
+  --color-soft-sage: #A9C49A;
+  --color-deep-green: #5C7651;
+  --color-brand-green: #5C7651;
   --color-light-grey: #E8E9E5;
   --color-medium-grey: #858780;
-  --color-charcoal: #181A16;
+  --color-charcoal: #252724;
   --color-near-black: #111310;
 }
 
@@ -26,21 +26,21 @@
   html {
     scroll-behavior: smooth;
     background-color: #FFFFFF;
-    color: #181A16;
+    color: #252724;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
   body {
     background-color: #FFFFFF;
-    color: #181A16;
+    color: #252724;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
     overflow-x: hidden;
   }
 
   ::selection {
-    background-color: #8f9d6f;
-    color: #FFFFFF;
+    background-color: #C7DDB0;
+    color: #111310;
   }
 }
 
@@ -93,12 +93,12 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #8f9d6f;
+  background: #C7DDB0;
   border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #6a774b;
+  background: #5C7651;
 }
 
 /* Respect Reduced Motion Preferences */

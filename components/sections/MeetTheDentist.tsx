@@ -20,8 +20,8 @@ export function MeetTheDentist({ onBookAppointment }: MeetTheDentistProps) {
       <div className="content-container space-y-8 sm:space-y-10">
         {/* Section Header */}
         <div className="max-w-xl space-y-2">
-          <div className="flex items-center gap-2 text-xs font-semibold tracking-[0.18em] uppercase text-[#6a774b]">
-            <Sparkles className="w-3.5 h-3.5 text-[#6a774b]" />
+          <div className="flex items-center gap-2 text-xs font-semibold tracking-[0.18em] uppercase text-[#5C7651]">
+            <Sparkles className="w-3.5 h-3.5 text-[#5C7651]" />
             <span>CLINICAL LEADERSHIP</span>
           </div>
           <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl text-[#252724] tracking-tight leading-[1.18]">
@@ -51,7 +51,7 @@ export function MeetTheDentist({ onBookAppointment }: MeetTheDentistProps) {
               <div className="absolute bottom-3 left-3 right-3 p-3 rounded-xl bg-white/95 backdrop-blur-md border border-white/60 shadow-subtle text-xs text-[#252724]">
                 <div className="flex items-center justify-between font-semibold">
                   <span>{leadDentist.name}</span>
-                  <span className="text-[10px] font-mono text-[#6a774b] uppercase font-semibold">
+                  <span className="text-[10px] font-mono text-[#5C7651] uppercase font-semibold">
                     {leadDentist.qualifications.split("·")[0].trim()}
                   </span>
                 </div>
@@ -64,7 +64,7 @@ export function MeetTheDentist({ onBookAppointment }: MeetTheDentistProps) {
           <div className="lg:col-span-7 space-y-4">
             <div className="space-y-1">
               <div className="flex items-center gap-2">
-                <span className="text-xs font-semibold uppercase tracking-wider text-[#6a774b] px-2.5 py-0.5 rounded-full bg-[#8f9d6f]/40">
+                <span className="text-xs font-semibold uppercase tracking-wider text-[#5C7651] px-2.5 py-0.5 rounded-full bg-[#C7DDB0]/40">
                   {leadDentist.clinicRole}
                 </span>
                 <span className="text-xs text-[#858780]">·</span>
@@ -74,7 +74,7 @@ export function MeetTheDentist({ onBookAppointment }: MeetTheDentistProps) {
               <h3 className="font-serif text-2xl sm:text-3xl text-[#252724] font-medium">
                 {leadDentist.name}
               </h3>
-              <p className="text-xs text-[#6a774b] font-semibold">
+              <p className="text-xs text-[#5C7651] font-semibold">
                 {leadDentist.qualifications}
               </p>
             </div>
@@ -94,7 +94,7 @@ export function MeetTheDentist({ onBookAppointment }: MeetTheDentistProps) {
                     key={focus}
                     className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-[#E8E9E5] text-xs font-medium text-[#252724] shadow-subtle"
                   >
-                    <CheckCircle2 className="w-3 h-3 text-[#6a774b]" />
+                    <CheckCircle2 className="w-3 h-3 text-[#5C7651]" />
                     <span>{focus}</span>
                   </span>
                 ))}

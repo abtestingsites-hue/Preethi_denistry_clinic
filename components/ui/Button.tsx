@@ -26,7 +26,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     ref
   ) => {
     const baseStyles =
-      "inline-flex items-center justify-center font-medium rounded-full transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6a774b] focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none select-none active:scale-[0.98]";
+      "inline-flex items-center justify-center font-medium rounded-full transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5C7651] focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none select-none active:scale-[0.98]";
 
     const sizeStyles = {
       sm: "text-xs px-4 py-2 gap-1.5",
@@ -36,17 +36,17 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 
     const variantStyles = {
       primary:
-        "bg-[#6a774b] text-white hover:bg-[#58633d] shadow-subtle hover:shadow-card",
+        "bg-[#5C7651] text-white hover:bg-[#496041] shadow-subtle hover:shadow-card",
       pistachio:
-        "bg-[#8f9d6f] text-white hover:bg-[#7b895c] font-semibold shadow-subtle",
+        "bg-[#C7DDB0] text-[#111310] hover:bg-[#b5ce9a] font-semibold shadow-subtle",
       pastel:
-        "bg-[#8f9d6f] text-white hover:bg-[#7b895c] font-semibold shadow-subtle",
+        "bg-[#C7DDB0] text-[#111310] hover:bg-[#b5ce9a] font-semibold shadow-subtle",
       dark:
-        "bg-[#181A16] text-white hover:bg-[#252724] shadow-subtle hover:shadow-card",
+        "bg-[#111310] text-white hover:bg-[#252724] shadow-subtle hover:shadow-card",
       outline:
-        "border border-[#E8E9E5] bg-white text-[#181A16] hover:bg-[#F7F8F5] hover:border-[#6a774b]",
+        "border border-[#E8E9E5] bg-white text-[#252724] hover:bg-[#F7F8F5] hover:border-[#5C7651]",
       ghost:
-        "text-[#181A16] hover:bg-[#F7F8F5] hover:text-[#6a774b]",
+        "text-[#252724] hover:bg-[#F7F8F5] hover:text-[#5C7651]",
     };
 
     return (
