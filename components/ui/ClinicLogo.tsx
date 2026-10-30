@@ -22,14 +22,14 @@ export function ClinicLogo({
 
   return (
     <div className={cn("relative inline-flex items-center select-none", className)}>
-      <Image
-        src={src}
-        alt="Dr. Preethi’s Dentistry — Invisalign® Provider"
-        width={344}
-        height={107}
-        priority={priority}
-        className="h-full w-auto max-h-[48px] object-contain transition-transform duration-300 group-hover:scale-[1.02]"
-      />
+     <Image
+  src={src}
+  alt="Dr. Preethi’s Dentistry — Invisalign® Provider"
+  width={350}
+  height={104}
+  priority={priority}
+  className="h-full w-auto max-h-[50px] object-contain"
+/>
     </div>
   );
 }
