@@ -65,8 +65,8 @@ export const treatmentsData: Treatment[] = [
     ],
     idealFor:
       "Individuals and families seeking routine check-ups, filling replacements, or comprehensive oral examinations.",
-    image: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=900&q=80",
-    imageAlt: "Gentle dental consultation and examination suite",
+    image: "/Clinic3.png",
+    imageAlt: "Primary clinical operatory and ergonomic dental chair at Dr. Preethi's Dentistry",
     accentIcon: "tooth",
   },
   {
@@ -91,8 +91,8 @@ export const treatmentsData: Treatment[] = [
     ],
     idealFor:
       "Patients who wish to brighten, balance, or repair minor aesthetic imperfections in their smile.",
-    image: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=900&q=80",
-    imageAlt: "Cosmetic dentistry consultation and dental shade guide",
+    image: "/Clinic7.png",
+    imageAlt: "Dr. Preethi's Dentistry signature cosmetic consultation suite with circular halo lighting",
     accentIcon: "sparkle",
   },
   {
@@ -117,8 +117,8 @@ export const treatmentsData: Treatment[] = [
     ],
     idealFor:
       "Every adult and adolescent looking to maintain fresh breath, healthy gums, and cavity prevention.",
-    image: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=900&q=80",
-    imageAlt: "Modern dental hygiene and preventive care equipment",
+    image: "/Clinic4.png",
+    imageAlt: "Clinical operatory with shadowless surgical illumination and precision dental delivery unit",
     accentIcon: "shield",
   },
   {
@@ -143,8 +143,8 @@ export const treatmentsData: Treatment[] = [
     ],
     idealFor:
       "Patients with broken, fractured, heavily filled, or missing teeth seeking lasting functional restoration.",
-    image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=900&q=80",
-    imageAlt: "Precision dental restorative tools and ceramic crowns",
+    image: "/Clinic5.png",
+    imageAlt: "Treatment suite with filtered natural daylight for restorative dental care",
     accentIcon: "crown",
   },
   {
@@ -171,8 +171,8 @@ export const treatmentsData: Treatment[] = [
     ],
     idealFor:
       "Patients seeking an all-inclusive transformation addressing wear, discoloration, and mild misalignment.",
-    image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=900&q=80",
-    imageAlt: "Aesthetic smile makeover planning and digital diagnostic display",
+    image: "/Clinic6.png",
+    imageAlt: "Sterile operatory and custom cabinetry at Dr. Preethi's Dentistry in Saibaba Colony",
     accentIcon: "smile",
   },
 ];

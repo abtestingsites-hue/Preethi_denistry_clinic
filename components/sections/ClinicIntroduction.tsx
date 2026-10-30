@@ -27,7 +27,7 @@ export function ClinicIntroduction({
           <div className="lg:col-span-6 relative">
             <div className="relative rounded-3xl overflow-hidden shadow-elevated border border-[#E5EAE4] aspect-[4/5] sm:aspect-[4/4.5] max-w-lg mx-auto lg:max-w-none">
               <Image
-                src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=85"
+                src="/Clinic.png"
                 alt="Dr. Preethi's Dentistry Reception and Patient Lounge in Saibaba Colony"
                 fill
                 className="object-cover transition-transform duration-700 hover:scale-105"

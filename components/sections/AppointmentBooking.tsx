@@ -42,8 +42,8 @@ export function AppointmentBooking({
             {/* Authentic Clinic Image Card */}
             <div className="relative rounded-3xl overflow-hidden border border-[#E5EAE4] shadow-card aspect-[4/3] bg-[#111411]">
               <Image
-                src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1200&q=85"
-                alt="Dr. Preethi's Dentistry Clinical Operatory and Dental Chair"
+                src="/Clinic7.png"
+                alt="Dr. Preethi's Dentistry Clinical Operatory and Signature Treatment Suite"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 40vw"

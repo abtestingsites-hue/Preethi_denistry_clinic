@@ -51,10 +51,8 @@ export function CinematicHero({
   const currentVideo = videoSources[activeVideoIndex];
 
   // High-resolution poster fallback
-  const heroPosterUrl =
-    "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1600&q=85";
-  const alignerFeatureUrl =
-    "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=800&q=85";
+  const heroPosterUrl = "/Clinic.png";
+  const alignerFeatureUrl = "/aligner-presentation.png";
 
   useEffect(() => {
     if (videoRef.current) {

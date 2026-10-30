@@ -41,10 +41,27 @@ export function ClinicAbout({
               <div className="absolute bottom-3 left-3 right-3 p-3 rounded-xl bg-white/95 backdrop-blur-md border border-white/60 shadow-subtle flex items-center justify-between text-xs">
                 <div>
                   <span className="font-semibold text-[#252724]">Saibaba Colony Practice</span>
-                  <p className="text-[11px] text-[#858780]">Ivory walls & tranquil lighting</p>
+                  <p className="text-[11px] text-[#858780]">Reception Lounge & Tranquil Setting</p>
                 </div>
                 <span className="p-1.5 rounded-lg bg-[#C7DDB0]/25 text-[#5C7651]">
                   <Sparkles className="w-3.5 h-3.5" />
+                </span>
+              </div>
+            </div>
+
+            {/* Overlapping Secondary Operatory Preview */}
+            <div className="hidden sm:block absolute -bottom-3 -right-3 w-36 sm:w-44 aspect-[4/3] rounded-2xl overflow-hidden border-2 border-white shadow-elevated bg-white">
+              <Image
+                src="/Clinic7.png"
+                alt="Signature treatment suite with circular halo lighting at Dr. Preethi's Dentistry"
+                fill
+                className="object-cover"
+                sizes="176px"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+              <div className="absolute bottom-1.5 left-2 right-2 text-white">
+                <span className="text-[9px] font-semibold uppercase tracking-wider text-[#C7DDB0] block">
+                  Operatory Suite
                 </span>
               </div>
             </div>

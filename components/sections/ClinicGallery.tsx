@@ -111,7 +111,7 @@ export function ClinicGallery() {
             className="lg:col-span-7 relative rounded-card overflow-hidden bg-white border border-[#E8E9E5] shadow-card group cursor-pointer min-h-[300px] sm:min-h-[380px]"
           >
             <Image
-              src={currentFeatured.fallbackUrl}
+              src={currentFeatured.assetPath || currentFeatured.fallbackUrl}
               alt={currentFeatured.title}
               fill
               className="object-cover object-center transition-transform duration-500 group-hover:scale-[1.02]"
@@ -153,7 +153,7 @@ export function ClinicGallery() {
                   className="relative rounded-card overflow-hidden bg-white border border-[#E8E9E5] shadow-subtle group cursor-pointer min-h-[170px] sm:min-h-[180px]"
                 >
                   <Image
-                    src={img.fallbackUrl}
+                    src={img.assetPath || img.fallbackUrl}
                     alt={img.title}
                     fill
                     className="object-cover object-center transition-transform duration-500 group-hover:scale-[1.03]"
@@ -185,6 +185,9 @@ export function ClinicGallery() {
           <div className="grid grid-cols-4 sm:grid-cols-7 gap-2.5">
             {images.map((img, idx) => {
               const isSelected = featuredIndex === idx;
+              const matchesCategory =
+                selectedCategory === "all" || img.category === selectedCategory;
+
               return (
                 <button
                   key={img.id}
@@ -193,13 +196,15 @@ export function ClinicGallery() {
                   className={cn(
                     "relative aspect-[4/3] rounded-xl overflow-hidden border-2 transition-all duration-200 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5C7651]",
                     isSelected
-                      ? "border-[#5C7651] shadow-card scale-[1.02] ring-2 ring-[#5C7651]/20"
-                      : "border-[#E8E9E5] opacity-75 hover:opacity-100 hover:border-[#858780]"
+                      ? "border-[#5C7651] shadow-card scale-[1.02] ring-2 ring-[#5C7651]/20 opacity-100"
+                      : matchesCategory
+                      ? "border-[#E8E9E5] opacity-85 hover:opacity-100 hover:border-[#858780]"
+                      : "border-[#E8E9E5]/60 opacity-40 hover:opacity-80"
                   )}
                   aria-label={`View ${img.title}`}
                 >
                   <Image
-                    src={img.fallbackUrl}
+                    src={img.assetPath || img.fallbackUrl}
                     alt={img.title}
                     fill
                     className="object-cover transition-transform group-hover:scale-105"

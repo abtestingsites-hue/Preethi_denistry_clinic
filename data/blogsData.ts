@@ -41,8 +41,8 @@ export const blogArticles: BlogArticle[] = [
     publishDate: "October 2026",
     author: "Dr. Preethi",
     authorRole: "Chief Dental Surgeon & Clear Aligner Consultant",
-    imageUrl: "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=1000&q=85",
-    imageAlt: "Invisalign clear aligner demonstration tray held gently against modern background",
+    imageUrl: "/Clinic7.png",
+    imageAlt: "Dr. Preethi's Dentistry signature Invisalign and clear aligner consultation suite with circular halo lighting",
     featured: true,
     content: {
       intro:
@@ -90,8 +90,8 @@ export const blogArticles: BlogArticle[] = [
     publishDate: "October 2026",
     author: "Dr. Preethi",
     authorRole: "Chief Dental Surgeon",
-    imageUrl: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1000&q=85",
-    imageAlt: "Dr. Preethi's Dentistry peaceful consultation room and ergonomic operatory",
+    imageUrl: "/Clinic.png",
+    imageAlt: "Welcoming reception and arrival lounge at Dr. Preethi's Dentistry in Saibaba Colony",
     featured: false,
     content: {
       intro:
@@ -138,8 +138,8 @@ export const blogArticles: BlogArticle[] = [
     publishDate: "September 2026",
     author: "Dr. Preethi",
     authorRole: "Chief Dental Surgeon",
-    imageUrl: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1000&q=85",
-    imageAlt: "Precision dental instruments and sterile hygienic clinical setup",
+    imageUrl: "/Clinic4.png",
+    imageAlt: "Clinical operatory equipped with shadowless surgical illumination and precision dental delivery unit",
     featured: false,
     content: {
       intro:
@@ -181,8 +181,8 @@ export const blogArticles: BlogArticle[] = [
     publishDate: "September 2026",
     author: "Dr. Preethi",
     authorRole: "Chief Dental Surgeon & Clear Aligner Consultant",
-    imageUrl: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=1000&q=85",
-    imageAlt: "Demonstration of clear aligner hygiene and maintenance",
+    imageUrl: "/Clinic6.png",
+    imageAlt: "Hygienic operatory and sterile workstation at Dr. Preethi's Dentistry",
     featured: false,
     content: {
       intro:

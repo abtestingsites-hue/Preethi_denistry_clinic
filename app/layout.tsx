@@ -44,8 +44,8 @@ export const metadata: Metadata = {
       "Your Smile. Reimagined. Discover thoughtful modern dentistry, personalized consultations, and smile-enhancing treatments in a welcoming environment.",
     images: [
       {
-        url: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=85",
-        width: 1200,
+        url: "/Clinic.png",
+        width: 838,
         height: 630,
         alt: "Dr. Preethi’s Dentistry Clinic Interior — Saibaba Colony, Coimbatore",
       },
@@ -56,9 +56,7 @@ export const metadata: Metadata = {
     title: "Dr. Preethi’s Dentistry | Saibaba Colony, Coimbatore",
     description:
       "Modern dentistry and Invisalign® clear aligner consultations in a calming, luxury clinical setting.",
-    images: [
-      "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=85",
-    ],
+    images: ["/Clinic.png"],
   },
   icons: {
     icon: "/favicon.ico",
@@ -77,8 +75,7 @@ export default function RootLayout({
     name: clinicInfo.name,
     description:
       "Premium dental clinic in Saibaba Colony, Coimbatore offering Invisalign® clear aligners, aesthetic smile design, and gentle family dentistry.",
-    image:
-      "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=85",
+    image: "/Clinic.png",
     address: {
       "@type": "PostalAddress",
       streetAddress: clinicInfo.locality,

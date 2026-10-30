@@ -95,7 +95,7 @@ export function GalleryLightbox({
       <div className="relative w-full h-full max-w-5xl max-h-[75vh] mx-auto p-4 flex flex-col items-center justify-center">
         <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-elevated">
           <Image
-            src={currentImage.fallbackUrl}
+            src={currentImage.assetPath || currentImage.fallbackUrl}
             alt={currentImage.title}
             fill
             className="object-contain"
